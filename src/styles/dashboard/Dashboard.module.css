@@ -1,0 +1,1546 @@
+.dashboardContainer {
+  max-width: 1800px;
+  margin: auto;
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboardTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: #2d3748;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.actionButton, .logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+}
+
+.actionButton {
+  background-color: #4299e1;
+  color: white;
+}
+
+.actionButton:hover {
+  background-color: #3182ce;
+}
+
+.logoutButton {
+  background-color: #f56565;
+  color: white;
+}
+
+.logoutButton:hover {
+  background-color: #e53e3e;
+}
+
+.tableCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive table improvements */
+.tableResponsive {
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+  display: block;
+  width: 100%;
+  scrollbar-width: thin;
+}
+
+.tableResponsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tableResponsive::-webkit-scrollbar-track {
+  background-color: #f7fafc;
+  border-radius: 4px;
+}
+
+.tableResponsive::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 4px;
+}
+
+.tableResponsive::-webkit-scrollbar-thumb:hover {
+  background-color: #a0aec0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+/* Table header styles */
+.table th {
+  background-color: #f7fafc;
+  font-weight: 600;
+  color: #4a5568;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table tr:hover {
+  background-color: #f7fafc;
+}
+
+/* Better control of cell widths */
+.table th, .table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; /* Maximum width for content cells */
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+/* Special widths for common columns */
+.table th:nth-child(2), .table td:nth-child(2) {
+  min-width: 50px; /* Name column */
+  max-width: 200px;
+}
+
+.table th:nth-child(3), .table td:nth-child(3),
+.table th:nth-child(4), .table td:nth-child(4) {
+  min-width: 80px; /* Contact and Email columns */
+  max-width: 180px;
+}
+
+.table th:nth-child(5), .table td:nth-child(5),
+.table th:nth-child(6), .table td:nth-child(6) {
+  min-width: 100px; /* Course and Location columns */
+  max-width: 150px;
+}
+
+/* Container for the actions column buttons */
+.actionButtonsContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  justify-content: center; /* Center align the buttons */
+  min-width: 120px; /* Ensure minimum width for action buttons */
+}
+
+.checkboxColumn {
+  width: 3rem;
+}
+
+.viewColumn {
+  width: 3rem;
+  text-align: center;
+}
+
+.checkboxWrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #f56565;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+  background-color: #e53e3e;
+}
+
+.paginationControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.paginationButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  background-color: white;
+  color: #4a5568;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginationButton:hover:not(:disabled) {
+  background-color: #f7fafc;
+  border-color: #cbd5e0;
+}
+
+.pageIndicator {
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorMessage {
+  color: #e53e3e;
+  text-align: center;
+  padding: 1rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+.bulkActionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ebf8ff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+}
+
+.bulkDeleteButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f56565;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.bulkDeleteButton:hover {
+  background-color: #e53e3e;
+}
+
+.checkIcon {
+  font-size: 1.25rem;
+}
+
+/* SuperAdmin Panel Styles */
+.adminPanelContainer {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+  max-width: 100vw; /* Ensure it doesn't exceed viewport width */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.sidebar {
+  background-color: #2d3748;
+  color: white;
+  padding: 1.5rem 0;
+}
+
+.sidebarHeader {
+  padding: 0 1.5rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.sidebarTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sidebarNav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarNav li {
+  margin-bottom: 0.25rem;
+}
+
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.sidebarLink:hover, .activeLink {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.sidebarIcon {
+  font-size: 1.1rem;
+}
+
+.mainContent {
+  padding: 1.5rem;
+  background-color: #f7fafc;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  max-width: 100%; /* Ensure it doesn't exceed parent width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.pageHeader {
+  margin-bottom: 2rem;
+}
+
+.pageTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: #2d3748;
+}
+
+.pageDescription {
+  color: #718096;
+  margin: 0;
+}
+
+/* Dashboard Cards */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: #718096;
+  margin: 0;
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0;
+  color: #2d3748;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cardIconBlue {
+  background-color: #ebf8ff;
+  color: #3182ce;
+}
+
+.cardIconGreen {
+  background-color: #f0fff4;
+  color: #38a169;
+}
+
+.cardIconPurple {
+  background-color: #faf5ff;
+  color: #805ad5;
+}
+
+.cardIconRed {
+  background-color: #fff5f5;
+  color: #e53e3e;
+}
+
+/* Forms */
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.formInput, .formSelect, .formTextarea {
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  background-color: white;
+  color: #4a5568;
+  transition: all 0.2s;
+}
+
+.formInput:focus, .formSelect:focus, .formTextarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+.button {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.primaryButton {
+  background-color: #4299e1;
+  color: white;
+}
+
+.primaryButton:hover {
+  background-color: #3182ce;
+}
+
+.secondaryButton {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.secondaryButton:hover {
+  background-color: #cbd5e0;
+}
+
+.dangerButton {
+  background-color: #f56565;
+  color: white;
+}
+
+.dangerButton:hover {
+  background-color: #e53e3e;
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Tabs */
+.tabsContainer {
+  margin-bottom: 1.5rem;
+}
+
+.tabsList {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+}
+
+.tabButton {
+  padding: 0.75rem 1.25rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #718096;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tabButton:hover {
+  color: #4a5568;
+}
+
+.activeTab {
+  color: #4299e1;
+  border-bottom-color: #4299e1;
+}
+
+/* Charts */
+.chartContainer {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chartTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  color: #2d3748;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badgeBlue {
+  background-color: #ebf8ff;
+  color: #3182ce;
+}
+
+.badgeGreen {
+  background-color: #f0fff4;
+  color: #38a169;
+}
+
+.badgeYellow {
+  background-color: #fffaf0;
+  color: #d69e2e;
+}
+
+.badgeRed {
+  background-color: #fff5f5;
+  color: #e53e3e;
+}
+
+.badgePurple {
+  background-color: #faf5ff;
+  color: #805ad5;
+}
+
+.badgeGray {
+  background-color: #f7fafc;
+  color: #718096;
+}
+
+/* Role Badge */
+.roleBadge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.superAdminBadge {
+  background-color: #553c9a;
+  color: white;
+}
+
+.adminBadge {
+  background-color: #3182ce;
+  color: white;
+}
+
+.viewModeBadge {
+  background-color: #38a169;
+  color: white;
+}
+
+.editModeBadge {
+  background-color: #d69e2e;
+  color: white;
+}
+
+/* Permission Tables */
+.permissionTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.permissionTable th,
+.permissionTable td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.permissionTable th {
+  background-color: #f7fafc;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+/* Modals */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #2d3748;
+}
+
+.modalCloseButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #a0aec0;
+  transition: color 0.2s;
+  font-size: 1.25rem;
+}
+
+.modalCloseButton:hover {
+  color: #718096;
+}
+
+.modalBody {
+  padding: 1.5rem;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Styles for the new location input field */
+.addLocationInputGroup {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.addLocationInput {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.addLocationButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.addLocationButton:hover {
+  background-color: #3182ce;
+}
+
+.addLocationButton:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Make the modal appear on top of everything */
+.modalOverlay {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Enhanced Location Assignment Modal Styles */
+.locationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0.75rem;
+}
+
+.searchInputGroup {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem;
+  padding-right: 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.clearSearchButton {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.clearSearchButton:hover {
+  color: #4a5568;
+}
+
+.locationActions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.selectAllButton,
+.deselectAllButton {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  background-color: #edf2f7;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.selectAllButton:hover,
+.deselectAllButton:hover {
+  background-color: #e2e8f0;
+}
+
+.selectAllButton:disabled,
+.deselectAllButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.locationCount {
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+.noLocationsMessage {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.assignmentsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.clearAllButton {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  background-color: #f56565;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clearAllButton:hover {
+  background-color: #e53e3e;
+}
+
+.clearAllButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.confirmClear {
+  background-color: #e53e3e;
+  font-weight: bold;
+}
+
+.assignmentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assignmentActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.clearUserButton {
+  background: none;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearUserButton:hover {
+  color: #e53e3e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .adminPanelContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make tables responsive on mobile but maintain horizontal scroll instead of stacking */
+  .tableResponsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 5px;
+  }
+
+  /* Keep the table structure on mobile for better consistency */
+  .table {
+    min-width: 800px; /* Keep minimum width for horizontal scrolling */
+  }
+
+  /* Original responsive stacking styles are commented out
+  .table td {
+    display: flex;
+    text-align: right;
+    border-bottom: none;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    margin-right: auto;
+    color: #4a5568;
+  }
+
+  .table tr {
+    display: block;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .table thead {
+    display: none;
+  }
+  */
+
+  /* Smaller padding on mobile */
+  .table th, .table td {
+    padding: 0.5rem;
+  }
+
+  /* Add a hint for mobile users about scrolling */
+  .tableCard::before {
+    content: "Swipe horizontally to view more →";
+    display: block;
+    padding: 0.5rem;
+    background-color: #ebf8ff;
+    color: #3182ce;
+    font-size: 0.8rem;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
+  }
+}
+
+/* Lead details view modal styles */
+.leadDetailsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .leadDetailsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Make some items span full width */
+  .leadDetailsGrid > div:nth-child(3), /* Email */
+  .leadDetailsGrid > div:nth-child(9) { /* Contacted Comment */
+    grid-column: span 2;
+  }
+}
+
+.leadDetailItem {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.leadDetailLabel {
+  font-size: 0.875rem;
+  color: #718096;
+  margin: 0 0 0.25rem 0;
+  font-weight: 600;
+}
+
+.leadDetailValue {
+  font-size: 1rem;
+  color: #2d3748;
+  margin: 0;
+  word-break: break-word;
+}
+
+/* Add the following CSS classes to the existing Dashboard.module.css */
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.editSelect {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.editTextarea {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+  font-size: 0.9rem;
+  width: 100%;
+  min-height: 60px;
+  resize: vertical;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.editButton, .saveButton, .cancelButton, .viewButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.viewButton {
+  color: #805ad5; /* Purple color for view button */
+}
+
+.editButton {
+  color: #4299e1;
+}
+
+.saveButton {
+  color: #48bb78;
+}
+
+.cancelButton {
+  color: #f56565;
+}
+
+.viewButton:hover {
+  background-color: rgba(128, 90, 213, 0.1);
+}
+
+.editButton:hover {
+  background-color: rgba(66, 153, 225, 0.1);
+}
+
+.saveButton:hover {
+  background-color: rgba(72, 187, 120, 0.1);
+}
+
+.cancelButton:hover {
+  background-color: rgba(245, 101, 101, 0.1);
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.newStatus {
+  background-color: #e2e8f0;
+  color: #2d3748;
+}
+
+.contactedStatus {
+  background-color: #bee3f8;
+  color: #2c5282;
+}
+
+.convertedStatus {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.rejectedStatus {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+}
+
+.notInterestedStatus {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+}
+
+.inProgressStatus {
+  background-color: #feebc8;
+  color: #7b341e;
+}
+
+.enrolledStatus {
+  background-color: #c6f6d5;
+  color: #276749;
+}
+
+.contactedScore {
+  font-size: 0.85rem;
+}
+
+.contactedComment {
+  font-size: 0.8rem;
+  color: #4a5568;
+  font-style: italic;
+  margin-top: 2px;
+  display: block;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.colorSelectContainer {
+  position: relative;
+  width: 100%;
+}
+
+/* Settings page styles */
+.settingsContainer {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.settingItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.settingItem:last-child {
+  border-bottom: none;
+}
+
+.settingInfo {
+  flex: 1;
+}
+
+.settingTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.settingDescription {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.settingStatus {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.statusIconActive {
+  color: #48bb78;
+  margin-right: 0.5rem;
+}
+
+.statusIconInactive {
+  color: #f56565;
+  margin-right: 0.5rem;
+}
+
+.statusTextActive {
+  color: #48bb78;
+  font-weight: 500;
+}
+
+.statusTextInactive {
+  color: #f56565;
+  font-weight: 500;
+}
+
+.settingAction {
+  margin-left: 1.5rem;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.toggleButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toggleIconOn {
+  color: #4299e1;
+  font-size: 2.5rem;
+}
+
+.toggleIconOff {
+  color: #a0aec0;
+  font-size: 2.5rem;
+}
+
+.headerIcon {
+  margin-right: 0.5rem;
+}
+
+.noSettings {
+  text-align: center;
+  padding: 2rem 0;
+  color: #718096;
+}
+
+.savingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.savingContent {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.successMessage {
+  background-color: #f0fff4;
+  border-left: 4px solid #48bb78;
+  color: #2f855a;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.successIcon {
+  margin-right: 0.5rem;
+}
+
+.settingValue {
+  background-color: #f7fafc;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  max-width: 100%;
+  color: #4a5568;
+}
+
+/* View details button in audit logs */
+.viewDetailsBtn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ebf8ff;
+  color: #3182ce;
+  border: 1px solid #bee3f8;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.viewDetailsBtn:hover {
+  background-color: #3182ce;
+  color: white;
+}
+
+.viewIcon {
+  margin-right: 4px;
+}
+
+/* Settings slider styles */
+.sliderContainer {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.sliderWithInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #e2e8f0;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.numberInput {
+  width: 60px;
+  padding: 4px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4299e1;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #4299e1;
+  cursor: pointer;
+}
+
+.sliderLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: #718096;
+  font-size: 14px;
+}
+
+.sliderValue {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #4A5568;
+  text-align: center;
+}
+
+/* Location Assignment Modal Styles */
+.locationSelectionContainer {
+  margin: 1rem 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #f8fafc;
+}
+
+.locationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+.locationItem {
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.locationItem label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.buttonCenter {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.currentAssignments {
+  margin-top: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #f8fafc;
+}
+
+.assignmentsList {
+  margin-top: 0.75rem;
+}
+
+.assignmentItem {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.assignmentItem h5 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.assignedLocations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.locationTag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e2e8f0;
+  color: #4a5568;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.removeLocationBtn {
+  margin-left: 0.25rem;
+  background: none;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+
+.removeLocationBtn:hover {
+  color: #e53e3e;
+}
+
+/* Additional controls and configuration button styles for settings */
+.additionalControls {
+  margin-top: 0.75rem;
+}
+
+.configButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #edf2f7;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.configButton:hover {
+  background-color: #e2e8f0;
+  color: #2d3748;
+}
+
+.configButton:active {
+  background-color: #cbd5e0;
+}

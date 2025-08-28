@@ -1,0 +1,28 @@
+.parallaxContainer {
+  height: 600px; /* Adjust height as needed */
+  overflow-y: auto; /* Scroll inside the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.parallaxContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.parallaxGrid {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.parallaxImage {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}

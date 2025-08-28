@@ -1,0 +1,557 @@
+.containerItDsHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 70px;
+  background-blend-mode: overlay;
+  background-color: rgba(249, 249, 249, 0.75);
+  width: 100%;
+  max-width: 1800px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.leftSectionItDs {
+  max-width: 50%;
+}
+
+.leftSectionItDs h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.leftSectionItDs h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+}
+.leftSectionItDs h2 span {
+  color: #1f2937;
+  text-align: justify;
+}
+
+.leftSectionItDs p {
+  color: #000000;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.featuresItDs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.featuresItDs li {
+  font-size: 1rem;
+  color: #f85757;
+  font-weight: bolder;
+  list-style-position: inside;
+  padding-left: 1rem;
+  margin-left: -20px;
+}
+.featuresItDs li::before {
+  content: "• ";
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the marker */
+  width: 10px; /* Adjust marker size */
+  height: 10px; /* Adjust marker size */
+  /* Adjust marker color */
+  border-radius: 50%;
+}
+
+.alumniItDs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 30px;
+}
+
+.alumniLogosItDs {
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 40px;
+  width: 19%;
+  aspect-ratio: 3/1;
+  object-fit: contain;
+  mix-blend-mode: color-dodge #c8c4c4;
+}
+
+.ButtonItDs {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.submitButtonItDs {
+  background-color: #dc2626;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  margin-top: 1.2rem;
+}
+
+.batchButtonItDs {
+  background-color: #2563eb;
+  color: #fdfdfd;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.batchButtonItDs:hover {
+  background-color: white;
+  color: #2563eb;
+  border-color: #2563eb;
+}
+.buttons {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.buttonStyle1 {
+  background-color: #2563eb;
+  color: #fdfdfd;
+  padding: 0.3rem;
+  border-radius: 9999px;
+  font-size: 0.83rem;
+}
+.buttonStyle2 {
+  background-color: #fff;
+  color: #2563eb;
+  /* border-color: #2563eb; */
+  border: 1px solid #2563eb;
+  padding: 0.3rem;
+  border-radius: 9999px;
+  font-size: 0.83rem;
+}
+.buttonStyle2:hover {
+  background-color: #2563eb;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.form input {
+  width: 100%;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.form input:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+.phoneInputItDs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.1rem;
+  width: 100%;
+}
+.phoneInputItDs select,
+.phoneInputItDs input {
+  flex: 1 1 0%;
+  padding: 3px;
+  height: 2.9vw;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.375rem;
+  color: rgb(107, 107, 107);
+}
+
+.phoneInputItDs select {
+  max-width: 76px;
+  flex: 0 0 10px;
+  padding: 0.01rem;
+  height: 2.9vw;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.375rem;
+}
+.error {
+  color: red;
+}
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid rgb(45, 46, 49);
+  border-radius: 0.375rem;
+}
+
+.brochureButtonItDs {
+  background-color: white;
+  color: #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #2563eb;
+  font-size: 0.875rem;
+}
+.brochureButtonItDs {
+  padding: 0.1rem 1rem;
+  border-radius: 9px;
+  width: 40%;
+}
+.brochureButtonItDs:hover {
+  color: white;
+}
+
+.rightSectionItDs {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  height: 75%;
+  max-height: 380px;
+  text-align: justify;
+}
+
+.rightSectionItDs h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.rightSectionItDs h3 span {
+  color: #dc2626;
+}
+
+.accountInfoItDs {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+.accountInfoItDs a {
+  color: #2563eb;
+}
+
+.termsInfoItDs {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.termsInfoItDs a {
+  color: #2563eb;
+}
+.dsHeaderSpan {
+  color: #ff3300;
+}
+.dsHeaderSpan2 {
+  color: #000000;
+}
+.dsHeaderSpan3 {
+  color: #1e3a8a;
+  font-weight: 800;
+}
+
+.selectCountryCode {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 80px; /* Adjust width as needed */
+  margin-right: 10px; /* Space between the country code and phone number input */
+}
+
+@media (min-width: 1024px) {
+  .leftSectionItDs {
+    max-width: 40%;
+  }
+}
+
+/* Responsive styles for mobile screens */
+@media (min-width: 765px) and (max-width: 1024px) {
+  .containerItDsHeader {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+  }
+
+  .alumniLogosItDs {
+    width: 100%;
+    height: 1rem;
+  }
+
+  .leftSectionItDs,
+  .rightSectionItDs {
+    max-width: 100%;
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+  .leftSectionItDs h1 {
+    font-size: 1.58rem;
+  }
+
+  .leftSectionItDs h2 {
+    font-size: 1.2rem;
+    align-items: justify;
+  }
+
+  .leftSectionItDs p {
+    font-size: 0.8rem;
+  }
+  .featuresItDs li,
+  .alumniItDs span,
+  .batchButtonItDs,
+  .brochureButtonItDs {
+    font-size: 0.8rem;
+  }
+  .rightSectionItDs h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .rightSectionItDs {
+    padding: 1rem;
+    box-shadow: none;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .form input {
+    width: 90%;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .phoneInputItDs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40vw;
+  }
+  .phoneInputItDs select,
+  .phoneInputItDs input {
+    flex: 1 1 0%;
+    padding: 17px 10px;
+    height: 5vw;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    color: grey;
+  }
+
+  .phoneInputItDs select {
+    max-width: 49px;
+    flex: 0 0 10px;
+    padding: 0.01rem;
+    height: 5vw;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.375rem;
+  }
+  .submitButtonItDs {
+    background-color: #dc2626;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    margin-top: 1.2rem;
+    width: 90%;
+  }
+}
+@media (max-width: 480px) and (max-height: 800px) {
+  .containerItDsHeader {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .alumniLogosItDs {
+    width: 100%;
+    height: 1rem;
+  }
+
+  .leftSectionItDs,
+  .rightSectionItDs {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .leftSectionItDs h1 {
+    font-size: 1.75rem;
+  }
+
+  .leftSectionItDs h2 {
+    font-size: 1.2rem;
+  }
+
+  .leftSectionItDs p {
+    font-size: 0.8rem;
+  }
+  .featuresItDs li,
+  .alumniItDs span,
+  .batchButtonItDs,
+  .brochureButtonItDs {
+    font-size: 0.8rem;
+  }
+  .rightSectionItDs h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .rightSectionItDs {
+    padding: 1rem;
+    box-shadow: none;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .form input {
+    width: 90%;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .phoneInputItDs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* gap: 0.01rem; */
+    width: 81vw;
+    height: 33px;
+  }
+  .phoneInputItDs select,
+  .phoneInputItDs input {
+    flex: 1 1 0%;
+    padding: 17px 10px;
+    height: 7vw;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    color: grey;
+  }
+
+  .phoneInputItDs select {
+    max-width: 49px;
+    flex: 0 0 10px;
+    padding: 0.01rem;
+    height: 9vw;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.375rem;
+  }
+  .submitButtonItDs {
+    background-color: #dc2626;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    margin-top: 1.2rem;
+    width: 90%;
+  }
+}
+
+/* Add these styles to your existing CSS file */
+
+/* Status message styling */
+.statusMessage {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+.success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #2e7d32;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.error {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #d32f2f;
+  border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button loading state */
+.loading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+}
+
+.buttonText {
+  margin-right: 10px;
+}
+
+.buttonLoader {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled form elements */
+.input:disabled,
+.phoneInputItDs input:disabled,
+.phoneInputItDs select:disabled,
+.inputField:disabled,
+.selectCountryCode:disabled {
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: not-allowed;
+  opacity: 0.8;
+}

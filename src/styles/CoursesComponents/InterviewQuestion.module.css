@@ -1,0 +1,85 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accordionOption {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.panelGroup {
+  border-top: 1px solid #ddd;
+}
+
+.panel {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.panelHeading {
+  padding: 10px;
+  background: #004f9f;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.panelHeading:hover {
+  background: #003b7a;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 16px;
+}
+
+.button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.button:hover {
+  color: #f0f0f0;
+}
+
+.active {
+  color: #ffcc00;
+}
+
+.panelCollapse {
+  display: none;
+  padding: 10px;
+  background: #eef5ff;
+}
+
+.show {
+  display: block;
+}
+
+.panelBody {
+  font-size: 14px;
+  color: #333;
+  padding: 10px;
+}

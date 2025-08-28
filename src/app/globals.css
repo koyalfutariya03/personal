@@ -1,0 +1,182 @@
+/* src/app/globals.css */
+
+/* Tailwind CSS directives - KEEP THESE */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables - KEEP THESE */
+:root {
+  --primary: turquoise;
+  --primary-dark: #191825;
+  --primary-blue: #865dff;
+  --primary-light-blue: #c4b1ff;
+  --secondary-dark: #27253f;
+  --secondary-dark2: #191825;
+  --transparent-pink: #e384ff;
+  --gradient-angle: 0deg;
+
+  /* 🚀 NEW: Reference font variables for consistent use across your entire CSS */
+  font-family: var(--font-lato), var(--font-rubik), Arial, sans-serif;
+}
+
+/* Basic Reset Styles - KEEP THESE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Body Styles - KEEP THESE */
+body {
+  /* Use the CSS variables from next/font. Include fallbacks. */
+  font-family: var(--font-lato), var(--font-rubik), Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Body Background - KEEP THIS */
+.body {
+  background-color: #182e4a;
+}
+
+/* Ensure smooth scrolling is hardware accelerated */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Specific highlight class - KEEP THIS if it's used very early on the page */
+.highlight-span-cards {
+  color: #113b6b;
+  font-weight: bold;
+}
+
+/* Specific highlight class - KEEP THIS if it's used very early on the page */
+.txtHighlight {
+  color: #2277d3;
+  font-weight: bold;
+}
+
+/* Tailwind Layers - KEEP THESE */
+@layer base {
+  /* Keep your design system variables here */
+  :root {
+    --background: 0 0% 100%; /* light mode colors */
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    /* dark mode colors */
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Autocomplete styles - KEEP THIS */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #facc15 !important;
+  caret-color: #facc15 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+@keyframes pulse-bg {
+  0% {
+    box-shadow: 0 0 0 0 rgba(102, 130, 204, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(102, 130, 204, 0);
+  }
+}
+
+
+.course-main-content {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.seo-only {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  white-space: nowrap !important;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

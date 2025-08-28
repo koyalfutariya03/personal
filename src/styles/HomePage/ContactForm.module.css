@@ -1,0 +1,185 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.modalContent {
+  height: 570px;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+  background-image: none; /* No background image initially */
+}
+
+.modalContent.backgroundLoaded {
+  background-image: url("/ContactForm/contactform.avif"); /* New Imgur image */
+  background-size: 470px 600px;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.modalContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  background-image: none; /* No background initially */
+  z-index: -1;
+}
+
+.modalContent * {
+  position: relative;
+  z-index: 4;
+}
+
+.closeBtnContact {
+  position: absolute;
+  top: 35px;
+  right: 16px;
+  font-size: 28px;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.closeBtnContact:hover,
+.closeBtnContact:focus {
+  color: #444;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px; /* Move inputs down below the logo */
+  top: 150px;
+}
+
+.contactFormGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.contactFormGroup label {
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: left;
+  font-size: 16px;
+  color: #000000;
+}
+
+.contactFormGroup input::placeholder {
+  color: rgba(0, 0, 0, 0.7); /* Darker placeholder color */
+  font-weight: bolder; /* Optional: to make it bolder */
+}
+
+.contactFormGroup input{
+  padding: 29px;
+  width: 120%;
+  border-radius: 8px; 
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+  box-sizing: border-box;
+  height: 40px;
+  mix-blend-mode: multiply;
+  color: #000;
+}
+.selectCountryCode{
+  /* padding: 29px; */   
+  width: 30%;
+  border-radius: 8px;
+  border: 2px solid  rgba(4, 0, 0, 0.4);
+  background-color: transparent;
+  margin-right:1rem;
+  /* box-sizing: border-box; */
+  height: 40px;
+  /* mix-blend-mode: multiply; */
+  color: #000;
+
+}
+.inputWithIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputWithIcon ion-icon {
+  position: absolute;
+  right: 10px; /* Adjust based on padding */
+  font-size: 20px;
+  color: #888; /* You can adjust the color */
+}
+
+.inputWithIcon input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 35px; /* Extra padding to make space for the icon */
+  box-sizing: border-box;
+}
+
+.submitBtnContact {
+  align-self: center;
+  background-color: #0213ff;
+  color: white;
+  top: 110px;
+  right: 45px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 40%;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 105px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.submitBtnContact:hover {
+  background-color: #111c62;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    width: 85%;
+  }
+}
+
+/* Thank You Popup */
+.thankYouPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.thankYouPopup.fadeOut {
+  opacity: 0;
+}

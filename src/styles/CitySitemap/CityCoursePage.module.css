@@ -1,0 +1,281 @@
+/* Base Container */
+.cityPageContainer {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  padding: 40px 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);}
+
+/* City Header */
+.cityHeader {
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px 30px;
+  background-color: #0f3460;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cityHeader h1 {
+  font-size: 2.2rem;
+  margin: 0 0 15px 0;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.cityHeader p {
+  font-size: 1.05rem;
+  margin: 0 auto 25px;
+  color: #a3b0c2;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* Search Box */
+.searchBox {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 14px 20px 14px 45px;
+  border-radius: 30px;
+  background-color: #21395e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.searchInput::placeholder {
+  color: #a3b0c2;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3498db;
+  font-size: 1rem;
+}
+
+/* No Results */
+.noResults {
+  text-align: center;
+  padding: 30px;
+  background-color: #11233f;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.noResults h3 {
+  color: #ffffff;
+  margin: 0 0 20px;
+  font-size: 1.2rem;
+}
+
+.resetButton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.resetButton:hover {
+  background-color: #2980b9;
+}
+
+/* Categories Container */
+.categoriesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.categorySection {
+  background-color: #11233f;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.categoryTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 22px;
+  background-color: #0f3460;
+}
+
+.categoryTitle h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.categoryContent {
+  padding: 20px;
+}
+
+/* Subcategories Container */
+.subcategoriesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subcategorySection {
+  margin-bottom: 15px;
+}
+
+.subcategoryTitle {
+  font-size: 1.15rem;
+  color: #3498db;
+  margin: 0 0 15px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Horizontal Course List */
+.horizontalCourseList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.courseItem {
+  margin-bottom: 10px;
+}
+
+.courseLink {
+  text-decoration: none;
+  color: #a3b0c2;
+  padding: 8px 15px;
+  background-color: #182e4a;
+  border-radius: 4px;
+  display: inline-block;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.courseLink:hover {
+  color: #ffffff;
+  background-color: #21395e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sectionTag {
+  font-size: 0.7rem;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .cityHeader h1 {
+    font-size: 1.8rem;
+  }
+  
+  .courseLink {
+    padding: 7px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cityHeader {
+    padding: 30px 20px;
+  }
+  
+  .cityHeader h1 {
+    font-size: 1.6rem;
+  }
+  
+  .cityHeader p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .categoryTitle h2 {
+    font-size: 1.2rem;
+  }
+  
+  .subcategoryTitle {
+    font-size: 1.05rem;
+  }
+  
+  .horizontalCourseList {
+    gap: 8px;
+  }
+  
+  .courseLink {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cityHeader {
+    padding: 25px 15px;
+  }
+  
+  .cityHeader h1 {
+    font-size: 1.4rem;
+  }
+  
+  .categoryTitle {
+    padding: 15px;
+  }
+  
+  .categoryContent {
+    padding: 15px;
+  }
+  
+  .horizontalCourseList {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .courseItem {
+    margin-bottom: 6px;
+  }
+  
+  .courseLink {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Accessibility Improvements */
+.searchInput:focus,
+.courseLink:focus,
+.resetButton:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}

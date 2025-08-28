@@ -1,0 +1,232 @@
+.descriptionContainer {
+  display: flex;
+  flex-direction: row;
+  width: 97.5%;
+  max-width: 1800px;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow:
+    0 10px 32px rgba(34, 80, 156, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.07);
+  position: relative;
+  padding: 0;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.descriptionVideo {
+  flex: 1 1 380px;
+  min-width: 300px;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #e6eef7;
+  position: sticky;
+  top: 60px;
+  align-self: flex-start;
+}
+
+.descriptionVideo video {
+  width: 90%;
+  max-width: 440px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 32px 0;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.09),
+    0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+/* Main content area */
+.descriptionContent {
+  flex: 2 1 500px;
+  padding: 40px 30px 40px 40px;
+  background: linear-gradient(113deg, #fafdfe 60%, #e7f3fc 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Modern title */
+.descriptionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: rgb(1, 1, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 1, 98, 1) 35%,
+    rgb(3, 111, 133) 49%,
+    rgba(2, 2, 85, 1) 62%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+.descriptionParagraph,
+.descriptionParagraphAlt {
+  font-size: 1.13rem;
+  margin: 0 0 16px 0;
+  text-align: justify;
+  line-height: 1.72;
+  color: #293b4b;
+  padding: 0 18px;
+}
+.descriptionParagraphAlt {
+  color: #1b2534;
+  background: #f3f8fd;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin-bottom: 11px;
+}
+
+/* Highlights */
+.highlightDescJson {
+  background: #feefd8;
+  color: #bc560a;
+  font-weight: bold;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+/* Section Cards */
+.sectionCard,
+.sectionCardAlt {
+  background: #fafdff;
+  border-radius: 14px;
+  box-shadow: 0 6px 17px 0 rgba(34, 80, 156, 0.06);
+  margin: 34px 0 24px 0;
+  padding: 20px 24px 20px 24px;
+  border-left: 7px solid #2189ed;
+  display: flex;
+  flex-direction: column;
+}
+.sectionCardAlt {
+  border-left: 7px solid #d6ad3b;
+  background: #fdfbee;
+}
+
+.cardHeader,
+.secondTitle {
+  font-size: 1.26rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1559af;
+  letter-spacing: -0.02em;
+}
+.secondTitle {
+  color: #a87b00;
+}
+
+/* Feature List */
+.featureList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.featureList li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 1.09rem;
+  letter-spacing: -0.005em;
+}
+.bulletIcon {
+  color: #37b263;
+  margin-right: 9px;
+  margin-top: 3px;
+  font-size: 1.15em;
+}
+
+.listItem2 li {
+  font-size: 1.05rem;
+  color: #175f4b;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+.arrowIcon {
+  color: #daa832;
+  margin-right: 6px;
+}
+
+/* Error & Loader */
+.errorMsg {
+  color: #c33e33;
+  text-align: center;
+  background: #ffeded;
+  border-radius: 7px;
+  padding: 16px 10px;
+  margin: 17px auto;
+  max-width: 500px;
+  font-weight: bold;
+}
+.loader {
+  color: #2189ed;
+  text-align: center;
+  font-size: 1.19rem;
+  padding: 16px 10px;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 900px) {
+  .descriptionContainer {
+    flex-direction: column;
+  }
+
+  .descriptionVideo {
+    position: static;
+    width: 100%;
+    min-width: unset;
+    border-right: none;
+    border-bottom: 1px solid #e6eef7;
+  }
+
+  .descriptionVideo video {
+    width: 96%;
+    max-width: 380px;
+    height: 210px;
+  }
+
+  .descriptionContent {
+    padding: 24px;
+    min-width: unset;
+  }
+}
+
+/* Smaller Devices */
+@media (max-width: 700px) {
+  .sectionCard,
+  .sectionCardAlt {
+    border-left-width: 3.5px;
+    border-radius: 8px;
+    padding: 11px 9px;
+  }
+
+  .cardHeader,
+  .secondTitle {
+    font-size: 1.05rem;
+  }
+
+  .descriptionTitle {
+    font-size: 1.18rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .descriptionContainer {
+    margin: 10px;
+    border-radius: 8px;
+  }
+
+  .descriptionContent {
+    padding: 12px 8px;
+  }
+}

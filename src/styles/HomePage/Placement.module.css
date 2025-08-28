@@ -1,0 +1,429 @@
+/* styles/HomePage/Placement.module.css */
+
+.placementSection {
+  padding: 40px 0;
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionHeading {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.sectionHeading h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+/* font-family: "Lato", sans-serif; */
+letter-spacing: 4px;
+text-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 10px #0073e6, 0 0 20px #182e4a,
+  0 0 20px #182e4a, 0 0 30px #182e4a, 0 0 30px #182e4a;
+background: linear-gradient(
+  90deg,
+  #fff 35%,
+  rgba(3, 163, 196, 1) 49%,
+  #fff 62%
+);
+-webkit-background-clip: text;
+color: transparent;
+text-align: center;
+}
+
+.titleUnderline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #a76b2e, #f18436);
+  margin: 15px auto 25px;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.sectionHeading p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.carouselContainer {
+  position: relative;
+  height: 450px;
+  width: 100%;
+  perspective: 2000px;
+  overflow: visible;
+}
+
+.carouselBackground {
+  position: absolute;
+  top: -100px;
+  left: -50%;
+  width: 200%;
+  height: 800px;
+  z-index: -1;
+}
+
+.carouselTrack {
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.placementCard {
+  position: absolute;
+  width: 280px;
+  height: 380px;
+  left: calc(50% - 140px);
+  top: 25px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  overflow: hidden;
+  transform-origin: center center;
+  user-select: none;
+}
+
+/* Active card (center) */
+.activeCard {
+  transform: translateZ(0) scale(1);
+  z-index: 10;
+  opacity: 1;
+}
+
+/* Adjacent cards */
+.prevCard {
+  transform: translateX(-120%) translateZ(-150px) scale(0.85);
+  z-index: 5;
+  opacity: 0.9;
+}
+
+.nextCard {
+  transform: translateX(120%) translateZ(-150px) scale(0.85);
+  z-index: 5;
+  opacity: 0.9;
+}
+
+/* Far adjacent cards */
+.farPrevCard {
+  transform: translateX(-240%) translateZ(-250px) scale(0.7);
+  z-index: 4;
+  opacity: 0.7;
+}
+
+.farNextCard {
+  transform: translateX(240%) translateZ(-250px) scale(0.7);
+  z-index: 4;
+  opacity: 0.7;
+}
+
+/* Extra far adjacent cards (visible on wider screens) */
+.extraFarPrevCard {
+  transform: translateX(-360%) translateZ(-350px) scale(0.6);
+  z-index: 3;
+  opacity: 0.5;
+}
+
+.extraFarNextCard {
+  transform: translateX(360%) translateZ(-350px) scale(0.6);
+  z-index: 3;
+  opacity: 0.5;
+}
+
+/* Hidden cards */
+.hiddenCard {
+  transform: translateX(0) translateZ(-500px) scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+
+.topImageContainer {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #f4f3f3;
+}
+
+.personImage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 5px 0px;
+  border: 4px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardInfo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+.personName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.salaryInfo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2a6dff;
+  margin: 5px 0;
+}
+
+.degreeInfo {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0 15px;
+}
+
+.companyInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.companyInfo p {
+  font-size: 0.9rem;
+  color: #777;
+  padding-top: 15px;
+}
+
+.logoContainer {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.companyLogo {
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselIndicators {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  z-index: 20;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.activeIndicator {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (min-width: 1440px) {
+  .placementCard {
+    width: 300px;
+    height: 400px;
+    left: calc(50% - 150px);
+  }
+
+  .prevCard {
+    transform: translateX(-140%) translateZ(-150px) scale(0.85);
+  }
+
+  .nextCard {
+    transform: translateX(140%) translateZ(-150px) scale(0.85);
+  }
+
+  .farPrevCard {
+    transform: translateX(-280%) translateZ(-250px) scale(0.7);
+  }
+
+  .farNextCard {
+    transform: translateX(280%) translateZ(-250px) scale(0.7);
+  }
+
+  .extraFarPrevCard {
+    transform: translateX(-420%) translateZ(-350px) scale(0.6);
+  }
+
+  .extraFarNextCard {
+    transform: translateX(420%) translateZ(-350px) scale(0.6);
+  }
+}
+
+@media (max-width: 1200px) {
+  .prevCard {
+    transform: translateX(-110%) translateZ(-150px) scale(0.8);
+  }
+
+  .nextCard {
+    transform: translateX(110%) translateZ(-150px) scale(0.8);
+  }
+
+  .farPrevCard {
+    transform: translateX(-220%) translateZ(-250px) scale(0.65);
+  }
+
+  .farNextCard {
+    transform: translateX(220%) translateZ(-250px) scale(0.65);
+  }
+}
+
+@media (max-width: 991px) {
+  .placementCard {
+    width: 260px;
+    height: 360px;
+    left: calc(50% - 130px);
+  }
+
+  .prevCard {
+    transform: translateX(-100%) translateZ(-150px) scale(0.75);
+  }
+
+  .nextCard {
+    transform: translateX(100%) translateZ(-150px) scale(0.75);
+  }
+
+  .farPrevCard {
+    transform: translateX(-200%) translateZ(-250px) scale(0.6);
+  }
+
+  .farNextCard {
+    transform: translateX(200%) translateZ(-250px) scale(0.6);
+  }
+
+  .extraFarPrevCard,
+  .extraFarNextCard {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .placementCard {
+    width: 240px;
+    height: 340px;
+    left: calc(50% - 120px);
+  }
+  .sectionHeading h2 {
+    font-size: 2.2rem;
+  }
+  .prevCard {
+    transform: translateX(-90%) translateZ(-100px) scale(0.7);
+  }
+
+  .nextCard {
+    transform: translateX(90%) translateZ(-100px) scale(0.7);
+  }
+
+  .farPrevCard,
+  .farNextCard {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 576px) {
+  .placementSection {
+    padding: 40px 0;
+  }
+
+  .sectionHeading h2 {
+    font-size: 2rem;
+  }
+
+  .carouselContainer {
+    height: 400px;
+  }
+
+  .placementCard {
+    width: 220px;
+    height: 320px;
+    left: calc(50% - 110px);
+  }
+
+  .prevCard {
+    transform: translateX(-80%) translateZ(-100px) scale(0.65);
+    opacity: 0.7;
+  }
+
+  .nextCard {
+    transform: translateX(80%) translateZ(-100px) scale(0.65);
+    opacity: 0.7;
+  }
+
+  .farPrevCard,
+  .farNextCard {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .personImage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .topImageContainer {
+    height: 120px;
+  }
+
+  .personName {
+    font-size: 1.3rem;
+  }
+
+  .salaryInfo {
+    font-size: 1.2rem;
+  }
+
+  .degreeInfo {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .sectionHeading h2 {
+    font-size: 1.8rem;
+  }
+}
+/* Special animation for starry background */
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}

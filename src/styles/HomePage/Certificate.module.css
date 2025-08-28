@@ -1,0 +1,269 @@
+.certificateSection {
+  background-color: white;
+  padding: 30px 20px;
+  color: #000000;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1800px;
+  width: 100%;
+}
+
+/* Added: container used in Certificate.js for the gradient box */
+.certificateBox {
+  border-radius: 0;
+}
+
+.certificateTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: rgb(1, 1, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 1, 98, 1) 35%,
+    rgb(3, 111, 133) 49%,
+    rgba(2, 2, 85, 1) 62%
+  );
+  -webkit-background-clip: text;
+  background-clip: text; /* standard property for compatibility */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.titleUnderline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #182848, #4776E6);
+  margin: 0px auto 25px;
+  border-radius: 2px;
+}
+
+.certificateSubtitle {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.certificateContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 40px;
+}
+
+.certificateImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 100%;
+  box-shadow: inset 2px 2px 2px 0px rgba(98, 96, 96, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.certificateImage img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  border: 2px solid #000000;
+}
+
+/* Added: outer wrapper around the image on desktop */
+.imageOuter {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Added: explicit image sizing to prevent overflow */
+.certificateImg {
+  width: 100%;
+  height: auto;
+  max-width: 600px; /* desktop default */
+}
+
+.certificateText {
+  flex: 2;
+  margin-left: 20px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+}
+
+.certificateText h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.certificateText p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.btnContainer{
+  display: flex;
+  justify-content: left;
+}
+
+.outlineBtn {
+  margin-left: 65px;
+  border: 2px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.outlineBtn:hover {
+  background: #007bff;;
+  color: #f1f1f1;
+}
+
+@media (min-width: 1024px) {
+  .certificateText p {
+      font-size: 1rem;
+  }
+  /* Slightly larger image on wider screens */
+  .certificateImg {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificateSection {
+    padding: 10px;
+  }
+
+  .certificateImg {
+    max-width: 520px;
+    max-height: 300px;
+  }
+
+  .certificateTitle {
+    font-size: 2.2rem;
+    margin-top: 20px;
+  }
+
+  .certificateContent {
+    flex-direction: column;
+  }
+
+  .certificateImage {
+    order: 2;
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .certificateImage img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .certificateText {
+    order: 3;
+    margin-left: 0;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .certificateText h2 {
+    font-size: 1rem;
+  }
+
+  .certificateText p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  
+.outlineBtn {
+  margin-left: 0px;
+  justify-content: center;
+  border: 2px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.outlineBtn:hover {
+  background: rgb(85, 104, 230);
+  color: #f1f1f1;
+  border: 2px solid #fafbfd;
+  transform: scale(1.05);
+}
+}
+
+@media (max-width: 576px) {
+  .certificateTitle {
+    font-size: 2rem;
+  }
+
+  .certificateText {
+    font-size: 0.9rem;
+  }
+
+  .certificateImg {
+    max-width: 460px;
+    max-height: 260px;
+  }
+
+  .certificateText h2 {
+    font-size: 1.2rem;
+  }
+
+  .certificateText p {
+    font-size: 0.85rem;
+  }
+
+  .outlineBtn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificateTitle {
+    font-size: 1.8rem;
+  }
+
+  .certificateText {
+    font-size: 0.85rem;
+  }
+
+  .certificateImg {
+    max-width: 420px;
+    max-height: 240px;
+  }
+
+  .certificateText h2 {
+    font-size: 1rem;
+  }
+
+  .certificateText p {
+    font-size: 0.8rem;
+  }
+
+  .outlineBtn {
+    font-size: 0.85rem;
+    padding: 7px 14px;
+  }
+}

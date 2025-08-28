@@ -1,0 +1,512 @@
+/* Page Header */
+.pageHeader {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(-45deg, #01021d, #01021d, #01041d);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Canvas */
+.squaresCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  max-width: 1400px;
+  z-index: 1;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.contentVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textSection {
+  flex: 1;
+  padding-right: 2rem;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content Container */
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Title Animation */
+.titleWrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+}
+
+.animateTitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #e8dbdb, #d0d7ea, #f8b20f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.titleUnderline {
+  height: 4px;
+  width: 80px;
+  background: linear-gradient(90deg, #f2a624, #462ded);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.titleUnderline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.titleWrapper:hover .titleUnderline {
+  width: 120px;
+}
+
+.title:hover {
+  text-shadow: 0 0 10px rgba(228, 157, 15, 0.8),
+    0 0 20px rgba(255, 204, 102, 0.6);
+}
+
+/* Description Animation */
+.description {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease 0.2s;
+  position: relative;
+  z-index: 1;
+  border-left: 3px solid rgba(242, 166, 36, 0.5);
+  padding-left: 1rem;
+  max-width: 650px;
+}
+
+.animateDescription {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.description:hover {
+  color: #fff;
+  border-left: 3px solid rgba(242, 166, 36, 1);
+}
+
+/* Button Container */
+.buttonContainer {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin-bottom: 0rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease 0.3s;
+}
+
+.animateButton {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.enrollButton {
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.enrollButton {
+  background-color: #f2a624;
+  color: white;
+  border: none;
+}
+
+.enrollButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s ease;
+  z-index: -1;
+}
+
+.enrollButton:hover::before {
+  left: 100%;
+}
+
+.buttonIcon {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.enrollButton:hover {
+  background-color: #462ded;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(70, 45, 237, 0.3);
+}
+
+.enrollButton:hover .buttonIcon .buttonIcon {
+  transform: translateX(5px);
+}
+
+/* Stats Container */
+.statsContainer {
+  display: flex;
+  gap: 2.5rem;
+  padding-top: 0.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease 0.4s;
+  position: relative;
+}
+
+.animateStats {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.statsContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.statItem:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1.25rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.statItem:hover {
+  transform: translateY(-5px);
+}
+
+.statNumber {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #f2a624;
+  text-shadow: 0 2px 10px rgba(242, 166, 36, 0.3);
+  transition: all 0.3s ease;
+}
+
+.statItem:hover .statNumber {
+  text-shadow: 0 2px 15px rgba(242, 166, 36, 0.5);
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.3rem;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+.iconCloudSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Large Screens */
+@media (min-width: 1441px) {
+  .content {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+  
+  .statNumber {
+    font-size: 2.4rem;
+  }
+}
+
+/* Standard Desktop */
+@media (max-width: 1440px) {
+  .title {
+    font-size: 2.8rem;
+  }
+  
+  .statsContainer {
+    gap: 2rem;
+  }
+}
+
+/* Small Desktop & Tablets */
+@media (max-width: 1024px) {
+  .content {
+    gap: 2rem;
+  }
+
+  .textSection {
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  
+  .titleUnderline {
+    margin: 0 auto;
+  }
+
+  .description {
+    font-size: 1rem;
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+    border-bottom: 3px solid rgba(242, 166, 36, 0.5);
+    padding-bottom: 1rem;
+  }
+  
+  .description:hover {
+    border-left: none;
+    border-bottom: 3px solid rgba(242, 166, 36, 1);
+  }
+  
+  .buttonContainer {
+    justify-content: center;
+  }
+  
+  .statsContainer {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Tablets & Large Mobile */
+@media (max-width: 768px) {
+  .content {
+    width: 95%;
+    height: auto;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .enrollButton {
+    padding: 10px 20px;
+  }
+
+  .iconCloudSection {
+    display: none;
+  }
+  
+  .statsContainer {
+    gap: 1.5rem;
+  }
+  
+  .statItem:not(:last-child)::after {
+    right: -0.75rem;
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .pageHeader {
+    padding: 1rem;
+    min-height: 550px;
+  }
+
+  .content {
+    height: auto;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    margin-bottom: 0rem;
+  }
+  
+  .buttonContainer {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.7rem;
+  }
+
+  .enrollButton {
+    padding: 12px 16px;
+    margin-top: 0;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .statsContainer {
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .statItem {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+  }
+  
+  .statItem:not(:last-child)::after {
+    display: none;
+  }
+  
+  .statNumber {
+    font-size: 1.5rem;
+  }
+  
+  .statLabel {
+    font-size: 0.8rem;
+    margin-top: 0;
+  }
+  
+  .iconCloudSection {
+    display: none;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 320px) {
+  .pageHeader {
+    padding: 0.8rem;
+    min-height: 500px;
+  }
+  .content {
+    height: auto;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 0.6rem;
+  }
+  
+  .statNumber {
+    font-size: 1.3rem;
+  }
+}

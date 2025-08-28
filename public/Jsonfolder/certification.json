@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Search Engine Optimization",
+    "imageUrl": "https://i.imgur.com/CiOOPlg.jpeg",
+    "alt": "SEO icon"
+  },
+  {
+    "label": "Email Marketing",
+    "imageUrl": "https://i.imgur.com/8gNqVGi.jpeg"
+  },
+  {
+    "label": "Content Marketing",
+    "imageUrl": "https://i.imgur.com/yLt5FHI.jpeg"
+  },
+  {
+    "label": "PPC",
+    "imageUrl": "https://i.imgur.com/cWowbnP.jpeg"
+  },
+  {
+    "label": "Social Media Marketing",
+    "imageUrl": "https://i.imgur.com/6xfVybh.jpeg"
+  },
+  {
+    "label": "Design Thinking",
+    "imageUrl": "https://i.imgur.com/feAkDfT.png"
+  }
+]

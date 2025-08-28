@@ -1,0 +1,412 @@
+/* Progress Container */
+.progressContainer {
+  padding: 4rem 2rem;
+  background: #fafafa;
+  color: #333;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 1rem;
+  color: #01021d;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #462ded, #f2a624);
+  border-radius: 2px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+}
+
+.progressContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Section Title */
+.sectionTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  border-left: 4px solid #f2a624;
+  padding-left: 1rem;
+}
+
+/* Progress Bars Section */
+.progressBarsSection {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.progressBarsSection:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.progressBarItem {
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease;
+}
+
+.progressBarItem.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.courseHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
+}
+
+.courseIcon {
+  background: linear-gradient(45deg, #462ded, #6246ea);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(70, 45, 237, 0.3);
+}
+
+.courseInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.progressCourseName {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.courseDescription {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.2rem;
+}
+
+.progressPercentage {
+  font-weight: 700;
+  color: #f2a624;
+  font-size: 1.2rem;
+  min-width: 48px;
+  text-align: right;
+}
+
+.progressBarWrapper {
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+  background: linear-gradient(90deg, #462ded, #f2a624);
+  position: relative;
+}
+
+.progressBarFill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  background: #f2a624;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Metrics Container */
+.metricsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 2rem;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.metricNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #462ded;
+  margin-bottom: 0.5rem;
+}
+
+.metricLabel {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Description Section */
+.progressDescriptionSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.descriptionCard {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.descriptionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.descriptionCard h2 {
+  color: #01021d;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.descriptionCard h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #f2a624, #462ded);
+  border-radius: 2px;
+}
+
+.descriptionContent {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.descriptionContent p {
+  margin-bottom: 1.5rem;
+}
+
+/* Industry Adoption Section */
+.industryTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+  color: #333;
+}
+
+.industryAdoption {
+  margin-bottom: 2rem;
+}
+
+.industryItem {
+  margin-bottom: 1rem;
+}
+
+.industryName {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.industryBarContainer {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.industryBar {
+  height: 100%;
+  background: linear-gradient(90deg, #f2a624, #462ded);
+  border-radius: 4px;
+  width: 0;
+}
+
+.industryPercentage {
+  position: absolute;
+  right: 0;
+  top: -1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f2a624;
+}
+
+/* CTA Section */
+.ctaSection {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.ctaButton {
+  background: #462ded;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(70, 45, 237, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  background: #f2a624;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(242, 166, 36, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .progressContent {
+    flex-direction: column;
+  }
+
+  .progressBarsSection, .progressDescriptionSection {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .metricsContainer {
+    padding: 1rem 0;
+  }
+
+  .metricNumber {
+    font-size: 1.8rem;
+  }
+
+  .industryName {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .progressContainer {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .metricsContainer {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .metricItem {
+    width: 45%;
+  }
+
+  .progressBarItem {
+    margin-bottom: 1.2rem;
+  }
+
+  .descriptionCard {
+    padding: 1.5rem;
+  }
+
+  .descriptionCard h2 {
+    font-size: 1.5rem;
+  }
+
+  .descriptionContent {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .progressBarsSection, .descriptionCard {
+    padding: 1rem;
+  }
+
+  .courseIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .progressCourseName {
+    font-size: 1rem;
+  }
+
+  .progressPercentage {
+    font-size: 1rem;
+  }
+
+  .metricItem {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .metricNumber {
+    font-size: 1.5rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+  }
+}

@@ -1,0 +1,94 @@
+.mainContainerMarquee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  min-height: 1.6rem;
+  height:20px;
+  overflow-x: hidden;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background: linear-gradient(to right, #9260fc, #739fd2, #5099bb);
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.mainContainerMarqueeTrack {
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.mainContainerMarqueeItems {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: marquee 45s linear infinite;
+}
+
+.mainContainerMarqueeItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  transition: all 0.1s ease-in-out;
+  font-size: 17px;
+  margin: 0 40px;
+}
+
+/* Media queries for responsive font sizes and spacing */
+@media (max-width: 768px) {
+  .mainContainerMarqueeItem {
+    font-size: 12px;
+    margin: 0 35px;
+  }
+  .mainContainerMarquee {
+    min-height: 2.2rem;
+  }
+  .mainContainerMarqueeItems {
+    animation: marquee 40s linear infinite;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainContainerMarqueeItem {
+    font-size: 10px;
+    margin: 0 30px;
+  }
+  .mainContainerMarquee {
+    min-height: 2rem;
+    padding: 8px 0;
+  }
+  /* Slow down animation on mobile for better readability */
+  .mainContainerMarqueeItems {
+    animation: marquee 40s linear infinite;
+  }
+}
+
+@media (max-width: 420px) {
+  .mainContainerMarqueeItem {
+    font-size: 10px;
+    margin: 0 30px;
+    line-height: 1.2;
+  }
+  .mainContainerMarquee {
+    min-height: 1.8rem;
+  }
+  .mainContainerMarqueeItems {
+    animation: marquee 40s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

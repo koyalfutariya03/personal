@@ -1,0 +1,9 @@
+[
+    { "label": "Google Drive", "imageUrl": "/google-drive.png", "top": "10%", "left": "30%" },
+    { "label": "Google Docs", "imageUrl": "/google-docs.png", "top": "10%", "left": "70%" },
+    { "label": "Notion", "imageUrl": "/notion.png", "top": "50%", "left": "10%" },
+    { "label": "Zapier", "imageUrl": "/zapier.png", "top": "50%", "left": "90%" },
+    { "label": "WhatsApp", "imageUrl": "/whatsapp.png", "top": "90%", "left": "30%" },
+    { "label": "Messenger", "imageUrl": "/messenger.png", "top": "90%", "left": "70%" }
+  ]
+  

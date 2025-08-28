@@ -1,0 +1,83 @@
+.counselorContainer {
+  max-width: 1800px;
+  width: 97.5%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.counselorContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  opacity: 3.5;
+  z-index: 1;
+  margin-left: 20px;
+  padding: 50px;
+}
+
+.counselorContent {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.counselorText {
+  width: 50%;
+  text-align: left;
+}
+
+.title {
+  font-size: 1.56rem;
+  line-height: 2rem;
+  font-weight: 650;
+  color: #27272a;
+}
+
+.subtitle {
+  color: #000000;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.eligibility {
+  color: #000000;
+  margin-top: 1.25rem;
+}
+
+.buttonContainer {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.requestButton {
+  background-color: #6c757d;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+
+.requestButton:hover {
+  background-color: #112e74;
+  color: #ffffff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .counselorContainer {
+    display: none;
+  }
+}

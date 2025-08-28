@@ -1,0 +1,65 @@
+/* Custom floating chat button */
+.customLauncher {
+  position: fixed;
+  top:74%;
+  right: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.customLauncher:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+} 
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .customLauncher {
+    bottom: 80px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Chat widget container to prevent full-screen */
+#tawkchat-container {
+  position: fixed !important;
+  width: 320px !important;
+  height: 450px !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  max-width: 90vw !important;  /* Ensure it doesn’t exceed viewport width */
+  max-height: 90vh !important;  /* Ensure it doesn’t exceed viewport height */
+}
+
+/* Prevent full-screen chat on mobile */
+@media (max-width: 768px) {
+  #tawkchat-container {
+    width: 280px !important;
+    height: 400px !important;
+    bottom: 15px !important;
+    right: 10px !important;
+    max-width: 80vw !important;
+    max-height: 80vh !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .customLauncher {
+    display: none;
+  }
+}

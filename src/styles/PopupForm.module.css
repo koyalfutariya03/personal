@@ -1,0 +1,1265 @@
+.popupFormOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 10px; /* Increased from 8px */
+  transition: backdrop-filter 0.3s ease;
+}
+
+.popupFormContainer {
+  /* Glass layer; background image moved to rightPane */
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  padding: 0; /* let content touch edges so left image has no inner border */
+  z-index: 1010;
+  border-radius: 10px; /* Increased from 8px */
+  width: 100%;
+  max-width: 760px; /* widened to fit image + form */
+  max-height: 82vh; /* Increased from 80vh */
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.3),
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+  animation: popupSlideIn 0.4s ease-out;
+  margin: auto;
+}
+
+/* Video Background */
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: 10px;
+  opacity: 0.2;
+}
+
+/* Popup slide-in animation */
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Lightning border effect */
+.lightningBorder {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: 12px; /* Match container */
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.lightningEdge {
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #0d47a1,
+    #1565c0,
+    #2196f3,
+    #ffffff,
+    #64b5f6,
+    #1976d2,
+    #0d47a1,
+    transparent
+  );
+  background-size: 400% 100%;
+  z-index: 10;
+}
+
+.lightningEdge.top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  animation: lightningMoveHorizontal 7s infinite linear;
+}
+
+.lightningEdge.right {
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  animation: lightningMoveVertical 7s infinite linear 1.75s;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    #0d47a1,
+    #1565c0,
+    #2196f3,
+    #ffffff,
+    #64b5f6,
+    #1976d2,
+    #0d47a1,
+    transparent
+  );
+  background-size: 100% 400%;
+}
+
+.lightningEdge.bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  animation: lightningMoveHorizontal 7s infinite linear 3.5s;
+}
+
+.lightningEdge.left {
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  animation: lightningMoveVertical 7s infinite linear 5.25s;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    #0d47a1,
+    #1565c0,
+    #2196f3,
+    #ffffff,
+    #64b5f6,
+    #1976d2,
+    #0d47a1,
+    transparent
+  );
+  background-size: 100% 400%;
+}
+
+@keyframes lightningMoveHorizontal {
+  0% {
+    background-position: -100% 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  50% {
+    background-position: 100% 0%;
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    background-position: 300% 0%;
+    opacity: 0;
+  }
+}
+
+@keyframes lightningMoveVertical {
+  0% {
+    background-position: 0% -100%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  50% {
+    background-position: 0% 100%;
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    background-position: 0% 300%;
+    opacity: 0;
+  }
+}
+
+/* Enhanced close button */
+.closeButton {
+  position: absolute;
+  top: 8px; /* Increased from 6px */
+  right: 8px; /* Increased from 6px */
+  width: 28px; /* Increased from 24px */
+  height: 28px; /* Increased from 24px */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1020;
+  transition: all 0.3s ease;
+  color: #111; /* black X for visibility */
+  font-size: 10px; /* Increased from 9px */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.35);
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton:active {
+  transform: scale(0.95);
+}
+
+.closeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Ensure SVG/X icon renders black as well */
+.closeButton svg {
+  width: 60%;
+  height: 60%;
+}
+.closeButton svg, .closeButton svg * {
+  stroke: #111 !important;
+  fill: #111 !important;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* stack logo above title */
+  gap: 6px;
+  margin-bottom: 12px; /* Increased from 8px */
+  position: relative;
+  z-index: 15;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 0;
+  margin-left: 6px; /* slight nudge to the right */
+  transform: translateX(6px); /* subtle shift right */
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0 0 8px rgba(0, 153, 255, 0.8));
+}
+
+.headerContainer h2 {
+  font-size: 18px; /* Increased from 15px */
+  font-weight: 700;
+  color: #111; /* black heading */
+  margin: 0;
+  text-shadow: none;
+  transition: all 0.3s ease-in-out;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.3px; /* Increased from 0.2px */
+}
+
+/* Two-column layout: left image + right form */
+.popupContent {
+  display: flex;
+  gap: 0; /* no visible spacing to the right of g.png */
+  align-items: stretch;
+}
+
+.leftPane,
+.rightPane {
+  flex: 0 0 50%; /* lock widths to avoid subpixel gap */
+  min-width: 0; /* prevent overflow */
+}
+
+.leftPane {
+  position: relative;
+  border-radius: 10px 0 0 10px; /* match container radius on left side */
+  overflow: hidden; /* clip to rounded corner without external gap */
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  display: flex;               /* allow precise alignment of image */
+  align-items: flex-start;     /* stick to top */
+  justify-content: flex-start; /* stick to left */
+}
+
+.sideImage {
+  width: 100%;
+  height: auto;                 /* fill pane height */
+  display: block; /* removes inline-gap */
+  object-fit: contain; /* no cropping */
+  object-position: left top;   /* hug top-left to remove top/right space */
+  border: 2px solid #131212;   /* light border for g.png */
+  border-radius: 10px 0 0 10px; /* match leftPane radius */
+}
+
+/* Ensure form column stacks content nicely */
+.rightPane {
+  display: flex;
+  flex-direction: column;
+  background: #faf9f6;           /* off-white background */
+  background-image: none;        /* remove background image */
+  background-repeat: no-repeat;
+  background-position: top center; /* keep alignment if needed */
+  background-size: cover;      /* fill width, keep aspect */
+  padding: 18px; /* preserve spacing for form content */
+  opacity: 1;                    /* remove fade */
+} 
+
+/* Stack on small screens */
+@media (max-width: 768px) {
+  .popupFormContainer {
+    max-width: 95vw;
+  }
+  .popupContent {
+    flex-direction: column;
+  }
+  .leftPane {
+    height: 110px; /* further reduced banner on mobile */
+    background: #faf9f6; /* match right pane background */
+    padding: 10px; /* create inner spacing around the image */
+    border-radius: 10px 10px 0 0; /* match stacked layout corners */
+  }
+  .sideImage {
+    height: 100%;
+    width: 100%;
+    object-fit: contain; /* keep full image visible */
+    object-position: center;
+    border: none; /* remove dark border on mobile */
+    border-radius: 8px; /* soft rounding like screenshot */
+    background: transparent; /* image sits on same bg as right pane */
+  }
+  /* Bigger logo on mobile for better clarity */
+  .logo {
+    width: 54px;
+    height: 54px;
+    margin-left: 0;
+    transform: none;
+    filter: drop-shadow(0 0 6px rgba(0, 153, 255, 0.6));
+  }
+}
+
+/* Glassmorphism form styling */
+.popupFormContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Increased from 6px */
+  position: relative;
+  z-index: 15;
+}
+
+.popupFormContainer form input {
+  width: 100%;
+  padding: 10px; /* Increased from 6px */
+  border-radius: 6px; /* Increased from 5px */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px; /* Increased from 11px */
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #111; /* black input text */
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.popupFormContainer form input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.3),
+    0 2px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.popupFormContainer form input::placeholder {
+  color: rgba(0, 0, 0, 0.7); /* black-ish placeholder */
+  font-weight: 500;
+  font-size: 12px; /* Increased from 10px */
+}
+
+.popupFormContainer form input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 12px; /* Increased from 10px */
+}
+
+.popupFormContainer form input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 12px; /* Increased from 10px */
+}
+
+/* Course Select Dropdown Styling */
+.courseSelect {
+  width: 100%;
+  padding: 10px; /* Match input padding */
+  border-radius: 6px; /* Match input border-radius */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px; /* Match input font-size */
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #111; /* black select text */
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  
+  /* Remove default browser styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Custom dropdown arrow */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 35px; /* Make room for arrow */
+}
+
+.courseSelect:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.3),
+    0 2px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.courseSelect:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Option styling */
+.courseSelect option {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  padding: 8px;
+  border: none;
+}
+
+.courseSelect option:first-child {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.courseSelect option:not(:first-child) {
+  color: #111;
+}
+
+.courseSelect option:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.courseSelect option:checked {
+  background: rgba(0, 123, 255, 0.8);
+}
+
+/* Firefox specific styling */
+@-moz-document url-prefix() {
+  .courseSelect {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  }
+}
+
+/* Webkit specific styling */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .courseSelect {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  }
+}
+
+.termsCheckbox {
+  width: 100%;
+  display: flex;
+  padding: 10px; /* Increased from 6px */
+  align-items: flex-start;
+  border-radius: 6px; /* Increased from 5px */
+  font-size: 10px; /* Increased from 8px */
+  line-height: 1.2; /* Increased from 1.1 */
+  color: #111; /* black text */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 6px; /* Increased from 5px */
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.termsCheckbox span input[type="checkbox"] {
+  margin-top: 1px;
+  cursor: pointer;
+  transform: scale(0.9); /* Increased from 0.8 */
+}
+
+.termsCheckbox label {
+  color: #111;
+  font-size: 10px; /* Increased from 8px */
+}
+
+.termsCheckbox a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.termsCheckbox a:hover {
+  text-decoration: underline;
+  text-shadow: none;
+}
+
+/* Primary submit button (blue theme) */
+.popupFormContainer form button {
+  width: 100%;
+  padding: 12px; /* Increased from 8px */
+  background: linear-gradient(135deg, #2563eb, #1d4ed8); /* blue */
+  border: 1px solid #1e40af; /* darker blue border */
+  color: #fff; /* white text */
+  border-radius: 6px; /* Increased from 5px */
+  font-size: 14px; /* Increased from 12px */
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.1s ease;
+  box-shadow:
+    0 6px 18px rgba(37, 99, 235, 0.25), /* blue glow */
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.8px; /* Increased from 0.6px */
+  text-shadow: none; /* keep crisp on blue */
+}
+
+.popupFormContainer form button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow:
+    0 8px 22px rgba(37, 99, 235, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  border-color: #1e3a8a;
+}
+
+/* Focus ring for accessibility */
+.popupFormContainer form button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(147, 197, 253, 0.8), /* light blue ring */
+    0 6px 18px rgba(37, 99, 235, 0.25);
+}
+
+/* Pressed state */
+.popupFormContainer form button:active:not(:disabled) {
+  transform: translateY(0) scale(0.99);
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+}
+
+/* Disabled look */
+.popupFormContainer form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+/* Large screens - Increased height to 82% */
+@media (min-width: 1200px) {
+  .popupFormContainer {
+    max-width: 820px; /* room for two columns on large screens */
+    max-height: 82vh; /* Increased from 80vh */
+    padding: 0; /* no inner border around left image */
+  }
+
+  .headerContainer h2 {
+    font-size: 24px; /* Increased from 22px */
+  }
+
+  .headerContainer {
+    margin-bottom: 22px; /* Increased from 20px */
+  }
+
+  .logo {
+    width: 45px; /* Increased from 40px */
+    height: 45px; /* Increased from 40px */
+  }
+
+  .popupFormContainer form {
+    gap: 14px; /* Increased from 12px */
+  }
+
+  .popupFormContainer form input,
+  .courseSelect {
+    padding: 12px; /* Increased from 8px */
+    font-size: 15px; /* Increased from 14px */
+  }
+
+  .popupFormContainer form input::placeholder {
+    font-size: 14px; /* Increased from 12px */
+  }
+
+  .popupFormContainer form button {
+    padding: 14px; /* Increased from 12px */
+    font-size: 16px; /* Increased from 14px */
+  }
+
+  .rightPane {
+    padding: 24px; /* large screen padding for form */
+  }
+
+  .termsCheckbox {
+    padding: 12px; /* Increased from 9px */
+    font-size: 13px; /* Increased from 11px */
+  }
+
+  .termsCheckbox label {
+    font-size: 13px; /* Increased from 12px */
+  }
+
+  .statusMessage {
+    font-size: 15px; /* Increased from 14px */
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    width: 34px; /* Increased from 32px */
+    height: 34px; /* Increased from 32px */
+    font-size: 12px;
+  }
+}
+
+/* Medium screens - mimic desktop centered width (no full-bleed) */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .popupFormOverlay { padding: 10px; }
+  .popupFormContainer {
+    width: 100%;
+    max-width: 760px; /* align with desktop base */
+    margin: auto;
+    max-height: 82vh; /* keep height constraint */
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.3),
+      0 4px 15px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  .leftPane { padding: 0; border-radius: 10px 0 0 10px; }
+  .sideImage { width: 100%; height: 100%; object-fit: cover; object-position: left center; border-radius: 10px 0 0 10px; }
+  .headerContainer h2 {
+    font-size: 19px; /* Increased from 16px */
+  }
+
+  .logo {
+    width: 35px; /* Increased from 28px */
+    height: 35px; /* Increased from 28px */
+  }
+
+  .popupFormContainer form {
+    gap: 10px; /* Increased from 6px */
+  }
+
+  .popupFormContainer form input,
+  .courseSelect {
+    padding: 10px; /* Increased from 6px */
+    font-size: 13px; /* Increased from 11px */
+  }
+
+  .popupFormContainer form input::placeholder {
+    font-size: 12px; /* Increased from 10px */
+  }
+
+  .termsCheckbox {
+    padding: 10px; /* Increased from 6px */
+    font-size: 11px; /* Increased from 8px */
+  }
+
+  .termsCheckbox label {
+    font-size: 11px; /* Increased from 8px */
+  }
+
+  .popupFormContainer form button {
+    padding: 12px; /* Increased from 8px */
+    font-size: 14px; /* Increased from 12px */
+  }
+
+  .rightPane {
+    padding: 18px; /* medium screen padding for form */
+  }
+
+  .headerContainer {
+    margin-bottom: 12px; /* Increased from 8px */
+  }
+
+  .closeButton {
+    top: 8px;
+    right: 8px;
+    width: 30px; /* Increased from 28px */
+    height: 30px; /* Increased from 28px */
+
+    font-size: 11px;
+  }
+}
+
+/* Small to medium screens - Increased height to 85% */
+@media (max-width: 768px) and (min-width: 481px) {
+  .popupFormOverlay {
+    padding: 8px; /* Increased from 6px */
+  }
+
+  .popupFormContainer {
+    max-width: 320px; /* Increased from 280px */
+    max-height: 100vh; /* Increased from 85vh */
+    padding: 16px; /* Increased from 12px */
+  }
+
+  .headerContainer {
+    margin-bottom: 12px; /* Increased from 8px */
+  }
+
+  .headerContainer h2 {
+    font-size: 17px; /* Increased from 14px */
+  }
+
+  .logo {
+    width: 32px; /* Increased from 26px */
+    height: 32px; /* Increased from 26px */
+    margin-right: 7px; /* Increased from 5px */
+    margin-left: -15px; /* Increased from -12px */
+  }
+
+  .closeButton {
+    top: 7px; /* Increased from 5px */
+    right: 7px; /* Increased from 5px */
+    width: 26px; /* Increased from 22px */
+    height: 26px; /* Increased from 22px */
+    font-size: 9px; /* Increased from 8px */
+  }
+
+  .popupFormContainer form {
+    gap: 8px; /* Increased from 5px */
+  }
+
+  .popupFormContainer form input,
+  .courseSelect {
+    padding: 8px; /* Increased from 5px */
+    font-size: 12px; /* Increased from 10px */
+    border-radius: 5px; /* Increased from 4px */
+  }
+
+  .popupFormContainer form input::placeholder {
+    font-size: 11px; /* Increased from 9px */
+  }
+
+  .termsCheckbox {
+    padding: 8px; /* Increased from 5px */
+    font-size: 9px; /* Increased from 7px */
+    gap: 5px; /* Increased from 4px */
+    border-radius: 5px; /* Increased from 4px */
+  }
+
+  .termsCheckbox label {
+    font-size: 9px; /* Increased from 7px */
+  }
+
+  .termsCheckbox span input[type="checkbox"] {
+    transform: scale(0.8); /* Increased from 0.7 */
+  }
+
+  .popupFormContainer form button {
+    padding: 10px; /* Increased from 7px */
+    font-size: 13px; /* Increased from 11px */
+    border-radius: 5px; /* Increased from 4px */
+  }
+}
+
+/* Status message styling - more compact */
+.statusMessage {
+  margin-bottom: 8px; /* Increased from 5px */
+  padding: 6px; /* Increased from 4px */
+  border-radius: 5px; /* Increased from 4px */
+  text-align: center;
+  font-size: 14px; /* Increased from 9px */
+  font-weight: 600;
+  animation: fadeIn 0.3s ease;
+  position: relative;
+  z-index: 15;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  line-height: 1.2; /* Increased from 1.1 */
+}
+
+.success {
+  background: rgba(76, 175, 80, 0.3);
+  color: #111;
+  border-color: rgba(76, 175, 80, 0.5);
+  text-shadow: none;
+}
+
+.error {
+  background: rgba(244, 67, 54, 0.3);
+  color: #111;
+  border-color: rgba(244, 67, 54, 0.5);
+  text-shadow: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Button loading state - more compact */
+.submitting {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.buttonText {
+  margin-right: 6px; /* Increased from 4px */
+  color: #2563eb; /* Blue text */
+  font-weight: 500;
+}
+
+.buttonLoader {
+  display: inline-block;
+  width: 12px; /* Increased from 10px */
+  height: 12px; /* Increased from 10px */
+  border: 2px solid rgba(37, 99, 235, 0.3); /* Blue border */
+  border-radius: 50%;
+  border-top-color: #2563eb; /* Solid blue spinner */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Form validation visual cues */
+.popupFormContainer form input:focus:invalid,
+.courseSelect:focus:invalid {
+  border-color: rgba(244, 67, 54, 0.8);
+  box-shadow: 0 0 0 1px rgba(244, 67, 54, 0.3);
+}
+
+.popupFormContainer form input:focus:valid,
+.courseSelect:focus:valid {
+  border-color: rgba(76, 175, 80, 0.8);
+  box-shadow: 0 0 0 1px rgba(76, 175, 80, 0.3);
+}
+
+/* Remove scrollbars completely */
+.popupFormContainer {
+  overflow: hidden;
+}
+
+.popupFormOverlay {
+  overflow: hidden;
+}
+
+/* Ensure no horizontal scrolling */
+.popupFormContainer * {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+
+/* Enhanced Location Container with Suggestions */
+.locationContainer {
+  position: relative;
+  width: 100%;
+}
+
+/* Simplified Suggestions Dropdown - Less Animations */
+.suggestionsDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95); /* light background for black text */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  
+  /* Scrollable properties */
+  max-height: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  
+  /* Minimal slide animation */
+  animation: fadeIn 0.2s ease-out;
+  
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Simplified slide animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Simplified suggestion items - Minimal hover effects */
+.suggestionItem {
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 44px;
+  
+  /* Minimal transition - only for background */
+  transition: background-color 0.15s ease;
+  
+  /* Prevent text selection */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Simplified hover effect - just background change */
+.suggestionItem:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Active state for keyboard navigation */
+.suggestionActive {
+  background: rgba(59, 130, 246, 0.2);
+  color: #111;
+}
+
+.suggestionItem:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* Simplified suggestion text */
+.suggestionText {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Simplified suggestion icons - no animations */
+.suggestionIcon {
+  font-size: 14px;
+  opacity: 0.7;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+/* Simplified "more items" indicator */
+.suggestionMore {
+  padding: 8px 15px;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-style: italic;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Simplified empty state */
+.suggestionEmpty {
+  padding: 16px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Simplified Custom Scrollbar Styling */
+.suggestionsDropdown::-webkit-scrollbar {
+  width: 4px;
+}
+
+.suggestionsDropdown::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.suggestionsDropdown::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.suggestionsDropdown::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Firefox scrollbar styling */
+.suggestionsDropdown {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
+
+/* Loading indicator - simplified */
+.loadingIndicator {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.loadingSpinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+/* Responsive design - simplified */
+@media (min-width: 1200px) {
+  .suggestionsDropdown {
+    max-height: 150px;
+  }
+  
+  .suggestionItem {
+    padding: 14px 18px;
+    font-size: 14px;
+    min-height: 48px;
+  }
+  
+  .suggestionIcon {
+    font-size: 16px;
+    width: 22px;
+  }
+  
+  .suggestionsDropdown::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+  .suggestionsDropdown {
+    max-height: 150px;
+  }
+  
+  .suggestionItem {
+    padding: 12px 15px;
+    font-size: 13px;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .suggestionsDropdown {
+    max-height: 120px;
+  }
+  
+  .suggestionItem {
+    padding: 10px 12px;
+    font-size: 12px;
+    min-height: 40px;
+  }
+  
+  .suggestionIcon {
+    font-size: 12px;
+    width: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .suggestionsDropdown {
+    max-height: 80px;
+  }
+  
+  .suggestionItem {
+    padding: 8px 10px;
+    font-size: 11px;
+    min-height: 36px;
+    gap: 8px;
+  }
+  
+  .suggestionIcon {
+    font-size: 12px;
+    width: 16px;
+  }
+  
+  .suggestionText {
+    font-size: 11px;
+  }
+  
+  .suggestionsDropdown::-webkit-scrollbar {
+    width: 2px;
+  }
+}
+
+/* Hide scrollbar on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .suggestionsDropdown::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+/* Simple focus state for accessibility */
+.suggestionItem:focus {
+  outline: 1px solid rgba(59, 130, 246, 0.6);
+  outline-offset: -1px; 
+  background: rgba(59, 130, 246, 0.15);
+}
+
+/* ---------- Responsive improvements for popup layout & image ---------- */
+/* Large desktop tweaks (1200px - 1439px): give form a bit more width, keep image uncropped */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .leftPane { flex: 0 0 45%; }
+  .rightPane { flex: 0 0 55%; }
+  .sideImage { height: 100%; object-fit: cover; object-position: left top; }
+}
+
+/* Desktop/tablet landscape (992px - 1199px): prioritize form, ensure image fills pane gracefully */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .leftPane { flex: 0 0 42%; }
+  .rightPane { flex: 0 0 58%; }
+  .sideImage { height: 100%; object-fit: cover; object-position: left top; }
+}
+
+/* Tablet portrait and small laptops (600px - 1024px): mimic desktop centered width */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .popupFormOverlay { padding: 10px; }
+  .popupFormContainer {
+    width: 100%;
+    max-width: 760px; /* same as desktop base */
+    margin: auto;
+    border-radius: 10px;
+    /* restore subtle border and shadow like desktop */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.3),
+      0 4px 15px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  .popupContent { flex-direction: row; align-items: stretch; }
+  .leftPane { flex: 0 0 48%; height: auto; padding: 0; border-radius: 10px 0 0 10px; }
+  .rightPane { flex: 0 0 52%; padding: 16px; }
+  .sideImage { height: 100%; width: 100%; max-height: 100%; object-fit: cover; object-position: left center; border-radius: 10px 0 0 10px; /* keep base border */ }
+}
+
+/* Mobile and small devices (<= 600px): stack, full-width banner image */
+@media (max-width: 600px) {
+  .popupContent { flex-direction: column; }
+  .leftPane { height: 95px; padding: 10px; border-radius: 10px 10px 0 0; overflow: hidden; background: #faf9f6; }
+  .sideImage {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* show full graphic like screenshot */
+    object-position: center;
+    margin: 0;
+    display: block;
+    border: none;
+    border-radius: 8px;
+  }
+  .rightPane { padding: 14px; }
+  .logo { width: 60px; height: 60px; margin-right: 0; margin-left: 0; }
+}
+
+/* Extra small phones (<= 400px): slightly shorter banner but still readable */
+@media (max-width: 400px) {
+  .popupFormContainer { max-width: 99vw; padding: 6px; }
+  .leftPane { height: 85px; padding: 10px; background: #faf9f6; }
+  .sideImage { width: 100%; height: 100%; object-fit: contain; object-position: center; border: none; border-radius: 8px; }
+  .logo { width: 66px; height: 66px; }
+}
+
+/* ---------------- Mobile-only scrolling behaviour ---------------- */
+/* Ensure the popup can scroll vertically on small screens while the body
+   remains locked (via .noScroll). This overrides the default hidden overflow. */
+@media (max-width: 768px) {
+  .popupFormOverlay {
+    overflow-y: auto; /* allow vertical scroll on overlay */
+    -webkit-overflow-scrolling: touch; /* smooth on iOS */
+    align-items: flex-start; /* start from top so header stays visible */
+    padding-top: 10px; /* breathing space from top */
+  }
+
+  .popupFormContainer {
+    max-height: none; /* remove vh constraint to allow full content height */
+    overflow: visible; /* let content define height; scrolling is on overlay */
+    margin: 10px auto; /* center with small margins inside overlay */
+  }
+}
+
+/* Extra-narrow phones: keep same behavior */
+@media (max-width: 480px) {
+  .popupFormOverlay { overflow-y: auto; }
+  .popupFormContainer { max-height: none; }
+}
+
+/* ---------------- Desktop overflow fix ---------------- */
+/* Prevent cutoff at 100% zoom by enabling overlay scroll on desktop
+   and letting the container grow naturally. */
+@media (min-width: 769px) {
+  .popupFormOverlay {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    align-items: flex-start; /* start from top so header stays visible */
+    padding-top: 20px; /* breathing space */
+  }
+  .popupFormContainer {
+    max-height: none; /* remove vh constraint */
+    margin: 20px auto; /* ensure spacing inside overlay */
+  }
+}

@@ -1,0 +1,121 @@
+/* Main container sized for a navbar */
+.logoContainer {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: default;
+  overflow: visible;
+}
+
+.linesContainer {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+
+/* Center arrow animation */
+.centerArrow {
+  position: relative;
+  z-index: 10;
+  animation: upDownSmall 2s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Smaller up-down animation */
+@keyframes upDownSmall {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Arc lines base styles */
+.arcLine {
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: center;
+  box-sizing: border-box;
+  will-change: transform;
+}
+
+.arcLine {
+  border-width: 4px;
+}
+
+/* Outer line - #2CA7EF */
+.line1 {
+  width: 48px;           
+  height: 48px;    
+  top: 50%;
+  left: 50%;
+  border-color: transparent; 
+  border-top-color: #2CA7EF;
+  border-right-color: #2CA7EF;
+  animation: rotate1Flat 8s linear infinite;
+}
+
+/* Middle line - #224368 */
+.line2 {
+  width: 36px;
+  height: 36px;
+  top: 50%;
+  left: 50%;
+  border-color: transparent;
+  border-top-color: #224368;
+  border-left-color: #224368;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  animation: rotate2Flat 6s linear infinite;
+}
+
+/* Inner line - #2CA7EF */
+.line3 {
+  width: 24px; 
+  height: 24px;  
+  top: 50%;
+  left: 50%;
+  border-color: transparent;
+  border-top-color: #2CA7EF;
+  border-right-color: #2CA7EF;
+  transform: translate(-50%, -50%) rotateZ(90deg); 
+  animation: rotate3Flat 10s linear infinite;
+}
+
+
+@keyframes rotate1Flat {
+  from {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate2Flat {
+  from {
+    transform: translate(-50%, -50%) rotateZ(45deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateZ(-315deg);
+  }
+}
+
+@keyframes rotate3Flat {
+  from {
+    transform: translate(-50%, -50%) rotateZ(90deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateZ(450deg);
+  }
+}

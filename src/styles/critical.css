@@ -1,0 +1,48 @@
+/* File: styles/critical.css (new file) */
+
+/* Core styles needed for above-the-fold content */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  /* Critical styles for Chevron component */
+  .containerCH {
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1800px;
+    width: 97.5%;
+    padding-bottom: 50px;
+  }
+  
+  .containerCH h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-shadow: 0 0 0px #fff, 0 0 10px #fff, 0 0 10px #0073e6, 0 0 20px #182e4a, 0 0 20px #182e4a, 0 0 30px #182e4a, 0 0 30px #182e4a;
+    background: linear-gradient(90deg, #fff 35%, rgba(3, 163, 196, 1) 49%, #fff 62%);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+  }
+  
+  .titleUnderline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #a76b2e, #f18436);
+    margin: 15px auto 25px;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+  }
+  
+  /* Only basic styles for phases - detailed styling can be loaded later */
+  .phases {
+    text-align: center;
+    margin-top: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 7px 5px 5px #000000;
+  }

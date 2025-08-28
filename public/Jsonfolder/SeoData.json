@@ -1,0 +1,1057 @@
+{
+    "pages": {
+      "sapAbap": {
+        "metaTitle": "SAP ABAP Training | SAP Certification Courses in {city}",
+        "metaDescription": "Learn SAP ABAP with expert-led training at Connecting Dots ERP. Boost your career with in-depth SAP ABAP training and placement support in {city}.",
+        "metaKeywords": "SAP ABAP Course in {city}, SAP ABAP Training Institute in {city}, Best SAP ABAP Training Institute in {city}, SAP ABAP Jobs, SAP ABAP Certificate in {city}, SAP ABAP Certificate Course in {city}, SAP ABAP Course Fees, SAP ABAP Course near me, SAP ABAP Training Fees in {city}, SAP ABAP Training Fees, SAP ABAP Interview Preparation, SAP ABAP Mock Interview, SAP ABAP Tutorial, SAP ABAP Summer Training, SAP ABAP Training in {city}, SAP ABAP Industrial Training, SAP ABAP Internship, How to become SAP ABAP expert in {city}, SAP ABAP course Syllabus, SAP ABAP training Syllabus, SAP ABAP class near me, SAP ABAP course near me, SAP ABAP training near me, SAP ABAP review, SAP ABAP course program, Connecting Dots ERP’s SAP ABAP Course, Connecting Dots ERP’s SAP ABAP Training Institute in {city}",
+        "robots": "index, follow",
+        "author": "Connecting Dots ERP SAP Training Institute",
+        "viewport": "width=device-width, initial-scale=1",
+        "ogTags": {
+          "ogtitle": "SAP ABAP Training | SAP Certification Courses in {city}",
+          "ogdescription": "Join Connecting Dots ERP for comprehensive SAP ABAP training in {city} with placement support. Learn from industry experts.",
+          "ogimage": "/Navbar/connecting dot erp logo.avif",
+          "ogurl": "https://www.connectingdotserp.com/sap-abap-course-in-{city.toLowerCase()}",
+          "ogtype": "website",
+          "oglocale": "en_US",
+          "ogsite_name": "Connecting Dots ERP"
+        },
+        
+        "twitterTags": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "SAP ABAP Training in {city} | Connecting Dots ERP",
+          "twitter:description": "Get industry-recognized SAP ABAP training at Connecting Dots ERP in {city}. Start your career in SAP with expert guidance and placement assistance.",
+          "twitter:site": "@CD_ERP"
+        },
+        "schemaMarkup": {
+          "@context": "https://schema.org",
+          "@type": ["Organization", "LocalBusiness"],
+          "name": "Connecting Dots ERP SAP Training Institute",
+          "url": "https://www.connectingdotserp.com",
+          "logo": "/Navbar/connecting dot erp logo.avif",
+          "sameAs": [
+            "https://www.facebook.com/sapinstallation.pune.9",
+            "https://x.com/CD_ERP",
+            "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+919004002958",
+            "contactType": "Customer Support",
+            "areaServed": "IN",
+            "availableLanguage": ["English"]
+          },
+          "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies. Upon completing both the theoretical and practical components of the course, including hands-on projects, trainees—whether freshers or corporate professionals—receive certification that significantly enhances their resumes. This certification validates your expertise and opens doors to top positions in renowned global organizations.",
+          "address": [
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+              "addressLocality": "Pune",
+              "addressRegion": "MH",
+              "postalCode": "411027",
+              "addressCountry": "IN"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "8th Floor, Paradise Tower, next to McDonald's, Naupada, Thane West, Mumbai",
+              "addressLocality": "Mumbai",
+              "addressRegion": "Thane",
+              "postalCode": "400601",
+              "addressCountry": "IN"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "8th Floor, Paradise Tower, next to McDonald's, Naupada, Thane West, Raipur",
+              "addressLocality": "Chhattisgarh",
+              "addressRegion": "Raipur",
+              "postalCode": "492001",
+              "addressCountry": "IN"
+            }
+          ],
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "18.586532821424697",
+            "longitude": "73.78137250928907"
+          },
+          "foundingDate": "2013",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "Nitendra Singh"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "185"
+          },
+          "openingHours": "Mo-Sun 24 hours",
+          "priceRange": "$$",
+          "paymentAccepted": ["Cash", "UPI", "Net Banking", "Cheque", "Bank Transfer", "Credit Card"],
+          "currenciesAccepted": "INR",
+          "telephone": "+919004002958"
+        }
+      },
+      "sap-fico-course-in-pune": {
+        "metaTitle": "SAP FICO Training | SAP Certification Courses in {city}",
+        "metaDescription": "Join our SAP FICO course in {city} to gain expertise in Financial Accounting and Controlling and enhance your career opportunities.",
+        "metaKeywords": "SAP FICO Course in {city}, SAP FICO Training Institute in {city}, Best SAP FICO Training Institute in {city}, SAP FICO Jobs, SAP FICO Certificate in {city}, SAP FICO Certificate Course in {city}, SAP FICO Course Fees, SAP FICO Training Fees in {city}, SAP FICO Interview Preparation, SAP FICO Mock Interview, SAP FICO Tutorial, SAP FICO Summer Training, SAP FICO Training in {city}, SAP FICO Industrial Training, SAP FICO Internship, How to become SAP FICO expert in {city}, SAP FICO course Syllabus",
+        "robots": "index, follow",
+        "author": "Connecting Dots ERP SAP Training Institute",
+        "viewport": "width=device-width, initial-scale=1",
+        "ogTags": {
+          "og:title": "SAP FICO Training | SAP Certification Courses in {city}",
+          "og:description": "Enroll in our comprehensive SAP FICO training in {city} with expert guidance and placement support.",
+          "og:image": "/Navbar/connecting dot erp logo.avif",
+          "og:url": "https://www.connectingdotserp.com/sap-fico-course-in-{city.toLowerCase()}",
+          "og:type": "website",
+          "og:locale": "en_US",
+          "og:site_name": "Connecting Dots ERP"
+        },
+        "twitterTags": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "SAP FICO Training in {city} | Connecting Dots ERP",
+          "twitter:description": "Get recognized SAP FICO training at Connecting Dots ERP in {city}. Start your career in Finance with expert guidance.",
+          "twitter:site": "@CD_ERP"
+        },
+        "schemaMarkup": {
+          "@context": "https://schema.org",
+          "@type": ["Organization", "LocalBusiness"],
+          "name": "Connecting Dots ERP SAP Training Institute",
+          "url": "https://www.connectingdotserp.com",
+          "logo": "/Navbar/connecting dot erp logo.avif",
+          "sameAs": [
+            "https://www.facebook.com/sapinstallation.pune.9",
+            "https://x.com/CD_ERP",
+            "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+919004002958",
+            "contactType": "Customer Support",
+            "areaServed": "IN",
+            "availableLanguage": ["English"]
+          },
+          "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies... We offer expert-led training in SAP, Software Development, Digital Marketing, and HR courses with strong placement support for your career.",
+          "address": [
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+              "addressLocality": "Pune",
+              "addressRegion": "MH",
+              "postalCode": "411027",
+              "addressCountry": "IN"
+            },
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "8th Floor, Paradise Tower, next to McDonald's, Naupada, Thane West, Mumbai",
+              "addressLocality": "Mumbai",
+              "addressRegion": "Thane",
+              "postalCode": "400601",
+              "addressCountry": "IN"
+            }
+          ],
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "18.586532821424697",
+            "longitude": "73.78137250928907"
+          },
+          "foundingDate": "2013",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "Nitendra Singh"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "185"
+          },
+          "openingHours": "Mo-Sun 24 hours",
+          "priceRange": "$$",
+          "paymentAccepted": ["Cash", "UPI", "Net Banking", "Cheque", "Bank Transfer", "Credit Card"],
+          "currenciesAccepted": "INR",
+          "telephone": "+919004002958"
+        }
+      },
+      "sapHana": {
+        "metaTitle": "SAP HANA Training | SAP Certification Courses in {city}",
+        "metaDescription": "Join our SAP HANA course in {city} to gain expertise in in-memory database technology and enhance your career opportunities.",
+        "metaKeywords": "SAP HANA Course in {city}, SAP HANA Training Institute in {city}, Best SAP HANA Training Institute in {city}, SAP HANA Jobs, SAP HANA Certificate in {city}, SAP HANA Certificate Course in {city}, SAP HANA Course Fees, SAP HANA Training Fees in {city}, SAP HANA Interview Preparation, SAP HANA Mock Interview, SAP HANA Tutorial, SAP HANA Summer Training, SAP HANA Training in {city}, SAP HANA Industrial Training, SAP HANA Internship, How to become SAP HANA expert in {city}, SAP HANA course Syllabus",
+        "robots": "index, follow",
+        "author": "Connecting Dots ERP SAP Training Institute",
+        "viewport": "width=device-width, initial-scale=1",
+        "ogTags": {
+          "og:title": "SAP HANA Training | SAP Certification Courses in {city}",
+          "og:description": "Enroll in our comprehensive SAP HANA training in {city} with expert guidance and placement support.",
+          "og:image": "/Navbar/connecting dot erp logo.avif",
+          "og:url": "https://www.connectingdotserp.com/sap-hana-course-in-{city.toLowerCase()}",
+          "og:type": "website",
+          "og:locale": "en_US",
+          "og:site_name": "Connecting Dots ERP"
+        },
+        "twitterTags": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "SAP HANA Training in {city} | Connecting Dots ERP",
+          "twitter:description": "Get recognized SAP HANA training at Connecting Dots ERP in {city}. Start your career in HANA with expert guidance.",
+          "twitter:site": "@CD_ERP"
+        },
+        "schemaMarkup": {
+          "@context": "https://schema.org",
+          "@type": ["Organization", "LocalBusiness"],
+          "name": "Connecting Dots ERP SAP Training Institute",
+          "url": "https://www.connectingdotserp.com",
+          "logo": "/Navbar/connecting dot erp logo.avif",
+          "sameAs": [
+            "https://www.facebook.com/sapinstallation.pune.9",
+            "https://x.com/CD_ERP",
+            "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+919004002958",
+            "contactType": "Customer Support",
+            "areaServed": "IN",
+            "availableLanguage": ["English"]
+          },
+          "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+            "addressLocality": "Pune",
+            "addressRegion": "MH",
+            "postalCode": "411027",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "18.586532821424697",
+            "longitude": "73.78137250928907"
+          },
+          "foundingDate": "2013",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "Nitendra Singh"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "185"
+          },
+          "openingHours": "Mo-Sun 24 hours",
+          "priceRange": "$$",
+          "paymentAccepted": ["Cash", "Credit Card"],
+          "currenciesAccepted": "INR",
+          "telephone": "+919004002958"
+        }
+      },
+      "sapHRHCM": {
+      "metaTitle": "SAP HR HCM Training | SAP Certification Courses in {city}",
+      "metaDescription": "Join our SAP HR HCM course in {city} to gain expertise in Human Capital Management and enhance your career opportunities.",
+      "metaKeywords": "SAP HR HCM Course in {city}, SAP HR HCM Training Institute in {city}, Best SAP HR HCM Training Institute in {city}, SAP HR Jobs, SAP HR HCM Certificate in {city}, SAP HR HCM Certificate Course in {city}, SAP HR HCM Course Fees, SAP HR HCM Training Fees in {city}, SAP HR HCM Interview Preparation, SAP HR HCM Mock Interview, SAP HR HCM Tutorial, SAP HR HCM Summer Training, SAP HR HCM Training in {city}, SAP HR HCM Industrial Training, SAP HR HCM Internship, How to become SAP HR HCM expert in {city}, SAP HR HCM course Syllabus",
+      "robots": "index, follow",
+      "author": "Connecting Dots ERP SAP Training Institute",
+      "viewport": "width=device-width, initial-scale=1",
+      "ogTags": {
+        "og:title": "SAP HR HCM Training | SAP Certification Courses in {city}",
+        "og:description": "Enroll in our comprehensive SAP HR HCM training in {city} with expert guidance and placement support.",
+        "og:image": "/Navbar/connecting dot erp logo.avif",
+        "og:url": "https://www.connectingdotserp.com/sap-hr-hcm-course-in-{city.toLowerCase()}",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "og:site_name": "Connecting Dots ERP"
+      },
+      "twitterTags": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SAP HR HCM Training in {city} | Connecting Dots ERP",
+        "twitter:description": "Get recognized SAP HR HCM training at Connecting Dots ERP in {city}. Start your career in HR with expert guidance.",
+        "twitter:site": "@CD_ERP"
+      },
+      "schemaMarkup": {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Connecting Dots ERP SAP Training Institute",
+        "url": "https://www.connectingdotserp.com",
+        "logo": "/Navbar/connecting dot erp logo.avif",
+        "sameAs": [
+          "https://www.facebook.com/sapinstallation.pune.9",
+          "https://x.com/CD_ERP",
+          "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919004002958",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English"]
+        },
+        "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411027",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.586532821424697",
+          "longitude": "73.78137250928907"
+        },
+        "foundingDate": "2013",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nitendra Singh"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "185"
+        },
+        "openingHours": "Mo-Sun 24 hours",
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "currenciesAccepted": "INR",
+        "telephone": "+919004002958"
+      }
+    },
+    "sapMM": {
+      "metaTitle": "SAP MM Training | SAP Certification Courses in {city}",
+      "metaDescription": "Join our SAP MM course in {city} to gain expertise in Materials Management and enhance your career opportunities.",
+      "metaKeywords": "SAP MM Course in {city}, SAP MM Training Institute in {city}, Best SAP MM Training Institute in {city}, SAP MM Jobs, SAP MM Certificate in {city}, SAP MM Certificate Course in {city}, SAP MM Course Fees, SAP MM Training Fees in {city}, SAP MM Interview Preparation, SAP MM Mock Interview, SAP MM Tutorial, SAP MM Summer Training, SAP MM Training in {city}, SAP MM Industrial Training, SAP MM Internship, How to become SAP MM expert in {city}, SAP MM course Syllabus",
+      "robots": "index, follow",
+      "author": "Connecting Dots ERP SAP Training Institute",
+      "viewport": "width=device-width, initial-scale=1",
+      "ogTags": {
+        "og:title": "SAP MM Training | SAP Certification Courses in {city}",
+        "og:description": "Enroll in our comprehensive SAP MM training in {city} with expert guidance and placement support.",
+        "og:image": "/Navbar/connecting dot erp logo.avif",
+        "og:url": "https://www.connectingdotserp.com/sap-mm-course-in-{city.toLowerCase()}",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "og:site_name": "Connecting Dots ERP"
+      },
+      "twitterTags": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SAP MM Training in {city} | Connecting Dots ERP",
+        "twitter:description": "Get recognized SAP MM training at Connecting Dots ERP in {city}. Start your career in Materials Management with expert guidance.",
+        "twitter:site": "@CD_ERP"
+      },
+      "schemaMarkup": {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Connecting Dots ERP SAP Training Institute",
+        "url": "https://www.connectingdotserp.com",
+        "logo": "/Navbar/connecting dot erp logo.avif",
+        "sameAs": [
+          "https://www.facebook.com/sapinstallation.pune.9",
+          "https://x.com/CD_ERP",
+          "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919004002958",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English"]
+        },
+        "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411027",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.586532821424697",
+          "longitude": "73.78137250928907"
+        },
+        "foundingDate": "2013",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nitendra Singh"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "185"
+        },
+        "openingHours": "Mo-Sun 24 hours",
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "currenciesAccepted": "INR",
+        "telephone": "+919004002958"
+      }
+    },
+    
+      "sapNetWeaver": {
+        "metaTitle": "SAP NetWeaver Training | SAP Certification Courses in {city}",
+        "metaDescription": "Enroll in our SAP NetWeaver course in {city} to enhance your skills and career opportunities in SAP technologies.",
+        "metaKeywords": "SAP NetWeaver Course in {city}, SAP NetWeaver Training Institute in {city}, Best SAP NetWeaver Training Institute in {city}, SAP NetWeaver Jobs, SAP NetWeaver Certificate in {city}, SAP NetWeaver Certificate Course in {city}, SAP NetWeaver Course Fees, SAP NetWeaver Training Fees in {city}, SAP NetWeaver Interview Preparation, SAP NetWeaver Mock Interview, SAP NetWeaver Tutorial, SAP NetWeaver Summer Training, SAP NetWeaver Training in {city}, SAP NetWeaver Industrial Training, SAP NetWeaver Internship, How to become SAP NetWeaver expert in {city}, SAP NetWeaver course Syllabus",
+        "robots": "index, follow",
+        "author": "Connecting Dots ERP SAP Training Institute",
+        "viewport": "width=device-width, initial-scale=1",
+        "ogTags": {
+          "og:title": "SAP NetWeaver Training | SAP Certification Courses in {city}",
+          "og:description": "Join our comprehensive SAP NetWeaver training in {city} with expert guidance and placement support.",
+          "og:image": "/Navbar/connecting dot erp logo.avif",
+          "og:url": "https://www.connectingdotserp.com/sap-netweaver-course-in-{city.toLowerCase()}",
+          "og:type": "website",
+          "og:locale": "en_US",
+          "og:site_name": "Connecting Dots ERP"
+        },
+        "twitterTags": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "SAP NetWeaver Training in {city} | Connecting Dots ERP",
+          "twitter:description": "Get recognized SAP NetWeaver training at Connecting Dots ERP in {city}. Start your career in SAP technologies with expert guidance.",
+          "twitter:site": "@CD_ERP"
+        },
+        "schemaMarkup": {
+          "@context": "https://schema.org",
+          "@type": ["Organization", "LocalBusiness"],
+          "name": "Connecting Dots ERP SAP Training Institute",
+          "url": "https://www.connectingdotserp.com",
+          "logo": "/Navbar/connecting dot erp logo.avif",
+          "sameAs": [
+            "https://www.facebook.com/sapinstallation.pune.9",
+            "https://x.com/CD_ERP",
+            "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+919004002958",
+            "contactType": "Customer Support",
+            "areaServed": "IN",
+            "availableLanguage": ["English"]
+          },
+          "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+            "addressLocality": "Pune",
+            "addressRegion": "MH",
+            "postalCode": "411027",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "18.586532821424697",
+            "longitude": "73.78137250928907"
+          },
+          "foundingDate": "2013",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "Nitendra Singh"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "185"
+          },
+          "openingHours": "Mo-Sun 24 hours",
+          "priceRange": "$$",
+          "paymentAccepted": ["Cash", "Credit Card"],
+          "currenciesAccepted": "INR",
+          "telephone": "+919004002958"
+        }
+      },
+      "sapProjectManagement": {
+      "metaTitle": "SAP Project Management Training | SAP Certification Courses in {city}",
+      "metaDescription": "Enroll in our SAP Project Management course in {city} to enhance your skills and career opportunities in SAP technologies.",
+      "metaKeywords": "SAP Project Management Course in {city}, SAP Project Management Training Institute in {city}, Best SAP Project Management Training Institute in {city}, SAP Project Management Jobs, SAP Project Management Certificate in {city}, SAP Project Management Certificate Course in {city}, SAP Project Management Course Fees, SAP Project Management Training Fees in {city}, SAP Project Management Interview Preparation, SAP Project Management Mock Interview, SAP Project Management Tutorial, SAP Project Management Summer Training, SAP Project Management Training in {city}, SAP Project Management Industrial Training, SAP Project Management Internship, How to become SAP Project Management expert in {city}, SAP Project Management course Syllabus",
+      "robots": "index, follow",
+      "author": "Connecting Dots ERP SAP Training Institute",
+      "viewport": "width=device-width, initial-scale=1",
+      "ogTags": {
+        "og:title": "SAP Project Management Training | SAP Certification Courses in {city}",
+        "og:description": "Join our comprehensive SAP Project Management training in {city} with expert guidance and placement support.",
+        "og:image": "/Navbar/connecting dot erp logo.avif",
+        "og:url": "https://www.connectingdotserp.com/sap-project-management-course-in-{city.toLowerCase()}",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "og:site_name": "Connecting Dots ERP"
+      },
+      "twitterTags": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SAP Project Management Training in {city} | Connecting Dots ERP",
+        "twitter:description": "Get recognized SAP Project Management training at Connecting Dots ERP in {city}. Start your career in SAP technologies with expert guidance.",
+        "twitter:site": "@CD_ERP"
+      },
+      "schemaMarkup": {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Connecting Dots ERP SAP Training Institute",
+        "url": "https://www.connectingdotserp.com",
+        "logo": "/Navbar/connecting dot erp logo.avif",
+        "sameAs": [
+          "https://www.facebook.com/sapinstallation.pune.9",
+          "https://x.com/CD_ERP",
+          "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919004002958",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English"]
+        },
+        "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411027",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.586532821424697",
+          "longitude": "73.78137250928907"
+        },
+        "foundingDate": "2013",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nitendra Singh"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "185"
+        },
+        "openingHours": "Mo-Sun 24 hours",
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "currenciesAccepted": "INR",
+        "telephone": "+919004002958"
+      }
+    },
+    "sapProductionPlanning": {
+      "metaTitle": "SAP Production Planning Training | SAP Certification Courses in {city}",
+      "metaDescription": "Join our SAP Production Planning course in {city} to elevate your skills and career opportunities in SAP technologies.",
+      "metaKeywords": "SAP Production Planning Course in {city}, SAP Production Planning Training Institute in {city}, Best SAP Production Planning Training Institute in {city}, SAP Production Planning Jobs, SAP Production Planning Certificate in {city}, SAP Production Planning Certificate Course in {city}, SAP Production Planning Course Fees, SAP Production Planning Training Fees in {city}, SAP Production Planning Interview Preparation, SAP Production Planning Mock Interview, SAP Production Planning Tutorial, SAP Production Planning Summer Training, SAP Production Planning Training in {city}, SAP Production Planning Industrial Training, SAP Production Planning Internship, How to become SAP Production Planning expert in {city}, SAP Production Planning course Syllabus",
+      "robots": "index, follow",
+      "author": "Connecting Dots ERP SAP Training Institute",
+      "viewport": "width=device-width, initial-scale=1",
+      "ogTags": {
+        "og:title": "SAP Production Planning Training | SAP Certification Courses in {city}",
+        "og:description": "Enroll in our comprehensive SAP Production Planning training in {city} with expert guidance and placement support.",
+        "og:image": "/Navbar/connecting dot erp logo.avif",
+        "og:url": "https://www.connectingdotserp.com/sap-production-planning-course-in-{city.toLowerCase()}",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "og:site_name": "Connecting Dots ERP"
+      },
+      "twitterTags": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SAP Production Planning Training in {city} | Connecting Dots ERP",
+        "twitter:description": "Get recognized SAP Production Planning training at Connecting Dots ERP in {city}. Start your career in SAP technologies with expert guidance.",
+        "twitter:site": "@CD_ERP"
+      },
+      "schemaMarkup": {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Connecting Dots ERP SAP Training Institute",
+        "url": "https://www.connectingdotserp.com",
+        "logo": "/Navbar/connecting dot erp logo.avif",
+        "sameAs": [
+          "https://www.facebook.com/sapinstallation.pune.9",
+          "https://x.com/CD_ERP",
+          "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919004002958",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English"]
+        },
+        "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411027",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.586532821424697",
+          "longitude": "73.78137250928907"
+        },
+        "foundingDate": "2013",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nitendra Singh"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "185"
+        },
+        "openingHours": "Mo-Sun 24 hours",
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "currenciesAccepted": "INR",
+        "telephone": "+919004002958"
+      }
+    },
+    "sapQM": {
+      "metaTitle": "SAP QM Training | SAP Certification Courses in {city}",
+      "metaDescription": "Join our SAP QM course in {city} to gain expertise in Quality Management and enhance your career opportunities.",
+      "metaKeywords": "SAP QM Course in {city}, SAP QM Training Institute in {city}, Best SAP QM Training Institute in {city}, SAP QM Jobs, SAP QM Certificate in {city}, SAP QM Certificate Course in {city}, SAP QM Course Fees, SAP QM Training Fees in {city}, SAP QM Interview Preparation, SAP QM Mock Interview, SAP QM Tutorial, SAP QM Summer Training, SAP QM Training in {city}, SAP QM Industrial Training, SAP QM Internship, How to become SAP QM expert in {city}, SAP QM course Syllabus",
+      "robots": "index, follow",
+      "author": "Connecting Dots ERP SAP Training Institute",
+      "viewport": "width=device-width, initial-scale=1",
+      "ogTags": {
+        "og:title": "SAP QM Training | SAP Certification Courses in {city}",
+        "og:description": "Enroll in our comprehensive SAP QM training in {city} with expert guidance and placement support.",
+        "og:image": "/Navbar/connecting dot erp logo.avif",
+        "og:url": "https://www.connectingdotserp.com/sap-qm-course-in-{city.toLowerCase()}",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "og:site_name": "Connecting Dots ERP"
+      },
+      "twitterTags": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SAP QM Training in {city} | Connecting Dots ERP",
+        "twitter:description": "Get recognized SAP QM training at Connecting Dots ERP in {city}. Start your career in Quality Management with expert guidance.",
+        "twitter:site": "@CD_ERP"
+      },
+      "schemaMarkup": {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Connecting Dots ERP SAP Training Institute",
+        "url": "https://www.connectingdotserp.com",
+        "logo": "/Navbar/connecting dot erp logo.avif",
+        "sameAs": [
+          "https://www.facebook.com/sapinstallation.pune.9",
+          "https://x.com/CD_ERP",
+          "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919004002958",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English"]
+        },
+        "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411027",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.586532821424697",
+          "longitude": "73.78137250928907"
+        },
+        "foundingDate": "2013",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nitendra Singh"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "185"
+        },
+        "openingHours": "Mo-Sun 24 hours",
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "currenciesAccepted": "INR",
+        "telephone": "+919004002958"
+      }
+    },
+    "sapSCM": {
+      "metaTitle": "SAP SCM Training | SAP Certification Courses in {city}",
+      "metaDescription": "Join our SAP SCM course in {city} to gain expertise in Supply Chain Management and enhance your career opportunities.",
+      "metaKeywords": "SAP SCM Course in {city}, SAP SCM Training Institute in {city}, Best SAP SCM Training Institute in {city}, SAP SCM Jobs, SAP SCM Certificate in {city}, SAP SCM Certificate Course in {city}, SAP SCM Course Fees, SAP SCM Training Fees in {city}, SAP SCM Interview Preparation, SAP SCM Mock Interview, SAP SCM Tutorial, SAP SCM Summer Training, SAP SCM Training in {city}, SAP SCM Industrial Training, SAP SCM Internship, How to become SAP SCM expert in {city}, SAP SCM course Syllabus",
+      "robots": "index, follow",
+      "author": "Connecting Dots ERP SAP Training Institute",
+      "viewport": "width=device-width, initial-scale=1",
+      "ogTags": {
+        "og:title": "SAP SCM Training | SAP Certification Courses in {city}",
+        "og:description": "Enroll in our comprehensive SAP SCM training in {city} with expert guidance and placement support.",
+        "og:image": "/Navbar/connecting dot erp logo.avif",
+        "og:url": "https://www.connectingdotserp.com/sap-scm-course-in-{city.toLowerCase()}",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "og:site_name": "Connecting Dots ERP"
+      },
+      "twitterTags": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SAP SCM Training in {city} | Connecting Dots ERP",
+        "twitter:description": "Get recognized SAP SCM training at Connecting Dots ERP in {city}. Start your career in Supply Chain Management with expert guidance.",
+        "twitter:site": "@CD_ERP"
+      },
+      "schemaMarkup": {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Connecting Dots ERP SAP Training Institute",
+        "url": "https://www.connectingdotserp.com",
+        "logo": "/Navbar/connecting dot erp logo.avif",
+        "sameAs": [
+          "https://www.facebook.com/sapinstallation.pune.9",
+          "https://x.com/CD_ERP",
+          "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919004002958",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English"]
+        },
+        "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411027",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.586532821424697",
+          "longitude": "73.78137250928907"
+        },
+        "foundingDate": "2013",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nitendra Singh"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "185"
+        },
+        "openingHours": "Mo-Sun 24 hours",
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "currenciesAccepted": "INR",
+        "telephone": "+919004002958"
+      }
+    },
+    "sapSD": {
+      "metaTitle": "SAP SD Training | SAP Certification Courses in {city}",
+      "metaDescription": "Join our SAP SD course in {city} to gain expertise in Sales and Distribution and enhance your career opportunities.",
+      "metaKeywords": "SAP SD Course in {city}, SAP SD Training Institute in {city}, Best SAP SD Training Institute in {city}, SAP SD Jobs, SAP SD Certificate in {city}, SAP SD Certificate Course in {city}, SAP SD Course Fees, SAP SD Training Fees in {city}, SAP SD Interview Preparation, SAP SD Mock Interview, SAP SD Tutorial, SAP SD Summer Training, SAP SD Training in {city}, SAP SD Industrial Training, SAP SD Internship, How to become SAP SD expert in {city}, SAP SD course Syllabus",
+      "robots": "index, follow",
+      "author": "Connecting Dots ERP SAP Training Institute",
+      "viewport": "width=device-width, initial-scale=1",
+      "ogTags": {
+        "og:title": "SAP SD Training | SAP Certification Courses in {city}",
+        "og:description": "Enroll in our comprehensive SAP SD training in {city} with expert guidance and placement support.",
+        "og:image": "/Navbar/connecting dot erp logo.avif",
+        "og:url": "https://www.connectingdotserp.com/sap-sd-course-in-{city.toLowerCase()}",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "og:site_name": "Connecting Dots ERP"
+      },
+      "twitterTags": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SAP SD Training in {city} | Connecting Dots ERP",
+        "twitter:description": "Get recognized SAP SD training at Connecting Dots ERP in {city}. Start your career in Sales and Distribution with expert guidance.",
+        "twitter:site": "@CD_ERP"
+      },
+      "schemaMarkup": {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Connecting Dots ERP SAP Training Institute",
+        "url": "https://www.connectingdotserp.com",
+        "logo": "/Navbar/connecting dot erp logo.avif",
+        "sameAs": [
+          "https://www.facebook.com/sapinstallation.pune.9",
+          "https://x.com/CD_ERP",
+          "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919004002958",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English"]
+        },
+        "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411027",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.586532821424697",
+          "longitude": "73.78137250928907"
+        },
+        "foundingDate": "2013",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nitendra Singh"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "185"
+        },
+        "openingHours": "Mo-Sun 24 hours",
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "currenciesAccepted": "INR",
+        "telephone": "+919004002958"
+      }
+    },
+    "sapSuccessFactors": {
+      "metaTitle": "SAP SuccessFactors Training | SAP Certification Courses in {city}",
+      "metaDescription": "Join our SAP SuccessFactors course in {city} to gain expertise in Human Capital Management and enhance your career opportunities.",
+      "metaKeywords": "SAP SuccessFactors Course in {city}, SAP SuccessFactors Training Institute in {city}, Best SAP SuccessFactors Training Institute in {city}, SAP SuccessFactors Jobs, SAP SuccessFactors Certificate in {city}, SAP SuccessFactors Course Fees, SAP SuccessFactors Training Fees in {city}, SAP SuccessFactors Interview Preparation, SAP SuccessFactors Mock Interview, SAP SuccessFactors Tutorial, SAP SuccessFactors Summer Training, SAP SuccessFactors Training in {city}, SAP SuccessFactors Industrial Training, SAP SuccessFactors Internship, How to become SAP SuccessFactors expert in {city}, SAP SuccessFactors course Syllabus",
+      "robots": "index, follow",
+      "author": "Connecting Dots ERP SAP Training Institute",
+      "viewport": "width=device-width, initial-scale=1",
+      "ogTags": {
+        "og:title": "SAP SuccessFactors Training | SAP Certification Courses in {city}",
+        "og:description": "Enroll in our comprehensive SAP SuccessFactors training in {city} with expert guidance and placement support.",
+        "og:image": "/Navbar/connecting dot erp logo.avif",
+        "og:url": "https://www.connectingdotserp.com/sap-successfactors-course-in-{city.toLowerCase()}",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "og:site_name": "Connecting Dots ERP"
+      },
+      "twitterTags": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SAP SuccessFactors Training in {city} | Connecting Dots ERP",
+        "twitter:description": "Get recognized SAP SuccessFactors training at Connecting Dots ERP in {city}. Start your career in Human Capital Management with expert guidance.",
+        "twitter:site": "@CD_ERP"
+      },
+      "schemaMarkup": {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Connecting Dots ERP SAP Training Institute",
+        "url": "https://www.connectingdotserp.com",
+        "logo": "/Navbar/connecting dot erp logo.avif",
+        "sameAs": [
+          "https://www.facebook.com/sapinstallation.pune.9",
+          "https://x.com/CD_ERP",
+          "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919004002958",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English"]
+        },
+        "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411027",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.586532821424697",
+          "longitude": "73.78137250928907"
+        },
+        "foundingDate": "2013",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nitendra Singh"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "185"
+        },
+        "openingHours": "Mo-Sun 24 hours",
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "currenciesAccepted": "INR",
+        "telephone": "+919004002958"
+      }
+    },
+    "sapEWM": {
+      "metaTitle": "SAP EWM Training | SAP Extended Warehouse Management in {city}",
+      "metaDescription": "Master SAP EWM with expert-led training at Connecting Dots ERP. Join our SAP Extended Warehouse Management course in {city} and boost your career.",
+      "metaKeywords": "SAP EWM Course in {city}, SAP EWM Training Institute in {city}, Best SAP EWM Training Institute in {city}, SAP EWM Jobs, SAP EWM Certificate in {city}, SAP EWM Certificate Course in {city}, SAP EWM Course Fees, SAP EWM Course near me, SAP EWM Training Fees in {city}, SAP EWM Training Fees, SAP EWM Interview Preparation, SAP EWM Mock Interview, SAP EWM Tutorial, SAP EWM Summer Training, SAP EWM Training in {city}, SAP EWM Industrial Training, SAP EWM Internship, How to become SAP EWM expert in {city}, SAP EWM course Syllabus, SAP EWM training Syllabus, SAP EWM class near me, SAP EWM course near me, SAP EWM training near me, SAP EWM review, SAP EWM course program, Connecting Dots ERP’s SAP EWM Course, Connecting Dots ERP’s SAP EWM Training Institute in {city}, Connecting Dots ERP’s Best SAP EWM Training Institute, Connecting Dots ERP’s SAP EWM Jobs, Connecting Dots ERP’s SAP EWM Certificate, Connecting Dots ERP’s SAP EWM Certificate Course, Connecting Dots ERP’s SAP EWM Course Fees, Connecting Dots ERP’s SAP EWM Course near me, Connecting Dots ERP’s SAP EWM Training Fees in {city}, Connecting Dots ERP’s SAP EWM Training Fees, Connecting Dots ERP’s SAP EWM Interview Preparation, Connecting Dots ERP’s SAP EWM Mock Interview, Connecting Dots ERP’s SAP EWM Tutorial, Connecting Dots ERP’s SAP EWM Summer Training, Connecting Dots ERP’s SAP EWM Winter Training in {city}, Connecting Dots ERP’s SAP EWM Industrial Training, Connecting Dots ERP’s SAP EWM Internship, Connecting Dots ERP’s How to become SAP EWM expert, Connecting Dots ERP’s SAP EWM course Syllabus in {city}, Connecting Dots ERP’s SAP EWM training Syllabus, Connecting Dots ERP’s SAP EWM class near me, Connecting Dots ERP’s SAP EWM course near me, Connecting Dots ERP’s SAP EWM training near me, Connecting Dots ERP’s SAP EWM review, Connecting Dots ERP’s SAP EWM course program, SAP EWM Course, SAP EWM Training Institute, Best SAP EWM Training Institute, SAP EWM Jobs, SAP EWM Certificate, SAP EWM Certificate Course in {city}, SAP EWM Course Fees, SAP EWM Course near me, SAP EWM Training Fee, SAP EWM Training Fees in {city}, SAP EWM Interview Preparation, SAP EWM Mock Interview, SAP EWM Tutorial, SAP EWM Summer Training, SAP EWM Winter Training, SAP EWM Industrial Training, SAP EWM Internship in {city}, How to become SAP EWM expert, SAP EWM course Syllabus, SAP EWM training Syllabus, SAP EWM class near me, SAP EWM course near me, SAP EWM training near me, SAP EWM review, SAP EWM course program in {city}",
+      "robots": "index, follow",
+      "author": "Connecting Dots ERP SAP Training Institute",
+      "viewport": "width=device-width, initial-scale=1",
+      "ogTags": {
+        "og:title": "SAP EWM Training | SAP Extended Warehouse Management in {city}",
+        "og:description": "Join Connecting Dots ERP for comprehensive SAP EWM training in {city}. Learn from industry experts and boost your career with SAP Extended Warehouse Management skills.",
+        "og:image": "/Navbar/connecting dot erp logo.avif",
+        "og:url": "https://www.connectingdotserp.com/sap-ewm-course-in-{city.toLowerCase()}",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "og:site_name": "Connecting Dots ERP"
+      },
+      "twitterTags": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SAP EWM Training in {city} | Connecting Dots ERP",
+        "twitter:description": "Get industry-recognized SAP EWM training at Connecting Dots ERP in {city}. Become an expert in SAP Extended Warehouse Management with our practical training.",
+        "twitter:site": "@CD_ERP"
+      },
+      "schemaMarkup": {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Connecting Dots ERP SAP Training Institute",
+        "url": "https://www.connectingdotserp.com",
+        "logo": "/Navbar/connecting dot erp logo.avif",
+        "sameAs": [
+          "https://www.facebook.com/sapinstallation.pune.9",
+          "https://x.com/CD_ERP",
+          "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919004002958",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English"]
+        },
+        "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411027",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.586532821424697",
+          "longitude": "73.78137250928907"
+        },
+        "foundingDate": "2013",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nitendra Singh"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "185"
+        },
+        "openingHours": "Mo-Sun 24 hours",
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "currenciesAccepted": "INR",
+        "telephone": "+919004002958"
+      }
+    },
+    "sapBI": {
+      "metaTitle": "Top SAP BI Course in {city}| SAP Basis Classes in {city}",
+      "metaDescription": "Enroll in SAP BW/BI training at Connecting Dots ERP. Achieve career success with expert-led SAP BW/BI training and placement support in {city}.",
+      "metaKeywords": "SAP BW/BI Course in {city}, SAP BW/BI Training Institute in {city}, Best SAP BW/BI Training Institute in {city}, SAP BW/BI Jobs, SAP BW/BI Certificate in {city}, SAP BW/BI Certificate Course in {city}, SAP BW/BI Course Fees, SAP BW/BI Course near me, SAP BW/BI Training Fees in {city}, SAP BW/BI Training Fees, SAP BW/BI Interview Preparation, SAP BW/BI Mock Interview, SAP BW/BI Tutorial, SAP BW/BI Summer Training, SAP BW/BI Training in {city}, SAP BW/BI Industrial Training, SAP BW/BI Internship, How to become SAP BW/BI expert in {city}, SAP BW/BI course Syllabus, SAP BW/BI training Syllabus, SAP BW/BI class near me, SAP BW/BI course near me, SAP BW/BI training near me, SAP BW/BI review, SAP BW/BI course program, Connecting Dots ERP’s SAP BW/BI Course, Connecting Dots ERP’s SAP BW/BI Training Institute in {city}, Connecting Dots ERP’s Best SAP BW/BI Training Institute, Connecting Dots ERP’s SAP BW/BI Jobs, Connecting Dots ERP’s SAP BW/BI Certificate, Connecting Dots ERP’s SAP BW/BI Certificate Course, Connecting Dots ERP’s SAP BW/BI Course Fees, Connecting Dots ERP’s SAP BW/BI Course near me, Connecting Dots ERP’s SAP BW/BI Training Fees in {city}, Connecting Dots ERP’s SAP BW/BI Training Fees, Connecting Dots ERP’s SAP BW/BI Interview Preparation, Connecting Dots ERP’s SAP BW/BI Mock Interview, Connecting Dots ERP’s SAP BW/BI Tutorial, Connecting Dots ERP’s SAP BW/BI Summer Training, Connecting Dots ERP’s SAP BW/BI Winter Training in {city}, Connecting Dots ERP’s SAP BW/BI Industrial Training, Connecting Dots ERP’s SAP BW/BI Internship, Connecting Dots ERP’s How to become SAP BW/BI expert, Connecting Dots ERP’s SAP BW/BI course Syllabus in {city}, Connecting Dots ERP’s SAP BW/BI training Syllabus, Connecting Dots ERP’s SAP BW/BI class near me, Connecting Dots ERP’s SAP BW/BI course near me, Connecting Dots ERP’s SAP BW/BI training near me, Connecting Dots ERP’s SAP BW/BI review, Connecting Dots ERP’s SAP BW/BI course program, SAP BW/BI Course, SAP BW/BI Training Institute, Best SAP BW/BI Training Institute, SAP BW/BI Jobs, SAP BW/BI Certificate, SAP BW/BI Certificate Course in {city}, SAP BW/BI Course Fees, SAP BW/BI Course near me, SAP BW/BI Training Fee, SAP BW/BI Training Fees in {city}, SAP BW/BI Interview Preparation, SAP BW/BI Mock Interview, SAP BW/BI Tutorial, SAP BW/BI Summer Training, SAP BW/BI Winter Training, SAP BW/BI Industrial Training, SAP BW/BI Internship in {city}, How to become SAP BW/BI expert, SAP BW/BI course Syllabus, SAP BW/BI training Syllabus, SAP BW/BI class near me, SAP BW/BI course near me, SAP BW/BI training near me, SAP BW/BI review, SAP BW/BI course program in {city}",
+      "robots": "index, follow",
+      "author": "Connecting Dots ERP SAP Training Institute",
+      "viewport": "width=device-width, initial-scale=1",
+      "ogTags": {
+        "og:title": "SAP BW/BI Training | SAP Certification Courses in {city}",
+        "og:description": "Join Connecting Dots ERP for comprehensive SAP BW/BI training in {city} with placement support. Learn from industry experts.",
+        "og:image": "/Navbar/connecting dot erp logo.avif",
+        "og:url": "https://www.connectingdotserp.com/sap-bwbi-course-in-{city.toLowerCase()}",
+        "og:type": "website",
+        "og:locale": "en_US",
+        "og:site_name": "Connecting Dots ERP"
+      },
+      "twitterTags": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "SAP BW/BI Training in {city} | Connecting Dots ERP",
+        "twitter:description": "Get industry-recognized SAP BW/BI training at Connecting Dots ERP in {city}. Start your career in SAP with expert guidance and placement assistance.",
+        "twitter:site": "@CD_ERP"
+      },
+      "schemaMarkup": {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "LocalBusiness"],
+        "name": "Connecting Dots ERP SAP Training Institute",
+        "url": "https://www.connectingdotserp.com",
+        "logo": "/Navbar/connecting dot erp logo.avif",
+        "sameAs": [
+          "https://www.facebook.com/sapinstallation.pune.9",
+          "https://x.com/CD_ERP",
+          "https://www.instagram.com/connecting_dots_sap_training?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+919004002958",
+          "contactType": "Customer Support",
+          "areaServed": "IN",
+          "availableLanguage": ["English"]
+        },
+        "description": "At Connecting Dots ERP, our certifications are globally accredited and recognized by leading multinational companies...",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1st Floor, 101, Police, Wireless Colony, Vishal Nagar, Pimple Nilakh, Pune, Pimpri-Chinchwad",
+          "addressLocality": "Pune",
+          "addressRegion": "MH",
+          "postalCode": "411027",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "18.586532821424697",
+          "longitude": "73.78137250928907"
+        },
+        "foundingDate": "2013",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Nitendra Singh"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "reviewCount": "185"
+        },
+        "openingHours": "Mo-Sun 24 hours",
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Credit Card"],
+        "currenciesAccepted": "INR",
+        "telephone": "+919004002958"
+      }
+    }
+    }
+  }
+  

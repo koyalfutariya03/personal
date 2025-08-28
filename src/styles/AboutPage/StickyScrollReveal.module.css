@@ -1,0 +1,239 @@
+.stickyScrollContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  max-height: 800px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.progressContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 20;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #06b6d4);
+  border-radius: 4px;
+}
+
+.scrollContent {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 3rem 1.5rem;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 6rem);
+  gap: 3rem;
+}
+
+.textContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12vh;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  text-align: justify;
+}
+
+.contentCard {
+  min-height: 50vh;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.contentCard.active {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(10px);
+}
+
+.cardIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.cardTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 4rem;
+  height: 4px;
+  background: linear-gradient(90deg, #ff8c00, transparent);
+  border-radius: 2px;
+}
+
+.cardDescription {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.activeIndicator {
+  position: absolute;
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 80%;
+  background: #ff8c00;
+  border-radius: 0.25rem;
+}
+
+.visualContent {
+  width: 40%;
+  position: sticky;
+  top: 2rem;
+  height: calc(100vh - 10rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.contentImage {
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.5s ease;
+}
+
+.cardNumber {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-family: monospace;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.current {
+  color: white;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0.25rem;
+}
+
+.total {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.highlight {
+  color: #ff8c00;
+  font-weight: 600;
+  position: relative;
+  padding: 0 0.2rem;
+  z-index: 1;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 140, 0, 0.3);
+  z-index: -1;
+  transform: translateY(0px);
+}
+
+/* Mobile Cards */
+.mobileCardsContainer {
+  padding: 0.5rem;
+}
+
+.mobileCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobileCard .cardIcon {
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.mobileCard .cardTitle {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.mobileCard .cardDescription {
+  font-size: 0.9rem;
+  text-align: justify;
+}

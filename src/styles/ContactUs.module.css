@@ -1,0 +1,517 @@
+/* Main Container Styles */
+.pageContainer {
+  background-color: #f0f2f5;
+  padding: 40px 0;
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+}
+
+/* Main Title Styles */
+.branchesTitle {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(1, 1, 98, 1) 35%,
+    rgba(3, 163, 196, 1) 49%,
+    rgba(2, 2, 85, 1) 62%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Branch Information Styles */
+.branchInfo {
+  margin-bottom: 25px;
+}
+
+.branchName {
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+/* Contact Card Styles */
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  min-height: 220px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.phoneIcon {
+  color: #0d6efd;
+  margin-bottom: 10px;
+  transform: rotate(90deg);
+}
+
+.whatsappIcon {
+  color: #25d366;
+  margin-bottom: 10px;
+}
+
+.addressIcon {
+  color: #fd7e14;
+  margin-bottom: 10px;
+}
+
+.cardSubtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.contactLink {
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contactLink:hover {
+  color: #0a58ca;
+}
+
+.whatsappBtn {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.whatsappBtn:hover {
+  background-color: #128c7e;
+  color: white;
+}
+
+.addressLink {
+  font-size: 0.9rem;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.addressLink:hover {
+  color: #1f2937;
+}
+
+/* Form Styles - Keeping original class names but enhancing */
+.rightSectionItDs {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+  max-height: none;
+  margin: 0;
+}
+
+.rightSectionItDs h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+}
+
+.formGroup {
+  width: 100%;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #4b5563;
+  transition: border-color 0.2s;
+  height: auto;
+}
+
+.inputField:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.phoneInputItDs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.selectCountryCode {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  color: #4b5563;
+  width: 80px;
+  font-size: 0.95rem;
+}
+
+.contactInput {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.submitButtonItDs {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.submitButtonItDs:hover {
+  background-color: #b91c1c;
+}
+
+.submitButtonItDs:disabled {
+  background-color: #f87171;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Map Section Styles - Using existing class names */
+.branchesSection {
+  text-align: center;
+  padding: 20px;
+  max-width: 1800px;
+  width: 97.5%;
+  margin: 40px auto 20px;
+}
+
+.branchesContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.branchCard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 5px ridge black;
+  border-radius: 20px;
+  padding: 20px;
+  width: 325px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.branchCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+}
+
+.branchCard h3 {
+  color: #3d0eaa;
+  margin-bottom: 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px #3d0eaa;
+}
+
+.mapContainer {
+  height: 200px;
+  border: 2px ridge #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.loadingMap {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.add2 {
+  border: 2px ridge #000;
+  border-radius: 6px;
+  box-shadow: 0px 1px 0px 1px #212121;
+  padding: 15px;
+}
+
+.branchCard a {
+  color: #182e4a;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.branchCard a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Responsive Design - Enhanced for all screen sizes */
+@media (max-width: 991.98px) {
+  .branchesTitle {
+    font-size: 1.75rem;
+  }
+
+  .rightSectionItDs {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .branchesTitle {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .contactCard {
+    margin-bottom: 15px;
+  }
+
+  .rightSectionItDs {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+
+  .inputField,
+  .selectCountryCode,
+  .contactInput {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .branchesContainer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .branchesTitle {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+
+  .branchName {
+    text-align: center;
+  }
+
+  .contactCard {
+    min-height: 180px;
+    padding: 15px;
+  }
+
+  .rightSectionItDs {
+    padding: 15px;
+  }
+
+  .phoneInputItDs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+  }
+
+  .selectCountryCode {
+    width: 65px;
+    padding: 8px 5px;
+  }
+
+  .contactInput {
+    padding: 8px 10px;
+  }
+
+  .branchCard {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) and (max-height: 800px) {
+  .rightSectionItDs {
+    width: 100%;
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .form {
+    gap: 10px;
+  }
+
+  .inputField,
+  .contactInput {
+    height: 40px;
+    padding: 8px 10px;
+  }
+
+  .phoneInputItDs {
+    height: 40px;
+  }
+
+  .selectCountryCode {
+    height: 40px;
+    padding: 0 5px;
+  }
+
+  .submitButtonItDs {
+    margin-top: 10px;
+    padding: 8px;
+  }
+
+  .branchCard {
+    padding: 15px;
+  }
+
+  .mapContainer {
+    height: 180px;
+  }
+}
+
+/* Add these styles to your existing CSS file */
+
+/* Status message styling */
+.statusMessage {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease;
+}
+
+.success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #2e7d32;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.error {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #d32f2f;
+  border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button loading state */
+.loading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.buttonText {
+  margin-right: 10px;
+}
+
+.buttonLoader {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled form elements */
+.inputField:disabled,
+.contactInput:disabled,
+.selectCountryCode:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Focus styles for better accessibility */
+.inputField:focus,
+.contactInput:focus,
+.selectCountryCode:focus {
+  border-color: #2277d3;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(34, 119, 211, 0.2);
+}

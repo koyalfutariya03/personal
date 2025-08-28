@@ -1,0 +1,41 @@
+{
+    "pages": [
+      {
+        "pageId": "page1",
+        "missionTitle": "Our Mission",
+        "missionText": "At our SAP training institute in Pune, we focus on empowering dreams and changing lives. Our goal is to provide students and professionals with the skills and knowledge necessary to excel in their careers. We are dedicated to offering training that inspires and motivates individuals, preparing them to face real-world challenges with confidence. By combining practical learning with expert guidance, we strive to create a nurturing environment where every learner can thrive.Our passion lies in helping you discover your true potential and take significant steps toward a brighter future. With us, you’re not just gaining knowledge you’re laying the groundwork for lasting success. Together, let’s work towards achieving your career goals!",
+        "imageURL": "/Aboutus/Mission.png"
+      },
+      {
+        "pageId": "reverse1",
+        "missionTitle": "Our Institute",
+        "missionText": "“At Connecting Dots ERP, we bring together a team of experienced instructors and industry professionals to deliver the best training institute experience. Whether you're just starting out or looking to expand your skillset, we've got the resources you need to succeed. Join the best training institute for comprehensive software training that enhances your career prospects.",
+        "imageURL": "/Aboutus/about our institute.png"
+      },
+      {
+        "pageId": "page3",
+        "missionTitle": "Our Vision",
+        "missionText": "At Connecting Dots ERP, we aim to be a best training institute known for transforming lives through outstanding education. Our focus is on delivering a learning experience that transcends traditional methods, emphasizing practical and industry-relevant training that genuinely empowers our students and professionals. We aspire to motivate individuals to dream bigger, work smarter, and confidently pursue their career goals. By providing them with vital skills and comprehensive knowledge, we prepare them to excel in competitive industries and ever-changing workplaces. Together, we envision a future where every learner realizes their full potential and makes a meaningful impact in the world.",
+        "imageURL": "/Aboutus/Our vision.png"
+      },
+      {
+        "pageId": "page4",
+        "missionTitle": "Who we are?",
+        "missionText": "“Connecting Dots ERP is the premier institute in Pune for training and certification in a variety of software fields. Our team of qualified professionals is dedicated to providing excellent service to individuals and organizations. We offer training that is tailored to the needs of our students and employed individuals, helping them gain the knowledge and skills they need to succeed. With practical and theoretical instruction, our courses provide the perfect foundation for a successful career.“",
+        "imageURL": "public/Aboutus/Who we are.png"
+      },
+      {
+        "pageId": "page5",
+        "missionTitle": "Our Objective",
+        "missionText": "Our goal is to create a global platform that enables students and working professionals to reach their full potential and build rewarding careers. We seek to provide opportunities that motivate individuals to succeed, regardless of their current stage in the professional landscape. By delivering high-quality training programs and classes designed to meet industry demands, we ensure that our candidates acquire the skills and knowledge necessary to excel in their selected fields. We are dedicated to fostering a supportive and inclusive environment where learners can develop, tackle challenges, and pursue their career goals with assurance. Through ongoing innovation and a commitment to excellence, we aim to be a reliable partner in shaping the futures of our students and professionals, assisting them in transforming their aspirations into reality.",
+        "imageURL": "/Aboutus/Our objective.png" 
+      },
+      {
+        "pageId": "page6",
+        "missionTitle": "Why Choose Us?",
+        "missionText": "Our courses, taught by experienced trainers, offer hands-on learning through live projects, comprehensive interview preparation, and career advancement opportunities. With an affordable fee structure and a supportive learning environment that fosters growth, you'll gain the skills you need to succeed in your chosen field. Plus, with 100% placement assistance, we ensure you'll be well on your way to a successful career.",
+        "imageURL": "/Aboutus/Why choose us.png"
+      }
+    ]
+  }
+  

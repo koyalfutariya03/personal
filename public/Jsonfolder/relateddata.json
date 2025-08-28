@@ -1,0 +1,2642 @@
+{
+  "DSrelcourses": {
+    "id": "DSrelcourses",
+    "title": "RELATED COURSES",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "TABLEAU icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": " Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/SYHIAAO.mp4",
+        "alt": "Java icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": " SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "DArelcourses": {
+    "id": "DArelcourses",
+    "title": "ANOTHER COMPONENT",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Master Tableau skills",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "TABLEAU icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full stack icon"
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/SYHIAAO.mp4",
+        "alt": "Java icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "BArelcourses": {
+    "id": "BArelcourses",
+    "title": "ANOTHER COMPONENT",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/SYHIAAO.mp4",
+        "alt": "Java icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power Bi icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "GPTrelcourses": {
+    "id": "GPTrelcourses",
+    "title": "ANOTHER COMPONENT",
+    "items": [
+      {
+        "name": "Tableau",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/SYHIAAO.mp4",
+        "alt": "Java icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "FullStackrelcourses": {
+    "id": "FullStackrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/SYHIAAO.mp4",
+        "alt": "Java icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "Javarelcourses": {
+    "id": "Javarelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "Mernrelcourses": {
+    "id": "Mernrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/SYHIAAO.mp4",
+        "alt": "Java icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "UIUXrelcourses": {
+    "id": "UIUXrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/SYHIAAO.mp4",
+        "alt": "Java icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power Bi icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "Pythonrelcourses": {
+    "id": "Pythonrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/SYHIAAO.mp4",
+        "alt": "Java icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "Salesrelcourses": {
+    "id": "Salesrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Full-Stack Java",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/SYHIAAO.mp4",
+        "alt": "Java icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "Abaprelcourses": {
+    "id": "Abaprelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP HANA",
+        "description": "Learn HANA from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP HANA icon"
+      },
+      {
+        "name": "SAP NETWEAVER",
+        "description": "Become a NETWEAVER expert",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP NETWEAVER icon"
+      },
+      {
+        "name": "SAP BW/BI",
+        "description": "Master BW/BI skills",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP BI icon"
+      },
+      {
+        "name": "SAP BASIS",
+        "description": "Learn BASIS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP BASIS icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "Aribarelcourses": {
+    "id": "Aribarelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP HANA",
+        "description": "Learn HANA from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP HANA icon"
+      },
+      {
+        "name": "SAP NETWEAVER",
+        "description": "Become a NETWEAVER expert",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP NETWEAVER icon"
+      },
+      {
+        "name": "SAP BW/BI",
+        "description": "Master BW/BI skills",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP BI icon"
+      },
+      {
+        "name": "SAP BASIS",
+        "description": "Learn BASIS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP BASIS icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "Basisrelcourses": {
+    "id": "Basisrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP HANA",
+        "description": "Learn HANA from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP HANA icon"
+      },
+      {
+        "name": "SAP NETWEAVER",
+        "description": "Become a NETWEAVER expert",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP NETWEAVER icon"
+      },
+      {
+        "name": "SAP BW/BI",
+        "description": "Master BW/BI skills",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP BI icon"
+      },
+      {
+        "name": "SAP ABAP",
+        "description": "Learn ABAP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP ABAP icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "Bwbirelated": {
+    "id": "Bwbirelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP HANA",
+        "description": "Learn HANA from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP HANA icon"
+      },
+      {
+        "name": "SAP NETWEAVER",
+        "description": "Learn NETWEAVERfrom experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP NETWEAVER icon"
+      },
+      {
+        "name": "SAP BASIS",
+        "description": "Learn BASIS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP BASIS icon"
+      },
+      {
+        "name": "SAP ABAP",
+        "description": "Learn ABAP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP ABAP icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "EWMrelcourses": {
+    "id": "EWMrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP QM",
+        "description": "Become a QM expert",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP QM icon"
+      },
+      {
+        "name": "SAP PS",
+        "description": "Master PS skills",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PS icon"
+      },
+      {
+        "name": "SAP SUCCESSFACTOR",
+        "description": "Learn SUCCESSFACTOR from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SuccesFactor icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn QM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "FICOrelcourses": {
+    "id": "Ficorelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP QM",
+        "description": "Learn QM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP QM icon"
+      },
+      {
+        "name": "SAP PS",
+        "description": "Master PS skills",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PS icon"
+      },
+      {
+        "name": "SAP SUCCESSFACTOR",
+        "description": "Learn SUCCESSFACTOR from Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SuccesFactor icon"
+      },
+      {
+        "name": "SAP EWM",
+        "description": "Learn EWM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP EWM icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM   from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from Industry Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "Hanarelcourses": {
+    "id": "Hanarelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP BW/BI",
+        "description": "Learn BW/BI from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP BW/BI icon"
+      },
+      {
+        "name": "SAP NETWEAVER",
+        "description": "Learn NETWEAVER from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP NETWEAVER icon"
+      },
+      {
+        "name": "SAP BASIS",
+        "description": "Learn BASIS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP BASIS icon"
+      },
+      {
+        "name": "SAP ABAP",
+        "description": "Learn ABAP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP ABAP icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn BASIS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "HRHCMrelCOURSES": {
+    "id": "Hrhcmrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP QM",
+        "description": "Learn QM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP QM icon"
+      },
+      {
+        "name": "SAP PS",
+        "description": "Learn PS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PS icon"
+      },
+      {
+        "name": "SAP SUCCESSFACTOR",
+        "description": "Learn SUCCESSFACTOR from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SuccesFactor icon"
+      },
+      {
+        "name": "SAP EWM",
+        "description": "Learn EWM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP EWM icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "MMrelcourses": {
+    "id": "Mmrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP QM",
+        "description": "Learn QM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP QM icon"
+      },
+      {
+        "name": "SAP PS",
+        "description": "Learn PS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PS icon"
+      },
+      {
+        "name": "SAP SUCCESSFACTOR",
+        "description": "Learn SUCCESSFACTOR from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SuccesFactor icon"
+      },
+      {
+        "name": "SAP EWM",
+        "description": "Learn EWM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP EWM icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "netrelcourses": {
+    "id": "Netrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP HANA",
+        "description": "Learn HANA from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP HANA icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP BW/BI",
+        "description": "Learn BW/BI from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP BI icon"
+      },
+      {
+        "name": "SAP ABAP",
+        "description": "Learn ABAP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP ABAP icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "PMrelcourses": {
+    "id": "Pmrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP QM",
+        "description": "Learn QM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP QM icon"
+      },
+      {
+        "name": "SAP PS",
+        "description": "Learn PS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PS icon"
+      },
+      {
+        "name": "SAP SUCCESSFACTOR",
+        "description": "Learn SUCCESSFACTOR from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SuccesFactor icon"
+      },
+      {
+        "name": "SAP EWM",
+        "description": "Learn EWM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP EWM icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP ABAP",
+        "description": "Learn ABAP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP ABAP icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "PPrelcourses": {
+    "id": "PPrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP HANA",
+        "description": "Learn HANA from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP HANA icon"
+      },
+      {
+        "name": "SAP NETWEAVER",
+        "description": "Become a NETWEAVER expert",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP NETWEAVER icon"
+      },
+      {
+        "name": "SAP BW/BI",
+        "description": "Master BW/BI skills",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP BI icon"
+      },
+      {
+        "name": "SAP ABAP",
+        "description": "Learn ABAP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP ABAP icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn GCP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "PSrelcourses": {
+    "id": "PSrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP QM",
+        "description": "Become a QM expert",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP QM icon"
+      },
+      {
+        "name": "SAP ABAP",
+        "description": "Master ABAP skills",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP ABAP icon"
+      },
+      {
+        "name": "SAP SUCCESSFACTOR",
+        "description": "Learn SUCCESSFACTOR from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SuccesFactor icon"
+      },
+      {
+        "name": "SAP EWM",
+        "description": "Design EWM interfaces",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP EWM icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "QMrelcourses": {
+    "id": "QMrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP PS",
+        "description": "Learn PS from Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PS icon"
+      },
+      {
+        "name": "SAP SUCCESSFACTOR",
+        "description": "Learn SUCCESSFACTOR from Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SuccesFactor icon"
+      },
+      {
+        "name": "SAP EWM",
+        "description": "Learn EWM from Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP EWM icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from Experts ",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "SCMrelcourses": {
+    "id": "SCMrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP QM",
+        "description": "Become a QM expert",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP QM icon"
+      },
+      {
+        "name": "SAP PS",
+        "description": "Master PS skills",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PS icon"
+      },
+      {
+        "name": "SAP SUCCESSFACTOR",
+        "description": "Learn SUCCESSFACTOR from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SuccesFactor icon"
+      },
+      {
+        "name": "SAP EWM",
+        "description": "Learn BASIS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP EWM icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      }
+    ]
+  },
+  "SDrelcourses": {
+    "id": "SDrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from scratch",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP QM",
+        "description": "Become a QM expert",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP QM icon"
+      },
+      {
+        "name": "SAP PS",
+        "description": "Master PS skills",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PS icon"
+      },
+      {
+        "name": "SAP SUCCESSFACTOR",
+        "description": "Learn SUCCESSFACTOR from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SuccesFactor icon"
+      },
+      {
+        "name": "SAP EWM",
+        "description": "Learn EWM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP EWM icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "Succrelcourses": {
+    "id": "Succrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP QM",
+        "description": "Learn QM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP QM icon"
+      },
+      {
+        "name": "SAP PS",
+        "description": "Learn PS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PS icon"
+      },
+      {
+        "name": "SAP MM",
+        "description": "Learn MM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP MM icon"
+      },
+      {
+        "name": "SAP EWM",
+        "description": "Learn EWM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP EWM icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP PM",
+        "description": "Learn PM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM Experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "POWERBIrelcourses": {
+    "id": "PowerBIrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SQL",
+        "description": "Learn SQL from scratch",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Become a Tableau expert",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "Salesforce icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Master in Data Science",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/G9Rp8vY.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Mern Stack",
+        "description": "Learn Mern Stack from experts",
+        "icon": "https://i.imgur.com/qsfkvBs.mp4",
+        "alt": "Mern Stack icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "Reactjs icon"
+      }
+    ]
+  },
+  "TABLEAUrelcourses": {
+    "id": "Tableaurelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Power BI",
+        "description": "Learn Power BI from scratch",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Become a SQL expert",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "Salesforce icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Master in Data Science",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/G9Rp8vY.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Mern Stack",
+        "description": "Learn Mern Stack from experts",
+        "icon": "https://i.imgur.com/qsfkvBs.mp4",
+        "alt": "Mern Stack icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "Reactjs icon"
+      }
+    ]
+  },
+  "SQLrelcourses": {
+    "id": "SQLrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Power BI",
+        "description": "Learn Power BI from scratch",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Become a Tableau expert",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "Salesforce icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Master in Data Science",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/G9Rp8vY.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Mern Stack",
+        "description": "Learn Mern Stack from experts",
+        "icon": "https://i.imgur.com/qsfkvBs.mp4",
+        "alt": "Mern Stack icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "Reactjs icon"
+      }
+    ]
+  },
+  "CORErelated": {
+    "id": "SQLrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Power BI",
+        "description": "Learn Power BI from scratch",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Become a Tableau expert",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "Salesforce icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Master in Data Science",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/G9Rp8vY.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Mern Stack",
+        "description": "Learn Mern Stack from experts",
+        "icon": "https://i.imgur.com/qsfkvBs.mp4",
+        "alt": "Mern Stack icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "Reactjs icon"
+      }
+    ]
+  },
+  "ANArelated": {
+    "id": "SQLrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Power BI",
+        "description": "Learn Power BI from scratch",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Become a Tableau expert",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "Salesforce icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Master in Data Science",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/G9Rp8vY.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Mern Stack",
+        "description": "Learn Mern Stack from experts",
+        "icon": "https://i.imgur.com/qsfkvBs.mp4",
+        "alt": "Mern Stack icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "Reactjs icon"
+      }
+    ]
+  },
+  "MANrelated": {
+    "id": "SQLrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Power BI",
+        "description": "Learn Power BI from scratch",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Become a Tableau expert",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "Salesforce icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Master in Data Science",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/G9Rp8vY.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Mern Stack",
+        "description": "Learn Mern Stack from experts",
+        "icon": "https://i.imgur.com/qsfkvBs.mp4",
+        "alt": "Mern Stack icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "Reactjs icon"
+      }
+    ]
+  },
+  "PAYrelated": {
+    "id": "SQLrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Power BI",
+        "description": "Learn Power BI from scratch",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Become a Tableau expert",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "Salesforce icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Master in Data Science",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/G9Rp8vY.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Mern Stack",
+        "description": "Learn Mern Stack from experts",
+        "icon": "https://i.imgur.com/qsfkvBs.mp4",
+        "alt": "Mern Stack icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "Reactjs icon"
+      }
+    ]
+  },
+  "HCMrelated": {
+    "id": "SQLrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Power BI",
+        "description": "Learn Power BI from scratch",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Become a Tableau expert",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "Salesforce icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Master in Data Science",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/G9Rp8vY.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Mern Stack",
+        "description": "Learn Mern Stack from experts",
+        "icon": "https://i.imgur.com/qsfkvBs.mp4",
+        "alt": "Mern Stack icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "Reactjs icon"
+      }
+    ]
+  },
+  "Hrtrainrelated": {
+    "id": "SQLrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Power BI",
+        "description": "Learn Power BI from scratch",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Become a Tableau expert",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "Salesforce icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Master in Data Science",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/G9Rp8vY.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Mern Stack",
+        "description": "Learn Mern Stack from experts",
+        "icon": "https://i.imgur.com/qsfkvBs.mp4",
+        "alt": "Mern Stack icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "Reactjs icon"
+      }
+    ]
+  },
+  "DGMrelated": {
+    "id": "DGMrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Power BI",
+        "description": "Learn Power BI from scratch",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Become a Tableau expert",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "Salesforce icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Master in Data Science",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/G9Rp8vY.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Mern Stack",
+        "description": "Learn Mern Stack from experts",
+        "icon": "https://i.imgur.com/qsfkvBs.mp4",
+        "alt": "Mern Stack icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "Reactjs icon"
+      }
+    ]
+  },
+  "SAPrelcourses": {
+    "id": "SAPrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "SAP PP",
+        "description": "Learn PP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": " SAP PP icon"
+      },
+      {
+        "name": "SAP FICO",
+        "description": "Learn FICO from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP FICO icon"
+      },
+      {
+        "name": "SAP SD",
+        "description": "Learn SD from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SD icon"
+      },
+      {
+        "name": "SAP SUCCESSFACTOR",
+        "description": "Learn SUCCESSFACTOR from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SuccesFactor icon"
+      },
+      {
+        "name": "SAP ABAP",
+        "description": "Learn ABAP from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP ABAP icon"
+      },
+      {
+        "name": "SAP QM",
+        "description": "Learn QM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP QM icon"
+      },
+      {
+        "name": "SAP PS",
+        "description": "Learn PS from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP PS icon"
+      },
+      {
+        "name": "SAP HR/HCM",
+        "description": "Learn HR/HCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP HR/HCM icon"
+      },
+      {
+        "name": "SAP EWM",
+        "description": "Learn EWM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP EWM icon"
+      },
+      {
+        "name": "SAP SCM",
+        "description": "Learn SCM from experts",
+        "icon": "https://i.imgur.com/HbmlQ9u.png",
+        "alt": "SAP SCM icon"
+      }
+    ]
+  },
+  "ITrelcourses": {
+    "id": "ITrelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  },
+  "DataVisualrelcourses": {
+    "id": "Javarelcourses",
+    "title": "Related courses",
+    "items": [
+      {
+        "name": "Chat GPT & AI",
+        "description": "Learn AI from scratch",
+        "icon": "https://i.imgur.com/QHuijGO.mp4",
+        "alt": "Chat GPT icon"
+      },
+      {
+        "name": "Masters in Data Science",
+        "description": "Become a data science expert",
+        "icon": "https://i.imgur.com/C0Hv62l.mp4",
+        "alt": "Data Science icon"
+      },
+      {
+        "name": "Masters in Data Analytics",
+        "description": "Master data analytics skills",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "Data Analytics icon"
+      },
+      {
+        "name": "Salesforce",
+        "description": "Salesforce developer courses",
+        "icon": "https://i.imgur.com/6brz8Ea.mp4",
+        "alt": "SALESFORCE icon"
+      },
+      {
+        "name": "UI/UX Design",
+        "description": "Design stunning user interfaces",
+        "icon": "https://i.imgur.com/9FN2rSu.mp4",
+        "alt": "UI/UX icon"
+      },
+      {
+        "name": "Full-Stack Python",
+        "description": "Full-stack development with Python",
+        "icon": "https://i.imgur.com/grx2N9O.mp4",
+        "alt": "Full Stack icon"
+      },
+      {
+        "name": "Tableau",
+        "description": "Full-stack development with Java",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Tableau icon"
+      },
+      {
+        "name": "PowerBI",
+        "description": "Business intelligence with PowerBI",
+        "icon": "https://i.imgur.com/WE4y4wK.mp4",
+        "alt": "Power BI icon"
+      },
+      {
+        "name": "SQL",
+        "description": "Learn SQL from experts",
+        "icon": "https://i.imgur.com/y0zkEYb.mp4",
+        "alt": "SQL icon"
+      },
+      {
+        "name": "Reactjs Framework",
+        "description": "Learn Reactjs from Industry Experts",
+        "icon": "https://i.imgur.com/QxPxKeN.mp4",
+        "alt": "React icon"
+      }
+    ]
+  }
+}

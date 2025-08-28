@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+  .accent {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+}
+
+.pageContainer {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: rgb(1, 1, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 1, 98, 1) 35%,
+    rgb(3, 111, 133) 49%,
+    rgba(2, 2, 85, 1) 62%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.titleAnimation {
+  animation: slideInFromTop 1s forwards;
+}
+/* Accent styles */
+.accent {
+  background: linear-gradient(
+    90deg,
+    rgba(1, 1, 98, 1) 20%,
+    rgba(3, 163, 196, 1) 50%,
+    rgba(2, 2, 85, 1) 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  display: inline-block;
+}

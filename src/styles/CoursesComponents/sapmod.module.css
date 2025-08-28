@@ -1,0 +1,205 @@
+.glowText {
+  font-size: 2rem; /* Adjust this value as needed */
+  color: #00e1ff !important; /* Base text color */
+  font-family: "Lato", sans-serif;
+  display: inline-block;
+}
+
+.glowText span {
+  opacity: 0;
+  animation: glow 1.5s infinite ease-in-out alternate;
+  text-shadow: 1px 1px 1px #0a0b0a, 2px 2px 2px #090909, 3px 3px 3px #080808,
+    4px 4px 4px #2bd3fd, 0px 0px 5px #279cb4, 0px 0px 10px #0e4981;
+}
+.highlight-Span-cards{
+  color: blue;
+  font-weight: bold;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0;
+    text-shadow: 1px 1px 1px #0a0b0a, 2px 2px 2px #090909, 3px 3px 3px #080808,
+      4px 4px 4px #070707, 0px 0px 5px #0b788e, 0px 0px 5px #0a6e8f;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 1px 1px 1px #0a0b0a, 2px 2px 2px #090909, 3px 3px 3px #080808,
+      4px 4px 4px #070707, 0px 0px 20px #146a7b, 0px 0px 20px #076f92;
+  }
+}
+
+.sapModContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  gap: 1.5rem;
+  max-width: 1800px;
+  width: 97.5%;
+  margin: auto;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.highlightSpanCards{
+  color: #113b6b;
+}
+.sapModHeading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(1, 1, 98, 1) 35%,
+    rgba(3, 163, 196, 1) 49%,
+    rgba(2, 2, 85, 1) 62%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.sapModCont {
+  display: flex;
+  gap: 10px;
+}
+
+.sapModCard {
+  flex: 1;
+  padding: 1.7rem;
+  width: 45%;
+  margin: 10px;
+  background-color: #e3e3e3;
+  color: black;
+  border-radius: 0.5rem;
+  transition: all ease 0.5s;
+  transform: scale(1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.sapModCard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.sapModButton {
+  background-color: white;
+  color: black;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  transform: scale(1);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.sapModButton:hover {
+  background-color: rgba(135, 206, 235, 0.8);
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.sapModButtonContainer{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.sapModButtonContainer .downloadGif {
+  width: 50px;
+  height: 60px;
+}
+
+.sapModButtonContainer .sapModButton {
+  margin-right: 10px;
+}
+
+.downloadVideo {
+  width: 6%;
+  border-radius: 30px;
+}
+
+.sapModCardSecondary {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  width: 45%;
+  height: 65%;
+  margin: auto;
+}
+
+.sapModCardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #50edb0;
+  transition: all ease 0.5s;
+  border-radius: 0.5rem;
+  transform: scale(1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.sapModCardContent:hover {
+  background-color: #50edb0;
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.sapModCardContent.alt {
+  background-color: rgba(var(--muted), 0.8);
+}
+
+.sapModNote {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .sapModContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .sapModCont{
+    flex-direction: column;
+  }
+
+  .sapModButtonContainer{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .sapModCard {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .downloadVideo {
+    width: 18%;
+  }
+
+  .sapModCardSecondary{
+    padding: 10px;
+    width: 100%;
+    color: black;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    transform: scale(1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+}

@@ -1,0 +1,344 @@
+.gallerySection {
+  padding: 2rem 0;
+  color: #e0e7ff; /* Light text for dark background */
+  overflow: hidden;
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  background-color: #09162b;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.galleryTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  color: #ffffff; /* Bright white for title */
+}
+
+.galleryTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #4f9cff,
+    #6e78ff
+  ); /* Blue gradient for accent */
+  transition: width 0.3s ease;
+}
+
+.sectionHeader:hover .galleryTitle::after {
+  width: 100px;
+}
+
+.gallerySubtitle {
+  color: #b0c4de; /* Lighter blue for subtitle */
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.galleryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.featuredImageContainer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.featuredImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* New wrapper for the image to ensure it's contained properly */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Add some padding to avoid touching the edges */
+  box-shadow: 0 10px 30px rgba(225, 57, 57, 0.3); /* Deeper shadow for dark theme */
+}
+
+.featuredImage:hover {
+  box-shadow: 0 15px 40px rgba(79, 156, 255, 0.15); /* Blue tinted shadow on hover */
+}
+
+.image {
+  border-radius: 8px;
+  transition: transform 0.7s ease;
+  max-height: 100%;
+  max-width: 100%;
+  /* width: auto !important; */
+  height: auto !important;
+  position: relative !important;
+}
+
+.featuredImage:hover .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 15, 35, 0.9),
+    transparent
+  ); /* Darker gradient for overlay */
+  padding: 2rem;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 5;
+}
+
+.featuredImage:hover .imageOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.imageTitle {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.imageDescription {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #d0e0ff; /* Light blue text for description */
+}
+
+.navArrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featuredImageContainer:hover .navArrows {
+  opacity: 1;
+}
+
+.navArrow {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.15
+  ); /* Transparent white background */
+  color: #ffffff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navArrow:hover {
+  background-color: rgba(79, 156, 255, 0.5); /* Blue highlight on hover */
+  transform: scale(1.1);
+}
+
+.thumbnailContainer {
+  padding: 0.5rem;
+}
+
+.thumbnail {
+  position: relative;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #09162b; /* Dark background for thumbnails */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* New wrapper for thumbnail images */
+.thumbnailWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px; /* Some padding to prevent touching edges */
+}
+
+.thumbnail:hover {
+  box-shadow: 0 8px 16px rgba(79, 156, 255, 0.2); /* Blue tinted shadow */
+  opacity: 0.9;
+}
+
+.thumbnailImage {
+  transition: transform 0.5s ease;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto !important;
+  height: auto !important;
+  position: relative !important;
+}
+
+.thumbnail:hover .thumbnailImage {
+  transform: scale(1.1);
+}
+
+.activeThumbnail {
+  border: 3px solid #4f9cff; /* Bright blue border */
+  transform: scale(1.05);
+}
+
+.activeThumbnail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(79, 156, 255, 0.2); /* Blue overlay */
+  z-index: 1;
+}
+
+/* Animation for image transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.image {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .galleryContainer {
+    flex-direction: row;
+  }
+
+  .featuredImageContainer {
+    flex: 2;
+  }
+
+  .thumbnailContainer {
+    flex: 1;
+    padding-left: 1.5rem;
+  }
+
+  .thumbnail {
+    height: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .featuredImageContainer {
+    height: 350px;
+  }
+
+  .imageTitle {
+    font-size: 1.5rem;
+  }
+
+  .imageDescription {
+    font-size: 0.9rem;
+  }
+
+  .galleryTitle {
+    font-size: 2rem;
+  }
+
+  .gallerySubtitle {
+    font-size: 1rem;
+  }
+
+  .thumbnail {
+    height: 80px;
+  }
+
+  .imageOverlay {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 1.5rem;
+    background: linear-gradient(
+      to top,
+      rgba(5, 15, 35, 0.95),
+      rgba(5, 15, 35, 0.7) 70%,
+      transparent
+    ); /* More visible on mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .gallerySection {
+    padding: 3rem 0;
+  }
+
+  .featuredImageContainer {
+    height: 250px;
+  }
+
+  .thumbnail {
+    height: 60px;
+  }
+
+  .navArrows {
+    opacity: 1;
+  }
+
+  .navArrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+}

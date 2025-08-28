@@ -1,0 +1,30 @@
+{
+  "framework": "nextjs",
+  "headers": [
+    {
+      "source": "/_next/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/site.webmanifest",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/hr-courses-training-institute-in-pune",
+      "destination": "/hr-training-course-in-pune", 
+      "permanent": true
+    }
+  ]
+}

@@ -1,0 +1,544 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.modalContainer {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease-out;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #2d3748;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #718096;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.closeButton:hover {
+  color: #e53e3e;
+  background-color: rgba(229, 62, 62, 0.1);
+}
+
+.modalContent {
+  padding: 20px 24px;
+  overflow-y: auto;
+  max-height: calc(90vh - 68px);
+}
+
+.logInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logSection {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logSection:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.logSection h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.logGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .logGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.logItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.logLabel {
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.logValue {
+  color: #2d3748;
+  word-break: break-word;
+}
+
+.actionValue {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.updateFields {
+  margin-top: 16px;
+}
+
+.updateFields h4 {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #4a5568;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.codeBlock {
+  background-color: #f7fafc;
+  border: 1px solid #edf2f7;
+  border-radius: 6px;
+  padding: 12px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.875rem;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Styled update fields display */
+.updateFieldsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fieldChange {
+  background-color: #f7fafc;
+  border-radius: 6px;
+  border: 1px solid #edf2f7;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.fieldChange:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.valueChanged {
+  background-color: #fff8f8;
+  border-color: #fed7d7;
+}
+
+.valueChanged:hover {
+  border-color: #feb2b2;
+}
+
+.fieldNameWithIcon {
+  background-color: #edf2f7;
+  margin: 0;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fieldIcon {
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.fieldName {
+  margin: 0;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.changedBadge {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.changeValues {
+  padding: 12px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.singleValueDisplay {
+  padding: 12px 16px;
+}
+
+.rawFieldValue {
+  padding: 12px 16px;
+}
+
+.nestedValue {
+  display: flex;
+  margin-bottom: 4px;
+  padding: 4px 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.nestedValue:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.nestedKey {
+  font-weight: 500;
+  color: #4a5568;
+  margin-right: 8px;
+  min-width: 100px;
+}
+
+.nestedValueContent {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .changeValues {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .changeArrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+}
+
+.oldValue, .newValue {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.valueLabel {
+  font-size: 0.75rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.valueContent {
+  border-radius: 4px;
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.changeArrow {
+  color: #718096;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+}
+
+.nullValue, .emptyValue {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.valueObject {
+  margin: 0;
+  padding: 8px;
+  background-color: #f8fafc;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  overflow-x: auto;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.successStatus {
+  color: #38a169;
+  font-weight: 600;
+}
+
+.failedStatus {
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+/* User Reference display styles */
+.userReferenceValue {
+  background-color: #edf7ff;
+  border: 1px solid #cde0f7;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 4px 0;
+}
+
+.userPropertyExpanded {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.userHeading {
+  margin: 0 0 6px 0;
+  color: #2c5282;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #cde0f7;
+  padding-bottom: 4px;
+}
+
+.userProperty {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.loadingSpinner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4a5568;
+  font-size: 0.9rem;
+  margin: 8px 0;
+  padding: 8px;
+  background-color: #f0f4f8;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+.spinnerIcon {
+  animation: spin 1s linear infinite;
+}
+
+.loadingValue {
+  color: #3182ce;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+
+.loadingValue::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  border: 2px solid #3182ce;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.adminNote {
+  font-size: 0.8rem;
+  color: #4a5568;
+  background-color: #f8fafc;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border-left: 3px solid #90cdf4;
+  margin-top: 4px;
+}
+
+.adminNote em, .adminNote strong {
+  color: #2c5282;
+}
+
+/* Object and array display styles */
+.objectValue, .arrayValue {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.objectProperty, .arrayItem {
+  display: flex;
+  padding: 4px 0;
+  border-bottom: 1px dashed #e2e8f0;
+  align-items: flex-start;
+}
+
+.objectProperty:last-child, .arrayItem:last-child {
+  border-bottom: none;
+}
+
+.propertyKey, .arrayIndex {
+  font-weight: 500;
+  color: #4a5568;
+  margin-right: 8px;
+  min-width: 100px;
+}
+
+.propertyValue {
+  flex: 1;
+}
+
+.arrayIndex {
+  min-width: 30px;
+}
+
+/* Boolean values */
+.booleanTrue, .booleanFalse {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.booleanTrue {
+  color: #38a169;
+  background-color: #f0fff4;
+}
+
+.booleanFalse {
+  color: #e53e3e;
+  background-color: #fff5f5;
+}
+
+/* No changes message */
+.noChangesMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 1px dashed #e2e8f0;
+  border-radius: 6px;
+  color: #718096;
+  font-style: italic;
+}
+
+.noChangesMessage p {
+  margin: 0;
+}
+
+/* Settings update styles */
+.settingUpdateContainer {
+  background-color: #f7fafc;
+  border: 1px solid #edf2f7;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.settingHeader {
+  background-color: #e6f0ff;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #cbd5e0;
+}
+
+.settingIcon {
+  color: #4a5568;
+  font-size: 1.2rem;
+}
+
+.settingName {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2d3748;
+  flex: 1;
+}
+
+.settingChanges {
+  padding: 16px;
+}
+
+.settingValues {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 640px) {
+  .settingValues {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .settingValues .changeArrow {
+    transform: rotate(90deg);
+    margin: 8px 0;
+  }
+}
+
+.settingDescription {
+  font-size: 0.875rem;
+  color: #4a5568;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+  margin-top: 4px;
+  line-height: 1.5;
+}

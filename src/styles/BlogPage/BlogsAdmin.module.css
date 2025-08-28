@@ -1,0 +1,180 @@
+.blogsAdmin {
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+.blogsAdmin h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.adminFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.blogsAdminForm {
+  background: #ffffff;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blogsAdminForm h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #212529;
+  text-align: center;
+}
+
+.blogsAdminForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.blogsAdminForm input,
+.blogsAdminForm textarea,
+.blogsAdminForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #495057;
+  transition: border-color 0.3s;
+}
+
+.blogsAdminForm input:focus,
+.blogsAdminForm textarea:focus,
+.blogsAdminForm select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.blogsAdminForm button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.blogsAdminForm button:hover {
+  background: linear-gradient(to right, #0056b3, #004085);
+}
+
+.ReactQuill {
+  margin-bottom: 15px;
+}
+
+.imagePreview {
+  width: 150px;
+  height: 100px;
+}
+
+.blogsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.blogCard {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+}
+
+.blogCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.blogImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blogCard h2 {
+  font-size: 1.5rem;
+  margin: 20px;
+  color: #333;
+}
+
+.blogAuthor,
+.blogCategory {
+  font-size: 1rem;
+  color: #777;
+  margin-left: 20px;
+}
+
+.blogDescription {
+  font-size: 1rem;
+  color: #555;
+  margin: 20px;
+}
+
+.blogItem button {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.blogItem button:hover {
+  background: #cc0000;
+}
+
+.blogItem button:first-child {
+  background: #007bff;
+  margin-right: 8px;
+}
+
+.blogItem button:first-child:hover {
+  background: #0056b3;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.linkTag {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .blogsList {
+    grid-template-columns: 1fr;
+  }
+}

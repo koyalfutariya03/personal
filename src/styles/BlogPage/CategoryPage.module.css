@@ -1,0 +1,123 @@
+.categoryPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.categoryTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #64ffda; /* Neon Green Accent */
+}
+
+/* ✅ Horizontal Subcategory Filter */
+.subcategoryContainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; /* Scrollable on small screens */
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.subcategoryContainer button {
+  background: #112240;
+  color: white;
+  border: 1px solid #64ffda;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.subcategoryContainer button:hover,
+.subcategoryContainer .active {
+  background: #64ffda;
+  color: #112240;
+  font-weight: bold;
+}
+
+.categoryLayout {
+  display: flex;
+  flex-direction: column; /* ✅ Ensure vertical stacking */
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+}
+
+/* ✅ Blog Container */
+.blogsContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.noBlogs {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #8892b0; /* Greyish Blue */
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .categoryTitle {
+    font-size: 1.8rem;
+  }
+
+  .subcategoryContainer {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
+
+  .blogsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .categoryTitle {
+    font-size: 1.5rem;
+  }
+
+  .blogsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.loadingIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px; /* Adjust height as needed */
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #64ffda; /* Neon Green Accent */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

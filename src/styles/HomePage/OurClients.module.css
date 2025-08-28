@@ -1,0 +1,189 @@
+.ourClientsSection {
+  text-align: center;
+  width: 100%;
+  margin: 50px auto;
+  max-width: 1800px;
+  z-index: 1;
+}
+
+.marqueeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  margin: 2rem 0;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+/* Animation for infinite scrolling */
+.marqueeContent {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 120px;
+  padding-top: 20px;
+  animation: marqueeScroll 80s linear infinite;
+  will-change: transform;
+}
+
+/* Reverse animation for the middle marquee */
+.marqueeReverse .marqueeContent {
+  animation: marqueeScrollReverse 60s linear infinite;
+}
+
+.clientLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clientLogo {
+  height: 90px;
+  max-width: 90px;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Normal infinite scrolling animation - exactly one loop of logos */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 2));
+  }
+}
+
+/* Reverse infinite scrolling animation - exactly one loop of logos */
+@keyframes marqueeScrollReverse {
+  0% {
+    transform: translateX(calc(-100% / 2));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Section Title Styling */
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-shadow:
+    0 0 0px #fff,
+    0 0 10px #fff,
+    0 0 10px #0073e6,
+    0 0 20px #182e4a,
+    0 0 20px #182e4a,
+    0 0 30px #182e4a,
+    0 0 30px #182e4a;
+  background: linear-gradient(
+    90deg,
+    #fff 35%,
+    rgba(3, 163, 196, 1) 49%,
+    #fff 62%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.titleUnderline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #a76b2e, #f18436);
+  margin: 15px auto 25px;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+  }
+  .clientLogo {
+    height: 90px;
+    width: 90px;
+  }
+  .marqueeContainer {
+    gap: 0;
+  }
+  .marquee {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  .clientLogo {
+    height: 70px;
+    width: 70px;
+  }
+  .marqueeContainer {
+    gap: 0;
+  }
+  .marquee {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 25%,
+      black 75%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 25%,
+      black 75%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 576px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+}

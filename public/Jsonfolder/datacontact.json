@@ -1,0 +1,19 @@
+{
+  "courses": {
+    "sap": {
+      "advisorsContact": "9004008253"
+    },
+    "dataScience": {
+      "advisorsContact": "9004002958"
+    },
+    "digitalMarketing": {
+      "advisorsContact": "9004008313"
+    },
+    "hr": {
+      "advisorsContact": "8805563870"
+    }
+  },
+  "default": {
+    "advisorsContact": "9004002941"
+  }
+}

@@ -1,0 +1,239 @@
+.categoryFilterContainer {
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+}
+
+.filterHeading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #e6f1ff;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.filterHeading:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #64ffda;
+  border-radius: 2px;
+}
+
+.categoryFilter {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  perspective: 1000px;
+}
+
+.categoryButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgba(17, 34, 64, 0.7);
+  color: #ccd6f6;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  height: 70px;
+}
+
+.categoryButton:hover {
+  background-color: rgba(17, 34, 64, 0.9);
+  transform: translateY(-3px);
+  border-color: rgba(100, 255, 218, 0.6);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+}
+
+.categoryButton:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #64ffda;
+  transition: width 0.3s ease;
+}
+
+.categoryButton:hover:before {
+  width: 100%;
+}
+
+.categoryButton.active {
+  background: rgba(100, 255, 218, 0.15);
+  color: #64ffda;
+  border-color: #64ffda;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+  transform: translateY(-3px);
+}
+
+.categoryButton.active:before {
+  width: 100%;
+}
+
+.categoryIcon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(100, 255, 218, 0.1);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.categoryButton:hover .categoryIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Course-specific colors */
+.categoryButton[data-course="SAP"] .categoryIcon {
+  background: rgba(0, 112, 242, 0.2);
+}
+
+.categoryButton[data-course="AI"] .categoryIcon {
+  background: rgba(255, 80, 80, 0.2);
+}
+
+.categoryButton[data-course="IT"] .categoryIcon {
+  background: rgba(0, 200, 83, 0.2);
+}
+
+.categoryButton[data-course="DV"] .categoryIcon {
+  background: rgba(255, 193, 7, 0.2);
+}
+
+.categoryButton[data-course="DM"] .categoryIcon {
+  background: rgba(156, 39, 176, 0.2);
+}
+
+.categoryButton[data-course="DS"] .categoryIcon {
+  background: rgba(3, 169, 244, 0.2);
+}
+
+.categoryButton[data-course="HR"] .categoryIcon {
+  background: rgba(233, 30, 99, 0.2);
+}
+
+.categoryName {
+  flex: 1;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.categoryButton:hover .categoryName {
+  transform: translateX(5px);
+}
+
+.moreButton {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(17, 34, 64, 0.5);
+  color: #ccd6f6;
+  border: 1px dashed rgba(100, 255, 218, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 0.5rem;
+}
+
+.moreButton:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+}
+
+.moreIcon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.moreButton:hover .moreIcon {
+  transform: translateY(3px);
+}
+
+/* Animation for active button highlight */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(100, 255, 218, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(100, 255, 218, 0);
+  }
+}
+
+.categoryButton.active {
+  animation: pulse 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .categoryFilter {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .categoryFilterContainer {
+    margin: 2rem auto;
+  }
+
+  .filterHeading {
+    font-size: 1.6rem;
+  }
+
+  .categoryFilter {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .categoryButton {
+    height: 60px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .categoryIcon {
+    font-size: 1.3rem;
+    width: 35px;
+    height: 35px;
+    margin-right: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoryFilter {
+    grid-template-columns: 1fr;
+  }
+
+  .filterHeading {
+    font-size: 1.4rem;
+  }
+
+  .categoryButton {
+    height: 55px;
+  }
+}

@@ -1,0 +1,835 @@
+/* Base Layout */
+.pageWrapper {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  padding: 20px 0;
+}
+
+.sitemapContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.sitemapHeader {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.sitemapHeader h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.sitemapHeader h2:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: #3498db;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sitemapHeader p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  max-width: 700px;
+  margin: 15px auto 0;
+}
+
+/* Popular Cities Section */
+.popularCitiesSection {
+  margin-bottom: 40px;
+  padding: 25px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+}
+
+.popularCitiesSection h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.popularCitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.popularCityCard {
+  background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.popularCityCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.popularCityCard h3 {
+  margin: 10px 0 5px;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.cityIcon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.popularBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* All Cities Grid */
+.allCitiesSection {
+  margin-bottom: 40px;
+}
+
+.allCitiesSection h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.citiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.cityCardWrapper {
+  position: relative;
+}
+
+.cityCard {
+  background-color: #f8f9fa;
+  color: #34495e;
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+}
+
+.cityCard:hover {
+  background-color: #ecf0f1;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: #3498db;
+}
+
+.cityCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.cityCard h2 {
+  font-size: 1rem;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.regionTag {
+  font-size: 0.75rem;
+  background-color: #e0e6ed;
+  color: #5d6777;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 8px;
+  align-self: center;
+}
+
+.infoButton {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: none;
+  border: none;
+  color: #95a5a6;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+  z-index: 2;
+}
+
+.infoButton:hover {
+  background-color: #eaeaea;
+  color: #3498db;
+}
+
+.cityInfoPopup {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  border: 1px solid #eaeaea;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cityInfoPopup h4 {
+  font-size: 1rem;
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.cityInfoPopup p {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  color: #7f8c8d;
+}
+
+.cityInfoPopup ul {
+  margin: 0 0 15px 20px;
+  padding: 0;
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+.cityInfoPopup ul li {
+  margin-bottom: 5px;
+}
+
+.enquireButton {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.enquireButton:hover {
+  background-color: #2980b9;
+}
+
+/* No Results */
+.noResults {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  color: #7f8c8d;
+}
+
+.noResults svg {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #95a5a6;
+}
+
+/* Contact Section */
+.contactSection {
+  margin-bottom: 40px;
+}
+
+.contactToggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s;
+}
+
+.contactToggle:hover {
+  background-color: #eaeaea;
+}
+
+.contactToggle svg {
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+
+.contactInfo {
+  background-color: #f8f9fa;
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+  margin-top: 1px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contactHeader {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contactHeader h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.contactHeader p {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+.officesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.officeCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+}
+
+.officeHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.officeIcon {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-right: 10px;
+}
+
+.officeHeader h4 {
+  font-size: 1.2rem;
+  color: #3498db;
+  margin: 0;
+}
+
+.contactItem {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.contactItem svg {
+  flex-shrink: 0;
+  color: #3498db;
+  font-size: 1rem;
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
+.contactItem p {
+  font-size: 0.95rem;
+  color: #5d6777;
+  margin: 0;
+}
+
+.contactItem a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contactItem a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Registration CTA */
+.registrationCta {
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  border-radius: 10px;
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+
+.ctaContent h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.ctaContent p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.termsCheckbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.termsCheckbox input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.termsCheckbox label {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.registerButton {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.registerButton:hover {
+  background-color: #c0392b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .sitemapContainer {
+    padding: 25px 20px;
+  }
+
+  .citiesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .sitemapHeader h2 {
+    font-size: 1.8rem;
+  }
+
+  .sitemapHeader p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 15px 0;
+  }
+
+  .sitemapContainer {
+    padding: 20px 15px;
+  }
+
+  .citiesGrid,
+  .popularCitiesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .cityCard {
+    padding: 12px 10px;
+  }
+
+  .officesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .registerButton {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .ctaContent h3 {
+    font-size: 1.4rem;
+  }
+
+  .ctaContent p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 480px) {
+  .popularCityCard {
+    padding: 15px 10px;
+  }
+
+  .popularCityCard h3 {
+    font-size: 1.1rem;
+  }
+
+  .cityIcon {
+    font-size: 24px;
+  }
+
+  .officeCard {
+    padding: 15px;
+  }
+
+  .contactHeader h3 {
+    font-size: 1.2rem;
+  }
+
+  .contactItem p {
+    font-size: 0.85rem;
+  }
+
+  .termsCheckbox label {
+    font-size: 0.8rem;
+  }
+
+  .contactToggle {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+
+  .regionTag {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+  }
+
+  .cityInfoPopup {
+    padding: 12px;
+  }
+
+  .cityInfoPopup h4 {
+    font-size: 0.9rem;
+  }
+
+  .cityInfoPopup p,
+  .cityInfoPopup ul {
+    font-size: 0.8rem;
+  }
+
+  .enquireButton {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .pageWrapper {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  }
+
+  .sitemapContainer {
+    background-color: #0f3460;
+    color: #e0e0e0;
+  }
+
+  .sitemapHeader h2 {
+    color: #ffffff;
+  }
+
+  .sitemapHeader p {
+    color: #b8c2cc;
+  }
+
+  .popularCitiesSection {
+    background-color: #16213e;
+    border-left: 4px solid #3498db;
+  }
+
+  .popularCitiesSection h3 {
+    color: #e0e0e0;
+  }
+
+  .cityCard {
+    background-color: #1e2a4a;
+    border-color: #2c3e50;
+    color: #e0e0e0;
+  }
+
+  .cityCard:hover {
+    background-color: #2c3e50;
+    border-color: #3498db;
+  }
+
+  .regionTag {
+    background-color: #2c3e50;
+    color: #b8c2cc;
+  }
+
+  .infoButton {
+    color: #7f8c8d;
+  }
+
+  .infoButton:hover {
+    background-color: #2c3e50;
+    color: #3498db;
+  }
+
+  .cityInfoPopup {
+    background-color: #1e2a4a;
+    border-color: #2c3e50;
+  }
+
+  .cityInfoPopup h4 {
+    color: #e0e0e0;
+  }
+
+  .cityInfoPopup p,
+  .cityInfoPopup ul {
+    color: #b8c2cc;
+  }
+
+  .contactToggle {
+    background-color: #1e2a4a;
+    color: #e0e0e0;
+  }
+
+  .contactToggle:hover {
+    background-color: #2c3e50;
+  }
+
+  .contactInfo {
+    background-color: #1e2a4a;
+  }
+
+  .contactHeader h3 {
+    color: #e0e0e0;
+  }
+
+  .contactHeader p {
+    color: #b8c2cc;
+  }
+
+  .officeCard {
+    background-color: #16213e;
+    border-color: #2c3e50;
+  }
+
+  .officeHeader {
+    border-bottom-color: #2c3e50;
+  }
+
+  .contactItem p {
+    color: #b8c2cc;
+  }
+
+  .noResults {
+    background-color: #1e2a4a;
+    color: #b8c2cc;
+  }
+
+  .allCitiesSection h3 {
+    color: #e0e0e0;
+    border-bottom-color: #2c3e50;
+  }
+}
+
+/* Animation Styles */
+.cityCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.cityCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.1) 38%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0) 48%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.6s;
+}
+
+.cityCard:hover::after {
+  background-position: -100% 0;
+}
+
+/* Accessibility Styles */
+.searchInput:focus,
+.regionSelect:focus,
+.contactToggle:focus,
+.registerButton:focus,
+.infoButton:focus,
+.enquireButton:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+.cityCard:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+  transform: translateY(-3px);
+}
+
+/* Additional Mobile Optimizations */
+@media (pointer: coarse) {
+  .cityCard,
+  .infoButton,
+  .contactToggle {
+    min-height: 44px; /* Minimum touch target size */
+  }
+
+  .infoButton {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cityCardWrapper {
+    margin-bottom: 5px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .pageWrapper {
+    background: none;
+    padding: 0;
+  }
+
+  .sitemapContainer {
+    box-shadow: none;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .infoButton,
+  .registrationCta,
+  .contactToggle {
+    display: none;
+  }
+
+  .citiesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .cityCard,
+  .popularCityCard {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    break-inside: avoid;
+  }
+
+  .contactInfo {
+    display: block !important;
+    background: none;
+    padding: 0;
+  }
+
+  .officesContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .officeCard {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
+
+/* Performance Optimizations */
+@supports (content-visibility: auto) {
+  .officesContainer,
+  .citiesGrid {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+  }
+}

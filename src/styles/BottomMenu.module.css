@@ -1,0 +1,150 @@
+.bottomMenu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 10px 0 8px;
+  transition: all 0.3s ease;
+}
+
+.menuContainer {
+  padding: 0 15px;
+}
+
+.menuWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.menuItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease;
+  padding: 8px 0;
+  overflow: hidden;
+}
+
+.menuItem:active {
+  transform: scale(0.95);
+}
+
+.iconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.menuItem:hover .iconWrapper {
+  background-color: rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
+}
+
+.menuItem.active .iconWrapper {
+  animation: pulse 0.5s ease;
+}
+
+.ripple {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menuItem.active .ripple {
+  animation: ripple 0.6s ease-out;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.menuItem:hover .label {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 0.2; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 414px) {
+  .bottomMenu {
+    padding: 8px 0 6px;
+  }
+  
+  .iconWrapper {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .label {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .menuWrapper {
+    padding: 0 5px;
+  }
+  
+  .iconWrapper {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .bottomMenu {
+    padding: 6px 0 4px;
+  }
+  
+  .iconWrapper {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 3px;
+  }
+  
+  .label {
+    font-size: 9px;
+  }
+}

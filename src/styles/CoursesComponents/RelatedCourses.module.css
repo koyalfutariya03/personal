@@ -1,0 +1,158 @@
+.relatedCoursesContainer {
+  padding: 70px 0;
+  background-color: #ffffff;
+  max-width: 1800px;
+  width: 97.5%;
+  height: auto; /* Adjust height dynamically */
+  margin: 0 auto;
+}
+
+.relatedCoursesTitleh2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: rgb(1, 1, 98);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 1, 98, 1) 35%,
+    rgb(3, 111, 133) 49%,
+    rgba(2, 2, 85, 1) 62%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.relatedCoursesGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.relatedCourseCard {
+  width: 18%; /* Adjusted for 5 per row */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  border: 1px solid #007bff;
+  overflow: hidden;
+}
+
+.relatedCourseCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #0056b3;
+}
+
+.relatedIconContainer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.relatedCourseIcon {
+  max-width: 40%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.relatedCourseCard h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-top: 10px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.relatedCourseCard p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.relatedCarouselRadioButtons {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.relatedCarouselRadioButtonsInput[type="radio"] {
+  margin: 0 5px;
+  cursor: pointer;
+  accent-color: #007bff;
+}
+
+.outlineBtn {
+  border: 2px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.outlineBtn:hover,
+.outlineBtn:focus {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .relatedCourseCard {
+    width: 30%; /* Show 3 cards in a row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .relatedCoursesGrid {
+    justify-content: center;
+  }
+  .relatedCourseCard {
+    width: 45%; /* Show 2 cards in a row */
+  }
+  .relatedCoursesTitleh2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .relatedCourseCard {
+    width: 80%; /* Adjust width */
+    margin: 10px auto; /* Center cards */
+  }
+
+  .relatedCourseIcon {
+    max-width: 70%; /* Increase icon size */
+  }
+
+  .relatedCoursesTitleh2 {
+    font-size: 1.6rem; /* Adjust title size */
+    letter-spacing: 4px; /* Reduce spacing */
+  }
+}
+
+
+@media (max-width: 350px) {
+  .relatedCourseCard {
+    width: 90%;
+  }
+  .relatedCoursesTitleh2 {
+    font-size: 1.5rem;
+  }
+}

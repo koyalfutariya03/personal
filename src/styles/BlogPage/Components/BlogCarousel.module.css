@@ -1,0 +1,294 @@
+/* BlogCarousel.module.css */
+.carouselSection {
+  margin: 5rem 0;
+  position: relative;
+  width: 100%;
+}
+
+.carouselHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.carouselTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  position: relative;
+}
+
+.carouselTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.gridView {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.carouselItem {
+  padding: 0.5rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.carouselItem:hover {
+  transform: translateY(-5px);
+}
+
+.blogCard {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.blogCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.blogImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blogCard:hover .blogImage {
+  transform: scale(1.05);
+}
+
+.statusBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  padding: 1rem;
+  background: white;
+}
+
+.blogTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blogCategory {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.blogAuthor {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.readMore {
+  display: inline-block;
+  color: #3498db;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.readMore:hover {
+  transform: translateX(5px);
+}
+
+.linkTag {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+/* Navigation Buttons - Repositioned to sides */
+.prev,
+.next {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background: #3498db;
+  color: white;
+}
+
+/* Navigation Dots */
+.dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dot:hover {
+  background-color: #999;
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  transform: scale(1.2);
+}
+
+.noBlogs {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .carouselItem {
+    min-width: 33.33%;
+  }
+}
+
+@media (max-width: 992px) {
+  .carouselItem {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselItem {
+    min-width: 100%;
+  }
+
+  .blogImage {
+    height: 180px;
+  }
+
+  .carouselTitle {
+    font-size: 1.3rem;
+  }
+
+  .blogTitle {
+    font-size: 1rem;
+  }
+
+  .prev,
+  .next {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .blogImage {
+    height: 160px;
+  }
+
+  .overlay {
+    padding: 0.75rem;
+  }
+
+  .blogTitle {
+    font-size: 0.9rem;
+  }
+
+  .blogCategory,
+  .blogAuthor {
+    font-size: 0.8rem;
+  }
+
+  .readMore {
+    font-size: 0.8rem;
+  }
+
+  .prev,
+  .next {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+}

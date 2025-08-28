@@ -1,0 +1,282 @@
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(41, 50, 75, 0.7), rgba(20, 30, 48, 0.85));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.loaderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 4rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.3),
+    0 2px 10px rgba(255, 255, 255, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  max-width: 500px;
+  width: 90%;
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 0.6s ease-in-out forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glass reflection effect */
+.loaderContent::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.logoWrapper {
+  transform: scale(1.5);
+  margin-bottom: 2.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+/* Scroll message styles */
+.scrollMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.scrollMessage p {
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+/* Animated scroll arrow */
+.scrollArrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 0.5rem;
+  animation: bounceArrow 2s infinite;
+}
+
+.scrollArrow span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #4facfe;
+  border-right: 3px solid #4facfe;
+  transform: rotate(45deg);
+  opacity: 0;
+  animation: fadeInArrow 2s infinite;
+}
+
+.scrollArrow span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.scrollArrow span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.scrollArrow span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInArrow {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-10px, -10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+}
+
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.loadingDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  animation: pulseDot 1.5s infinite ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+  background-color: #4facfe;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+  background-color: #66bdff;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+  background-color: #00f2fe;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-25px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(0.6);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Enhanced hover effects */
+.loaderContent:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.4),
+    0 5px 15px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+.logoWrapper:hover {
+  transform: scale(1.6);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+}
+
+/* Add custom animated border */
+.loaderContent::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    rgba(79, 172, 254, 0.1) 25%,
+    rgba(0, 242, 254, 0.3) 50%,
+    rgba(79, 172, 254, 0.1) 75%,
+    transparent 100%
+  );
+  animation: rotateBorder 6s linear infinite;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .loaderContent {
+    padding: 2.5rem 2.5rem;
+    max-width: 85%;
+  }
+
+  .logoWrapper {
+    transform: scale(1.3);
+    margin-bottom: 2rem;
+  }
+
+  .scrollMessage p {
+    font-size: 1.1rem;
+  }
+  
+  .scrollArrow span {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loaderContent {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .logoWrapper {
+    transform: scale(1.1);
+    margin-bottom: 1.5rem;
+  }
+
+  .scrollMessage p {
+    font-size: 1rem;
+  }
+  
+  .scrollArrow span {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}

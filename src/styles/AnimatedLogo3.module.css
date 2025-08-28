@@ -1,0 +1,94 @@
+.logoContainer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    overflow: visible;
+  }
+  
+  .linesContainer {
+    position: absolute;
+    top: 0%;
+    /* left: 50%; */
+    width: 100%;
+    height: 100%;
+    /* transform: translate(-50%, -50%); */
+    pointer-events: none;
+  }
+  
+  .centerArrow {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: upDown 2s ease-in-out infinite;
+  }
+  
+  @keyframes upDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .arcLine {
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: center;
+    box-sizing: border-box;
+    will-change: transform;
+    border-style: solid;
+    border-width: 18px;
+  }
+  
+  /* Large gap between arcs */
+  .line1 {
+    width: 310px;
+    height: 310px;
+    top: 50%;
+    left: 50%;
+    border-color: transparent;
+    border-top-color: #2CA7EF;
+    border-right-color: #2CA7EF;
+    animation: rotate1Flat 8s linear infinite;
+  }
+  
+  .line2 {
+    width: 260px; /* Even more gap for visual clarity */
+    height: 260px;
+    top: 50%;
+    left: 50%;
+    border-color: transparent;
+    border-top-color: #224368;
+    border-left-color: #224368;
+    transform: translate(-50%, -50%) rotateZ(45deg);
+    animation: rotate2Flat 6s linear infinite;
+  }
+  
+  .line3 {
+    width: 210px;
+    height: 210px;
+    top: 50%;
+    left: 50%;
+    border-color: transparent;
+    border-top-color: #2CA7EF;
+    border-right-color: #2CA7EF;
+    transform: translate(-50%, -50%) rotateZ(90deg);
+    animation: rotate3Flat 10s linear infinite;
+  }
+  
+  /* Rotation animations */
+  @keyframes rotate1Flat {
+    from { transform: translate(-50%, -50%) rotateZ(0deg); }
+    to   { transform: translate(-50%, -50%) rotateZ(360deg); }
+  }
+  @keyframes rotate2Flat {
+    from { transform: translate(-50%, -50%) rotateZ(45deg); }
+    to   { transform: translate(-50%, -50%) rotateZ(-315deg); }
+  }
+  @keyframes rotate3Flat {
+    from { transform: translate(-50%, -50%) rotateZ(90deg); }
+    to   { transform: translate(-50%, -50%) rotateZ(450deg); }
+  }

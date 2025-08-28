@@ -1,0 +1,80 @@
+.callAdvisorsStrip {
+  position: relative;
+  background-color: #182e4a;
+  padding: 0px;
+  padding-bottom: 4px;
+  max-width: 1800px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  font-size: 10 px;
+  z-index: 1000;
+  border-top: 1px solid #050e1b;
+}
+
+.phoneIcon {
+  margin-right: 6px;
+  font-size: 1.2em;
+  color: #f3f3f3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2em;
+  height: 1.2em;
+  padding-top: 10px;
+}
+
+.leftStripContent {
+  align-items: left;
+  margin-left: 20px;
+}
+
+.advisorText,
+.advisorNumber {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 1em;
+}
+
+.advisorNumber {
+  color: #f7f7f7;
+}
+
+.socialIconsStrip {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}
+
+.socialIconsStrip a {
+  color: #ecf0f1;
+  margin: 10px;
+  font-size: 22px;
+  transition: color 0.3s;
+}
+
+@media (max-width: 480px) {
+  .phoneIcon {
+    font-size: 0.6em;
+    margin-right: 5px;
+  }
+
+  .leftStripContent {
+    margin-left:10px;
+  }
+
+  .advisorText,
+  .advisorNumber {
+    font-size: 0.64rem;
+  }
+
+  .socialIconsStrip a {
+    font-size: 13px;
+    margin: 5px;
+  }
+  .socialIconsStrip {
+    right: 10px;
+  }
+}

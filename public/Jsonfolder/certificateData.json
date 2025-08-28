@@ -1,0 +1,339 @@
+{
+  "pages": [
+    {
+      "pageId": "sap-abapCERT",
+      "courseTitle": "SAP ABAP CERTIFICATION",
+      "alt": "sap-abap-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " Master SAP ABAP (Advanced Business Application Programming) with our Advanced SAP ABAP certification. This program equips you with the skills to develop customized applications on the SAP platform",
+      "description": "Through hands-on training, you'll become proficient in ABAP programming, making you highly valuable in building, maintaining, and optimizing SAP systems for businesses."
+    },
+    {
+      "pageId": "sap-aribaCERT",
+      "courseTitle": "SAP ARIBA CERTIFICATION",
+      "alt": "sap-abap-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " The Connecting Dots ERP Certification holds immense value in elevating your expertise and setting you on the path to a successful career as an SAP Ariba professional. Our SAP Ariba certification program goes beyond theoretical knowledge, combining hands-on practical sessions with real-world scenarios. ",
+      "description": "Additionally, we focus on grooming you to adapt and excel in the dynamic role of SAP Ariba personnel, ensuring you're well-prepared for the evolving corporate landscape. Enroll in our SAP Ariba certification in {city} to gain the skills and confidence to thrive in the competitive world of procurement and supply chain management."
+    },
+    {
+      "pageId": "sap-basisCERT",
+      "courseTitle": "SAP BASIS CERTIFICATION",
+      "alt": "sap-basis-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " SAP BASIS is the core technical foundation of SAP systems, and our certification covers all aspects of system administration. Learn to install, configure, and maintain SAP systems, ensuring optimal performance. ",
+      "description": "Your in-depth knowledge in SAP Basis ensures robust system administration and configuration, paving the way for a successful career in SAP management."
+    },
+    {
+      "pageId": "sap-ficoCERT",
+      "courseTitle": "SAP FICO CERTIFICATION",
+      "alt": "sap-fico-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "The Connecting Dots ERP Certification holds immense value in elevating your expertise and setting you on the path to a successful career as an SAP FICO professional. Our SAP FICO certification program goes beyond theoretical knowledge, combining hands-on practical sessions with real-world scenarios. ",
+      "description": "Additionally, we focus on grooming you to adapt and excel in the dynamic role of SAP FICO personnel, ensuring you're well-prepared for the evolving corporate landscape."
+    },
+    {
+      "pageId": "sap-ewmCERT",
+      "courseTitle": "SAP EWM CERTIFICATION",
+      "alt": "sap-ewm-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "Our SAP EWM (Extended Warehouse Management) certification focuses on optimizing warehouse operations.",
+      "description": " Learn to manage inventory, streamline supply chain logistics, and improve warehouse efficiency. This certification equips you for roles in warehouse and logistics management."
+    },
+    {
+      "pageId": "sap-mmCERT",
+      "courseTitle": "SAP MM CERTIFICATION",
+      "alt": "sap-mm-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " SAP MM (Materials Management) certification offers in-depth training on procurement and inventory management processes.",
+      "description": "You’ll learn how to handle materials, track inventory, and manage purchasing effectively. This certification prepares you for key roles in supply chain and procurement management."
+    },
+    {
+      "pageId": "sap-bwbiCERT",
+      "courseTitle": "SAP BW/BI CERTIFICATION",
+      "alt": "sap-bi-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "With our SAP BW/BI certification, you'll acquire the skills to work with Business Warehouse and Business Intelligence tools",
+      "description": "Learn how to gather, analyze, and report on business data, helping organizations make informed decisions. This hands-on program ensures you can transform raw data into valuable insights."
+    },
+    {
+      "pageId": "sap-netweaverCERT",
+      "courseTitle": "SAP NETWEAVER CERTIFICATION",
+      "alt": "sap-netweaver-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "This certificate proudly recognizes that Mr./Miss XYZ has successfully completed the SAP Netweaver program on dd/mm/yyyy.Gain expertise in SAP NetWeaver, a key foundation for integrating various business processes. This SAP NetWeaver certification helps you understand how to implement and manage an SAP environment that supports application integration and seamless data exchange.",
+      "description": " You’ll be ready to manage and optimize SAP landscapes effectively."
+    },
+    {
+      "pageId": "sap-psCERT",
+      "courseTitle": "SAP PS CERTIFICATION",
+      "alt": "sap-ps-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "SAP PS (Project Systems) certification provides you with the tools to manage projects from start to finish.",
+      "description": "Learn to plan, execute, and monitor projects using SAP PS, ensuring timely completion and resource optimization. This certification prepares you for roles in project management across industries."
+    },
+    {
+      "pageId": "sap-pmCERT",
+      "courseTitle": "SAP PM CERTIFICATION",
+      "alt": "sap-pm-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " Our SAP PM (Plant Maintenance) certification trains you to manage the upkeep and maintenance of enterprise equipment. ",
+      "description": " You’ll learn to schedule repairs, manage maintenance workflows, and ensure operational efficiency. This certification is ideal for roles in maintenance management and operations."
+    },
+    {
+      "pageId": "sap-qmCERT",
+      "courseTitle": "SAP QM CERTIFICATION",
+      "alt": "sap-qm-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " With our SAP QM (Quality Management) certification, you’ll gain expertise in maintaining quality across production processes. Learn to implement quality control measures, conduct inspections, and ensure product compliance.",
+      "description": " This hands-on training positions you for roles in quality assurance and process improvement."
+    },
+    {
+      "pageId": "sap-ppCERT",
+      "courseTitle": "SAP PP CERTIFICATION",
+      "alt": "sap-pp-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " SAP PP (Production Planning) certification gives you the knowledge to plan and manage manufacturing processes. .",
+      "description": "You’ll learn to oversee production schedules, material requirements, and workflow optimizations. This program prepares you for roles in production and supply chain management."
+    },
+    {
+      "pageId": "sap-hanaCERT",
+      "courseTitle": "SAP S/4 HANA CERTIFICATION",
+      "alt": "sap-s/4-hana-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "Our SAP S/4 HANA certification Course offers a deep dive into in-memory database technology. Learn how to leverage SAP S/4 HANA to process massive data volumes in real-time and support business-critical applications.",
+      "description": "With practical experience, you'll be ready to implement high-performance data analytics and solutions for leading enterprises."
+    },
+    {
+      "pageId": "sap-hrhcmCERT",
+      "courseTitle": "SAP HR/HCM CERTIFICATION",
+      "alt": "sap-hcm-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " Our SAP HR/HCM (Human Capital Management) certification covers all aspects of workforce management. Learn how to handle payroll, time management, recruitment, and employee data, ensuring businesses can manage their workforce effectively.",
+      "description": "This certification positions you for roles in HR and talent management."
+    },
+    {
+      "pageId": "sap-scmCERT",
+      "courseTitle": "SAP SCM CERTIFICATION",
+      "alt": "sap-scm-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "With our SAP SCM (Supply Chain Management) certification, you’ll gain expertise in optimizing end-to-end supply chain processes.",
+      "description": "Learn to plan, execute, and manage supply chain networks to ensure smooth operations. This certification is ideal for careers in logistics and supply chain optimization."
+    },
+    {
+      "pageId": "sap-successfactorCERT",
+      "courseTitle": "SAP SUCCESSFACTOR CERTIFICATION",
+      "alt": "sap-successfactor-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " Our SAP SuccessFactors certification is designed for professionals looking to excel in human resource management in the cloud.",
+      "description": " Learn to manage recruitment, performance, learning, and employee engagement on the SuccessFactors platform. This certification is ideal for those aiming to streamline HR processes in global organizations."
+    },
+    {
+      "pageId": "sap-sdCERT",
+      "courseTitle": "SAP SD CERTIFICATION",
+      "alt": "sap-sd-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " Become an expert in sales and distribution with our SAP SD certification. You'll learn to manage sales orders, shipping, billing, and customer relationships, ensuring efficient sales processes. ",
+      "description": "This program prepares you to optimize sales functions and improve customer satisfaction for any business."
+    },
+    {
+      "pageId": "DatascienceCERT",
+      "courseTitle": "Data Science Certificate",
+      "alt": "data-science-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " The Data Science Certification at Connecting Dots ERP is designed to provide in-depth knowledge of data analysis, machine learning, and big data. This program equips you with skills in Python, R, SQL, and data visualization tools.",
+      "description": "With hands-on training, you’ll be prepared to apply data science techniques to solve complex problems and drive business decisions, opening doors to high-paying data-driven roles."
+    },
+    {
+      "pageId": "DataanalyticsCERT",
+      "courseTitle": "Data Analytics Certificate",
+      "alt": "data-analytics-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " The Masters in Data Analytics Certification at Connecting Dots ERP offers advanced training in data processing, statistical analysis, and reporting. ",
+      "description": " You’ll learn to use tools like Python, Excel, and Power BI to extract valuable insights from data. This program is ideal for those looking to boost their careers in data analytics, preparing you for top roles in the industry."
+    },
+    {
+      "pageId": "BusinessanalyticsCERT",
+      "courseTitle": "Business Analytics Certificate",
+      "alt": "business-analytics-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " The Masters in Business Analytics Certification at Connecting Dots ERP focuses on turning data into actionable business insights. ",
+      "description": "Learn to use analytics tools to optimize business processes, improve decision-making, and drive growth. This program ensures you’re ready to meet the increasing demand for analytics experts in the corporate world."
+    },
+    {
+      "pageId": "gptaiCERT",
+      "courseTitle": "Artificial Intelligence Certificate",
+      "alt": "artificial-intelligence-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " The Chat GPT & AI Certification at Connecting Dots ERP offers cutting-edge training in AI-powered conversational systems.",
+      "description": " Learn to develop chatbots, integrate AI into business processes, and create intelligent applications using GPT models. This certification will position you at the forefront of AI innovation and automation."
+    },
+    {
+      "pageId": "fullstackCERT",
+      "courseTitle": "Full-Stack Certificate",
+      "alt": "full-stack-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " At, the Full Stack Training Certification provides comprehensive skills in front-end and back-end web development.",
+      "description": " You’ll learn to build dynamic web applications using technologies like HTML, CSS, JavaScript, and Node.js. This certification prepares you for versatile roles in full-stack development with hands-on project experience."
+    },
+    {
+      "pageId": "mernstackCERT",
+      "courseTitle": "MERN-Stack Certificate",
+      "alt": "mern-stack-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "The MERN Stack Certification at Connecting Dots ERP provides specialized training in MongoDB, Express.js, React, and Node.js.",
+      "description": "You’ll learn to develop full-stack JavaScript applications with a focus on both front-end and back-end technologies. This certification will prepare you for sought-after roles in modern web development."
+    },
+    {
+      "pageId": "JavaCERT",
+      "courseTitle": "Java Certificate",
+      "alt": "java-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " The JAVA Certification Course at Connecting Dots ERP is tailored for those looking to master the Java programming language.",
+      "description": " Gain proficiency in building high-performance applications, understanding object-oriented principles, and creating scalable solutions. This certification sets you up for success in software development and enterprise-level application design."
+    },
+    {
+      "pageId": "UiuxCERT",
+      "courseTitle": "UI/UX Certificate",
+      "alt": "uiux-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " With the UI/UX Design Certification at Connecting Dots ERP, you will master the principles of user-cantered design, from wireframing to usability testing.",
+      "description": " Gain practical experience in creating visually appealing and functional user interfaces, making you a strong candidate for roles in digital design and user experience."
+    },
+    {
+      "pageId": "PythonCERT",
+      "courseTitle": "Python Certificate",
+      "alt": "python-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " The Python Certification at Connecting Dots ERP equips you with versatile skills in one of the most popular programming languages.",
+      "description": " Learn to use Python for data analysis, web development, and automation. This certification is ideal for professionals seeking roles in data science, software development, or automation engineering."
+    },
+    {
+      "pageId": "SalesforceCERT",
+      "courseTitle": "Salesforce Certificate",
+      "alt": "salesforce-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " The Salesforce Training Certification at Connecting Dots ERP is designed to make you proficient in managing and configuring Salesforce CRM. ",
+      "description": "Gain hands-on experience with Salesforce tools, learn to automate workflows, and streamline customer relationship processes. This certification prepares you for in-demand roles in CRM and cloud technology."
+    },
+    {
+      "pageId": "TableauCERT",
+      "courseTitle": "Tableau Certificate",
+      "alt": "tableau-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " The Tableau Certification at Connecting Dots ERP offers in-depth training in data visualization and dashboard creation.",
+      "description": "You’ll learn to present complex data insights through interactive visuals, making it easier for businesses to make informed decisions. This certification prepares you for roles in data analysis and business intelligence."
+    },
+    {
+      "pageId": "PowerbiCERT",
+      "courseTitle": "PowerBI Certificate",
+      "alt": "power-bi-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " The Power BI Certification at Connecting Dots ERP trains you in Microsoft’s leading business intelligence tool. ",
+      "description": "Learn to create dynamic dashboards, perform data analysis, and share insights with stakeholders. This certification is perfect for professionals aiming to excel in business analytics and data visualization roles."
+    },
+    {
+      "pageId": "SqlCERT",
+      "courseTitle": "SQL Certificate",
+      "alt": "sql-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " At Connecting Dots ERP the SQL Certification covers the fundamentals of database management and querying.",
+      "description": "Gain expertise in SQL commands, data manipulation, and optimization techniques. This certification will prepare you for database management roles, ensuring you can efficiently manage and retrieve data."
+    },
+    {
+      "pageId": "DgimCERT",
+      "courseTitle": "Digital Marketing Certificate",
+      "alt": "digital-marketing-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "The Digital Marketing Certification at Connecting Dots ERP equips you with the essential skills to excel in the dynamic world of online marketing. Learn to create impactful campaigns, analyze performance metrics, and master strategies across platforms like SEO, social media, and email marketing.",
+      "description": "This certification prepares you for a amazing career in digital marketing, where creativity meets data-driven decision-making to achieve business goals effectively. "
+    },
+    {
+      "pageId": "HRCoreCERT",
+      "courseTitle": "Core HR Certificate",
+      "alt": "hr-core-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "The Core HR Certification at Connecting Dots ERP focuses on the essentials of human resources, including policies, employee management, and labor laws",
+      "description": "This certification ensures you are equipped to handle core HR functions and support organizational growth through effective HR practices."
+    },
+    {
+      "pageId": "HRPayrollCERT",
+      "courseTitle": "HR Payroll Certificate",
+      "alt": "hr-payroll-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": " At Connecting Dots ERP, the HR Payroll Certification teaches you the intricacies of payroll management.",
+      "description": "From handling salary calculations to statutory compliances, this certification ensures you are well-prepared to manage payroll functions in any organization efficiently."
+    },
+    {
+      "pageId": "HRManCERT",
+      "courseTitle": "HR Management Certificate",
+      "alt": "hr-management-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "The HR Management Certification at Connecting Dots ERP offers advanced training in strategic HR practices, such as workforce planning, talent management, and leadership development.",
+      "description": "This certification prepares you for managerial roles in HR, focusing on aligning HR strategies with business goals."
+    },
+    {
+      "pageId": "HRHCMCERT",
+      "courseTitle": "HR Generalist Certificate",
+      "image": "/Certificate/Certificate-1.avif",
+      "alt": "hr-hcm-certification-from-connecting-dots-erp",
+      "completionText": "This certificate proudly recognizes that Mr./Miss XYZ has successfully completed the SAP HR HCM Program on dd/mm/yyyy.At Connecting Dots ERP, the HR Generalist Certification covers all key HR functions, from recruitment to payroll management. ",
+      "description": "This well-rounded program provides the skills you need to efficiently manage human resources operations, positioning you for success as an HR Generalist."
+    },
+    {
+      "pageId": "HRAnalyticsCERT",
+      "courseTitle": "HR Analytics Certificate",
+      "image": "/Certificate/Certificate-1.avif",
+      "alt": "hr-analytics-certification-from-connecting-dots-erp",
+      "completionText": " The HR Analytics Certification at Connecting Dots ERP focuses on using data to optimize HR processes. Learn to analyse workforce metrics, improve recruitment strategies, and enhance employee performance.",
+      "description": "This certification prepares you for the growing field of HR analytics, where data-driven decisions are critical."
+    },
+    {
+      "pageId": "HomepageCERT",
+      "courseTitle": "Certification",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "At Connecting Dots ERP, recognized as the Best Training Institute in Pune, our credentials are internationally acknowledged and accredited by top multinational corporations. After completing both the theoretical and practical components of the course, including Real-time Scenario, hands-on training, both fresh graduates or Working professionals receive a prestigious certification that significantly enhances their resumes.",
+      "description": "This qualification validates your expertise and opens doors to senior positions in renowned global companies. Importantly, certification is awarded only upon successful completion of our rigorous Hard work and training, ensuring it reflects real-world skills and professional knowledge."
+    },
+    {
+      "pageId": "HrtrainCERT",
+      "courseTitle": "HR Training Certificate",
+      "alt": "hr-training-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "The HR Training Certification at Connecting Dots ERP provides a solid foundation in human resource management, covering recruitment, employee relations, and performance management.",
+      "description": " This certification prepares you to handle the daily operations of an HR department and develop strategic HR solutions for businesses."
+    },
+    {
+      "pageId": "sap-CERT",
+      "courseTitle": "SAP Training Certificate",
+      "alt": "sap-training-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "The Connecting Dots SAP Certification Course in {city} is designed to enhance your expertise in SAP systems and set you on the path to a successful career in ERP. Our program goes beyond theoretical learning, offering hands-on practical sessions and real-world scenarios across various SAP modules.",
+      "description": " With expert guidance and a focus on practical application, you'll be well-equipped to thrive in the dynamic world of SAP and meet the evolving needs of modern businesses."
+    },
+    {
+      "pageId": "ITcourses-CERT",
+      "courseTitle": "IT Training Certificate",
+      "alt": "software-course-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "The Connecting Dots Software Certification Course in {city} is designed to provide you with in-depth knowledge and hands-on experience in key software development technologies. Our comprehensive program covers programming languages, development frameworks, and industry best practices, equipping you with the skills to build, test, and deploy software solutions.",
+      "description": "  With expert trainers and real-world projects, you'll be ready to excel in the fast-paced world of software development."
+    },
+    {
+      "pageId": "HRcourses-CERT",
+      "courseTitle": "HR Training Certificate",
+      "alt": "hr-course-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "Master the art of Human resources with HR Certification Course in {city} is designed to equip you with the essential skills and knowledge needed to excel in Human Resources. Our comprehensive program combines theoretical learning with hands-on practical sessions, focusing on real-world HR scenarios.",
+      "description": " With expert trainers and a focus on contemporary HR practices, you’ll be prepared to navigate and succeed in the ever-evolving HR landscape."
+    },
+    {
+      "pageId": "DataVisual-CERT",
+      "courseTitle": "Data Visualization Training Certificate",
+      "alt": "data-visualization-course-certification-from-connecting-dots-erp",
+      "image": "/Certificate/Certificate-1.avif",
+      "completionText": "Learn advance about advance topics and industrial tools with the Certification of Data Visualization Course in {city}. It empowers you to transform complex data into clear, actionable insights. Our program blends theoretical concepts with hands-on training, focusing on popular tools like Tableau, Power BI, and Excel.",
+      "description": " With expert instructors and real-world applications, you'll gain the skills needed to create impactful visualizations and drive data-driven decision-making in any organization."
+    }
+  ]
+}
