@@ -17,6 +17,8 @@ const allowedOrigins = [
   "https://www.connectingdotserp.com",
   "https://blog.connectingdotserp.com",
   "https://www.blog.connectingdotserp.com",
+  "https://personal-rho-sand-23.vercel.app",
+  "https://blogs-panel-backend-test-of3h.onrender.com",
   "http://localhost:3000",
   "http://localhost:5002",
 ];
