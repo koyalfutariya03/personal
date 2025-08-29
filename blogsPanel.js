@@ -112,7 +112,6 @@ userSchema.index({ email: 1 }, { unique: true, sparse: true });
 // Pre-save hook to hash password
 userSchema.pre('save', async function(next) {
   if (!this.isModified('password')) return next();
-  
   try {
     this.password = await bcrypt.hash(this.password, 12);
     next();
@@ -191,13 +190,11 @@ cloudinary.config({
 // ✅ Helper function to extract public_id from Cloudinary URL (EXACTLY as you had it)
 const getPublicIdFromUrl = (url) => {
   if (!url) return null;
-
   try {
     const urlParts = url.split("/");
     const versionIndex = urlParts.findIndex(
       (part) => part.startsWith("v") && !isNaN(part.substring(1))
     );
-
     if (versionIndex !== -1 && urlParts.length > versionIndex + 2) {
       const relevantParts = urlParts.slice(versionIndex + 1);
       const publicIdWithExtension = relevantParts.slice(1).join("/");
@@ -225,7 +222,6 @@ const getPublicIdFromUrl = (url) => {
 // ✅ Helper function to delete image from Cloudinary (EXACTLY as you had it)
 const deleteCloudinaryImage = async (publicId) => {
   if (!publicId) return;
-
   try {
     console.log(`Attempting to delete Cloudinary image with public ID: ${publicId}`);
     const result = await cloudinary.uploader.destroy(publicId);
@@ -243,7 +239,7 @@ const storage = new CloudinaryStorage({
     folder: "blog-images",
     format: async (req, file) => "png",
     public_id: (req, file) =>
-      Date.now() + "-" + file.originalname.split(".")[0],
+      Date.now() + "-" + file.originalname.split("."),
   },
 });
 
@@ -282,7 +278,7 @@ const findUniqueSlug = async (baseSlug, BlogModel, excludeId = null) => {
 // --- JWT Authentication Middleware (Enhanced) ---
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers["authorization"];
-  const token = authHeader && authHeader.split(" ")[1];
+  const token = authHeader && authHeader.split(" ")[13];
 
   if (!token)
     return res
@@ -298,65 +294,52 @@ const authenticateToken = (req, res, next) => {
     next();
   });
 };
-// Add this endpoint after your existing auth routes in blogsPanel.js
 
 // ✅ Validate JWT Token Endpoint
 app.get("/api/auth/validate-token", authenticateToken, async (req, res) => {
-    try {
-      // The authenticateToken middleware has already validated the token
-      // and attached user info to req.user
-      
-      // Optionally fetch fresh user data from database
-      const user = await User.findById(req.user.id);
-      if (!user) {
-        return res.status(404).json({ message: "User not found" });
-      }
-  
-      if (!user.isActive) {
-        return res.status(403).json({ message: "Account is inactive" });
-      }
-  
-      // Return user profile data
-      res.json({
-        id: user._id,
-        username: user.username,
-        email: user.email,
-        role: user.role,
-        isActive: user.isActive,
-        lastLogin: user.lastLogin,
-        createdAt: user.createdAt,
-        updatedAt: user.updatedAt
-      });
-    } catch (err) {
-      console.error("Token validation error:", err);
-      res.status(500).json({ 
-        message: "Error validating token", 
-        error: err.message 
-      });
+  try {
+    const user = await User.findById(req.user.id);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
     }
-  });
-  
-  // ✅ Optional: Logout Endpoint (for cleanup on backend if needed)
-  app.post("/api/auth/logout", authenticateToken, async (req, res) => {
-    try {
-      // Optional: Update user's last logout time or invalidate refresh tokens
-      const user = await User.findById(req.user.id);
-      if (user) {
-        // You could add a lastLogout field to your User model if needed
-        // user.lastLogout = new Date();
-        // await user.save();
-      }
-  
-      res.json({ message: "Logged out successfully" });
-    } catch (err) {
-      console.error("Logout error:", err);
-      res.status(500).json({ 
-        message: "Error during logout", 
-        error: err.message 
-      });
+    if (!user.isActive) {
+      return res.status(403).json({ message: "Account is inactive" });
     }
-  });
-  
+    res.json({
+      id: user._id,
+      username: user.username,
+      email: user.email,
+      role: user.role,
+      isActive: user.isActive,
+      lastLogin: user.lastLogin,
+      createdAt: user.createdAt,
+      updatedAt: user.updatedAt
+    });
+  } catch (err) {
+    console.error("Token validation error:", err);
+    res.status(500).json({ 
+      message: "Error validating token", 
+      error: err.message 
+    });
+  }
+});
+
+// ✅ Optional: Logout Endpoint (for cleanup on backend if needed)
+app.post("/api/auth/logout", authenticateToken, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+    if (user) {
+      // Optionally track lastLogout or invalidate refresh tokens
+    }
+    res.json({ message: "Logged out successfully" });
+  } catch (err) {
+    console.error("Logout error:", err);
+    res.status(500).json({ 
+      message: "Error during logout", 
+      error: err.message 
+    });
+  }
+});
 
 // Enhanced role-based middleware
 const requireRole = (roles) => {
@@ -364,7 +347,6 @@ const requireRole = (roles) => {
     if (!req.user) {
       return res.status(401).json({ message: "Access Denied: Authentication required" });
     }
-    
     if (!roles.includes(req.user.role)) {
       return res.status(403).json({ 
         message: "Access Denied: Insufficient permissions",
@@ -372,7 +354,6 @@ const requireRole = (roles) => {
         current: req.user.role
       });
     }
-    
     next();
   };
 };
@@ -412,7 +393,6 @@ app.post("/api/auth/register", async (req, res) => {
     });
   } catch (err) {
     console.error("Registration Error:", err);
-    
     if (err.name === 'ValidationError') {
       const errors = Object.values(err.errors).map(e => e.message);
       return res.status(400).json({ 
@@ -420,7 +400,6 @@ app.post("/api/auth/register", async (req, res) => {
         errors 
       });
     }
-    
     res.status(500).json({ 
       message: "Error registering user", 
       error: err.message 
@@ -488,7 +467,6 @@ app.get("/api/auth/profile", authenticateToken, async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
-    
     res.json({ user: user.profile });
   } catch (err) {
     console.error("Profile Error:", err);
@@ -504,14 +482,11 @@ app.put("/api/auth/profile", authenticateToken, async (req, res) => {
   try {
     const { email } = req.body;
     const user = await User.findById(req.user.id);
-    
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
-    
     if (email) user.email = email;
     await user.save();
-    
     res.json({ 
       message: "Profile updated successfully", 
       user: user.profile 
@@ -524,13 +499,12 @@ app.put("/api/auth/profile", authenticateToken, async (req, res) => {
     });
   }
 });
+
 // ================ USER MANAGEMENT ENDPOINTS ================
-// Add these after your existing auth routes
 
 // ✅ Get all users (Admin/SuperAdmin only)
 app.get("/api/auth/users", authenticateToken, async (req, res) => {
   try {
-    // Check if user has admin or superadmin role
     if (!['admin', 'superadmin'].includes(req.user.role.toLowerCase())) {
       return res.status(403).json({ 
         message: "Access denied. Admin privileges required.",
@@ -538,15 +512,8 @@ app.get("/api/auth/users", authenticateToken, async (req, res) => {
         currentRole: req.user.role
       });
     }
-
-    console.log(`Admin ${req.user.username} fetching all users`);
-    
-    // Fetch all users from database (exclude passwords)
     const users = await User.find({}, { password: 0 }).sort({ createdAt: -1 });
-    
-    console.log(`Found ${users.length} users`);
     res.json(users);
-    
   } catch (err) {
     console.error("Error fetching users:", err);
     res.status(500).json({ 
@@ -567,7 +534,6 @@ app.get("/api/auth/users/:id", authenticateToken, async (req, res) => {
 
     const { id } = req.params;
 
-    // Validate MongoDB ObjectId format
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: "Invalid user ID format" });
     }
@@ -587,7 +553,7 @@ app.get("/api/auth/users/:id", authenticateToken, async (req, res) => {
   }
 });
 
-// ✅ Update user (Admin/SuperAdmin only)
+// ✅ Update user (Admin/SuperAdmin only) — username/role/email/isActive ONLY
 app.put("/api/auth/users/:id", authenticateToken, async (req, res) => {
   try {
     if (!['admin', 'superadmin'].includes(req.user.role.toLowerCase())) {
@@ -597,20 +563,25 @@ app.put("/api/auth/users/:id", authenticateToken, async (req, res) => {
     }
 
     const { id } = req.params;
-    const { username, email, role, isActive } = req.body;
+    const { username, email, role, isActive, password } = req.body;
 
-    // Validate MongoDB ObjectId format
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: "Invalid user ID format" });
     }
 
-    // Find the user to update
+    // Never accept password here; use the dedicated password endpoint
+    if (typeof password === 'string' && password.length > 0) {
+      return res.status(400).json({ 
+        message: "Password cannot be updated here. Use /api/auth/users/:id/password." 
+      });
+    }
+
     const userToUpdate = await User.findById(id);
     if (!userToUpdate) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // Prevent updating main admin
+    // Prevent updating main admin username away from 'admin'
     if (userToUpdate.username === 'admin' && username && username !== 'admin') {
       return res.status(403).json({ 
         message: "Cannot change main admin username" 
@@ -624,7 +595,6 @@ app.put("/api/auth/users/:id", authenticateToken, async (req, res) => {
       });
     }
 
-    // Update user fields
     const updateData = {};
     if (username) updateData.username = username;
     if (email) updateData.email = email;
@@ -634,10 +604,12 @@ app.put("/api/auth/users/:id", authenticateToken, async (req, res) => {
     const updatedUser = await User.findByIdAndUpdate(
       id, 
       updateData, 
-      { new: true, runValidators: true }
+      { new: true, runValidators: true, context: 'query' }
     ).select({ password: 0 });
 
-    console.log(`User ${updatedUser.username} updated by ${req.user.username}`);
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found" });
+    }
 
     res.json({ 
       message: "User updated successfully",
@@ -645,15 +617,62 @@ app.put("/api/auth/users/:id", authenticateToken, async (req, res) => {
     });
   } catch (err) {
     console.error("Error updating user:", err);
-    
     if (err.code === 11000) {
       return res.status(409).json({ 
         message: "Username or email already exists" 
       });
     }
-    
     res.status(500).json({ 
       message: "Error updating user", 
+      error: process.env.NODE_ENV === 'development' ? err.message : 'Internal server error'
+    });
+  }
+});
+
+// ✅ NEW: Update user password (Admin/SuperAdmin only) — uses save() to trigger pre-save hash
+app.put("/api/auth/users/:id/password", authenticateToken, async (req, res) => {
+  try {
+    if (!['admin', 'superadmin'].includes(req.user.role.toLowerCase())) {
+      return res.status(403).json({ 
+        message: "Access denied. Admin privileges required." 
+      });
+    }
+
+    const { id } = req.params;
+    const { password } = req.body;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "Invalid user ID format" });
+    }
+    if (!password || typeof password !== 'string' || password.length < 6) {
+      return res.status(400).json({ message: "Password must be at least 6 characters" });
+    }
+
+    const userToUpdate = await User.findById(id).select('+password');
+    if (!userToUpdate) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Prevent changing main admin password
+    if (userToUpdate.username === 'admin') {
+      return res.status(403).json({ message: "Cannot change main admin password" });
+    }
+
+    // Only superadmin can change another superadmin's password
+    if (userToUpdate.role === 'superadmin' && req.user.role.toLowerCase() !== 'superadmin') {
+      return res.status(403).json({ 
+        message: "Only superadmin can change another superadmin's password" 
+      });
+    }
+
+    userToUpdate.password = password; // will be hashed by pre-save
+    await userToUpdate.save();
+
+    res.json({ message: "Password updated successfully" });
+  } catch (err) {
+    console.error("Error updating password:", err);
+    res.status(500).json({ 
+      message: "Error updating password", 
       error: process.env.NODE_ENV === 'development' ? err.message : 'Internal server error'
     });
   }
@@ -662,7 +681,6 @@ app.put("/api/auth/users/:id", authenticateToken, async (req, res) => {
 // ✅ Delete user (Admin/SuperAdmin only)
 app.delete("/api/auth/users/:id", authenticateToken, async (req, res) => {
   try {
-    // Check if user has admin or superadmin role
     if (!['admin', 'superadmin'].includes(req.user.role.toLowerCase())) {
       return res.status(403).json({ 
         message: "Access denied. Admin privileges required." 
@@ -670,36 +688,27 @@ app.delete("/api/auth/users/:id", authenticateToken, async (req, res) => {
     }
 
     const { id } = req.params;
-    console.log(`Admin ${req.user.username} attempting to delete user: ${id}`);
-
-    // Validate MongoDB ObjectId format
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).json({ message: "Invalid user ID format" });
     }
 
-    // Find the user to delete
     const userToDelete = await User.findById(id);
     if (!userToDelete) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    console.log(`Found user to delete: ${userToDelete.username}`);
-
-    // Prevent deletion of main admin
     if (userToDelete.username === 'admin') {
       return res.status(403).json({ 
         message: "Cannot delete the main admin user" 
       });
     }
 
-    // Prevent self-deletion
     if (userToDelete._id.toString() === req.user.id) {
       return res.status(403).json({ 
         message: "Cannot delete yourself" 
       });
     }
 
-    // Only superadmin can delete other superadmins
     if (userToDelete.role === 'superadmin' && req.user.role.toLowerCase() !== 'superadmin') {
       return res.status(403).json({ 
         message: "Only superadmin can delete other superadmins" 
@@ -707,7 +716,6 @@ app.delete("/api/auth/users/:id", authenticateToken, async (req, res) => {
     }
 
     await User.findByIdAndDelete(id);
-    console.log(`User ${userToDelete.username} deleted successfully`);
 
     res.json({ 
       message: `User "${userToDelete.username}" deleted successfully`,
@@ -735,7 +743,6 @@ app.get("/api/ping", (req, res) => {
     server: "Express Blog Backend"
   });
 });
-
 
 // === Wake/Ping Endpoint (EXACTLY as you had it) ===
 app.get("/api/blogs/ping", (req, res) => {
@@ -774,7 +781,6 @@ app.get("/api/blogs/slug/:slug", async (req, res) => {
   try {
     const blog = await Blog.findOne({ slug: req.params.slug });
     if (!blog) return res.status(404).json({ message: "Blog not found" });
-
     res.json(blog);
   } catch (err) {
     res.status(500).json({ message: "Error fetching blog", error: err.message });
@@ -787,10 +793,8 @@ app.get("/api/blogs/:id", async (req, res) => {
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
       return res.status(400).json({ message: "Invalid Blog ID format" });
     }
-
     const blog = await Blog.findById(req.params.id);
     if (!blog) return res.status(404).json({ message: "Blog not found" });
-
     res.json(blog);
   } catch (err) {
     res.status(500).json({ message: "Error fetching blog", error: err.message });
@@ -924,15 +928,11 @@ app.put(
   }
 );
 
-
 // ✅ Get current user's blog posts only
 app.get("/api/blogs/my-posts", authenticateToken, async (req, res) => {
   try {
     const { category, subcategory, status, limit, skip } = req.query;
-    
-    console.log(`Fetching posts for user: ${req.user.username} (ID: ${req.user.id})`);
-    
-    // Build query for current user's posts only
+
     let query = { 
       $or: [
         { author: req.user.username },
@@ -941,7 +941,7 @@ app.get("/api/blogs/my-posts", authenticateToken, async (req, res) => {
         { userId: req.user.id }
       ]
     };
-    
+
     if (category) query.category = category;
     if (subcategory) query.subcategory = subcategory;
     if (status) query.status = status;
@@ -954,19 +954,17 @@ app.get("/api/blogs/my-posts", authenticateToken, async (req, res) => {
       .skip(parsedSkip)
       .limit(parsedLimit);
 
-    console.log(`✅ Found ${blogs.length} posts for user ${req.user.username}`);
-    
     res.json({ 
       blogs, 
       total: blogs.length,
       author: req.user.username 
     });
-    
   } catch (err) {
     console.error("Error fetching user blogs:", err);
     res.status(500).json({ message: "Error fetching user blogs", error: err.message });
   }
 });
+
 // ✅ Delete a blog (EXACTLY as you had it)
 app.delete("/api/blogs/:id", authenticateToken, async (req, res) => {
   try {
@@ -991,7 +989,6 @@ app.delete("/api/blogs/:id", authenticateToken, async (req, res) => {
   }
 });
 
-
-// ✅ Start the blog server (EXACTLY as you had it)
+// ✅ Start the blog server
 const PORT = process.env.BLOG_PORT || 5002;
 app.listen(PORT, () => console.log(`🚀 Blog server running on port ${PORT}`));

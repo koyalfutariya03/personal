@@ -74,22 +74,46 @@ const AdminLogin = () => {
       
       console.log(`Attempting login to: ${apiUrl}`);
       
-      // Make the API call
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: { 
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify(requestBody),
-      });
+      // Make the API call with better error handling
+      let response;
+      try {
+        response = await fetch(apiUrl, {
+          method: "POST",
+          headers: { 
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(requestBody),
+          credentials: 'include' // Include cookies for session-based auth if needed
+        });
 
-      console.log('Response status:', response.status);
-      
-      // Handle non-OK responses safely
-      if (!response.ok) {
-        const errorMessage = await extractErrorMessage(response);
-        throw new Error(errorMessage);
+        console.log('Response status:', response.status);
+        
+        // Handle non-OK responses safely
+        if (!response.ok) {
+          const errorMessage = await extractErrorMessage(response);
+          console.error('Login API error:', {
+            status: response.status,
+            statusText: response.statusText,
+            headers: Object.fromEntries(response.headers.entries()),
+            error: errorMessage
+          });
+          
+          // Provide more specific error messages for common cases
+          if (response.status === 401) {
+            throw new Error('Invalid username or password. Please try again.');
+          } else if (response.status >= 500) {
+            throw new Error('Server error. Please try again later.');
+          } else {
+            throw new Error(errorMessage || 'Login failed. Please try again.');
+          }
+        }
+      } catch (error) {
+        console.error('Network error during login:', error);
+        if (error.name === 'TypeError' && error.message.includes('Failed to fetch')) {
+          throw new Error('Cannot connect to the server. Please check your internet connection.');
+        }
+        throw error; // Re-throw for the outer catch block
       }
 
       const data = await response.json();
@@ -126,7 +150,7 @@ const AdminLogin = () => {
       console.log('Storing user data:', userData);
       
       // Namespaced storage to prevent token collisions
-      const namespace = targetPage === '/dashboard' ? 'dashboard' : 'blogs';
+      const namespace = targetPage === '/dashboard' ? 'dashboard' : 'blog';
       localStorage.setItem(`${namespace}Token`, token);
       localStorage.setItem(`${namespace}Role`, userData.role);
       localStorage.setItem(`${namespace}User`, JSON.stringify(userData));
@@ -135,19 +159,16 @@ const AdminLogin = () => {
       localStorage.setItem('adminToken', token);
       localStorage.setItem('adminRole', userData.role);
       localStorage.setItem('adminUsername', userData.username);
-      localStorage.setItem('adminEmail', userData.email);
+      localStorage.setItem('adminEmail', userData.email || '');  // Handle potential undefined email
       localStorage.setItem('adminId', userData.id);
       localStorage.setItem('isAdminLoggedIn', 'true');
       localStorage.setItem('userData', JSON.stringify(userData));
       
-      // Verify storage
-      console.log('Verifying localStorage:', {
-        token: localStorage.getItem('adminToken') ? 'present' : 'missing',
-        role: localStorage.getItem('adminRole'),
-        id: localStorage.getItem('adminId'),
-        username: localStorage.getItem('adminUsername'),
-        namespacedToken: localStorage.getItem(`${namespace}Token`) ? 'present' : 'missing'
-      });
+      // Force a page reload to ensure all context is properly initialized
+      if (targetPage === '/blog-admin') {
+        window.location.href = '/blog-admin';
+        return;
+      }
 
       // Use AuthContext login if available
       if (login) {
@@ -285,7 +306,7 @@ const AdminLogin = () => {
                 e.preventDefault();
                 handleSubmit(e, "/blog-admin");
               }}
-              disabled={blogsLoading || dashboardLoading}
+              disabled={dashboardLoading || dashboardLoading}
               className="w-4/5 h-11 rounded-full bg-blue-600 text-white text-lg font-semibold border-none outline-none cursor-pointer shadow-md hover:shadow-xl hover:bg-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center"
             >
               {blogsLoading ? (

@@ -1,0 +1,88 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { FaSpinner, FaExclamationTriangle } from "react-icons/fa";
+import { useAuth } from "@/context/AuthContext";
+import ProtectedPage from "@/components/blog-admin/ProtectedPage";
+import BlogFilters from "@/components/blog-admin/BlogFilters";
+import BlogStats from "@/components/blog-admin/BlogStats";
+import BlogList from "@/components/blog-admin/BlogList";
+import CreateBlogPost from "@/components/BlogsPage/CreateBlogPost";
+
+const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5002';
+
+const BlogsAdminPanel = () => {
+  const { user, isAuthenticated } = useAuth();
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [editingBlog, setEditingBlog] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterCategory, setFilterCategory] = useState("");
+  const [filterStatus, setFilterStatus] = useState("");
+  const [showCreateModal, setShowCreateModal] = useState(false);
+  const [error, setError] = useState(null);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [hasMore, setHasMore] = useState(true);
+  
+  const [stats, setStats] = useState({
+    total: 0,
+    published: 0,
+    drafts: 0,
+    featured: 0
+  });
+
+  // ... (rest of the component code)
+  
+  return (
+    <ProtectedPage requiredRoles={['admin', 'superadmin', 'user']} pageTitle="Blog Management">
+      <div className="space-y-6">
+        {showCreateModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-lg w-full max-w-6xl max-h-[90vh] overflow-hidden shadow-2xl">
+              <div className="p-6">
+                <CreateBlogPost
+                  onSave={handleSaveBlog}
+                  onCancel={closeModal}
+                  initialData={editingBlog}
+                  loading={loading}
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <BlogStats stats={stats} user={user} />
+          
+          <BlogFilters
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            filterCategory={filterCategory}
+            setFilterCategory={setFilterCategory}
+            filterStatus={filterStatus}
+            setFilterStatus={setFilterStatus}
+            onFilterChange={handleFilterChange}
+            onRefresh={handleRefresh}
+            onAddNew={openCreateModal}
+            loading={loading}
+            categories={categories}
+            statuses={statuses}
+          />
+          
+          <BlogList
+            blogs={blogs}
+            loading={loading}
+            handleEdit={handleEdit}
+            handleDelete={handleDelete}
+            user={user}
+            filteredBlogs={filteredBlogs}
+            hasMore={hasMore}
+            onLoadMore={loadMoreBlogs}
+          />
+        </div>
+      </div>
+    </ProtectedPage>
+  );
+};
+
+export default BlogsAdminPanel;

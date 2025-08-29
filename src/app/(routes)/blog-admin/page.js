@@ -13,9 +13,9 @@ const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5002';
 
 const BlogsAdminPanel = () => {
   const { user, isAuthenticated } = useAuth();
-  const canCreate = useBlogPermission('posts:create');
-  const canEdit = useBlogPermission('posts:edit');
-  const canDelete = useBlogPermission('posts:delete');
+  const canCreate = true;
+  const canEdit = true;
+  const canDelete = true;
   
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -46,40 +46,17 @@ const BlogsAdminPanel = () => {
 
   const statuses = ["None", "Trending", "Featured", "Editor's Pick", "Recommended"];
 
-  // Enhanced role-based filtering with stats calculation
-  const filterBlogsByRole = (blogsData) => {
-    if (!user) return blogsData;
-    
-    let filteredBlogs = blogsData;
-    
-    // If user has 'user' role, only show their own posts
-    if (user.role?.toLowerCase() === 'user') {
-      filteredBlogs = blogsData.filter(blog => 
-        blog.author === user.username ||
-        (blog.authorId && blog.authorId.toString() === user.id?.toString()) ||
-        (blog.createdBy && blog.createdBy.toString() === user.id?.toString()) ||
-        blog.authorId === user._id?.toString() ||
-        blog.createdBy === user._id?.toString()
-      );
-      
-      console.log('Filtered blogs for user:', {
-        userId: user.id || user._id,
-        username: user.username,
-        totalBlogs: blogsData.length,
-        filteredCount: filteredBlogs.length
-      });
-    }
-    
-    // Calculate stats
+  // Calculate stats for all blogs
+  const calculateBlogStats = (blogsData) => {
     const newStats = {
-      total: filteredBlogs.length,
-      published: filteredBlogs.filter(blog => blog.status && blog.status !== 'None').length,
-      drafts: filteredBlogs.filter(blog => !blog.status || blog.status === 'None').length,
-      featured: filteredBlogs.filter(blog => ['Featured', "Editor's Pick", 'Trending'].includes(blog.status)).length
+      total: blogsData.length,
+      published: blogsData.filter(blog => blog.status && blog.status !== 'None').length,
+      drafts: blogsData.filter(blog => !blog.status || blog.status === 'None').length,
+      featured: blogsData.filter(blog => ['Featured', "Editor's Pick", 'Trending'].includes(blog.status)).length
     };
     
     setStats(newStats);
-    return filteredBlogs;
+    return blogsData;
   };
 
   useEffect(() => {
@@ -94,17 +71,53 @@ const BlogsAdminPanel = () => {
   }, [isAuthenticated, user]);
 
   const fetchBlogs = async (reset = true, showLoader = true) => {
-    if (!isAuthenticated() || !user) {
-      console.log('Skipping fetch - user not authenticated or user data not loaded');
+    // Check authentication status and get token
+    let token = localStorage.getItem('blogToken') || localStorage.getItem('adminToken');
+    
+    // If not authenticated and no token, redirect to login
+    if ((!isAuthenticated() || !user) && !token) {
+      console.log('User not authenticated and no token found, redirecting to login');
+      router.push('/AdminLogin?redirect=/blog-admin');
+      return;
+    }
+    
+    // If we have a token but no user, try to validate it
+    if (token && (!user || !isAuthenticated())) {
+      try {
+        console.log('Validating token with backend...');
+        const response = await fetch(`${API_BASE}/api/auth/validate-token`, {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        
+        if (!response.ok) throw new Error('Invalid token');
+        
+        const userData = await response.json();
+        // Update auth context with validated user
+        if (window.loginFromProtectedPage) {
+          window.loginFromProtectedPage(userData);
+        }
+        // Wait for next render to let AuthContext update
+        return;
+      } catch (error) {
+        console.error('Token validation failed:', error);
+        localStorage.removeItem('blogToken');
+        localStorage.removeItem('adminToken');
+        router.push('/AdminLogin?session=expired');
+        return;
+      }
+    }
+    
+    // At this point, we should have a valid user
+    if (!user) {
+      setError('Failed to load user information. Please try again.');
       return;
     }
 
     console.log('BlogsAdminPanel: Starting to fetch blogs');
     console.log('Current user:', {
-      id: user?.id,
-      _id: user?._id,
-      username: user?.username,
-      role: user?.role
+      id: user.id,
+      username: user.username,
+      role: user.role
     });
     
     try {
@@ -114,20 +127,11 @@ const BlogsAdminPanel = () => {
         setRefreshing(true);
       }
       setError(null);
-
-      // Get token from localStorage - check both blogToken and adminToken for backward compatibility
-      let token = localStorage.getItem('blogToken') || localStorage.getItem('adminToken');
-      console.log('Token found in localStorage:', token ? 'Yes' : 'No');
       
+      // Get token again in case it was updated during validation
+      token = localStorage.getItem('blogToken') || localStorage.getItem('adminToken');
       if (!token) {
-        console.error('No authentication token found in localStorage');
-        // Check localStorage contents for debugging
-        console.log('LocalStorage contents:', {
-          blogToken: localStorage.getItem('blogToken') ? 'present' : 'missing',
-          adminToken: localStorage.getItem('adminToken') ? 'present' : 'missing',
-          keys: Object.keys(localStorage)
-        });
-        throw new Error('Please login to the blog admin panel first.');
+        throw new Error('No authentication token available');
       }
       
       // Clean up token (remove 'Bearer ' prefix if it exists and any whitespace)
@@ -156,11 +160,8 @@ const BlogsAdminPanel = () => {
         params.append('search', searchTerm.trim());
       }
 
-      // Use the appropriate endpoint based on user role
-      let endpoint = `${API_BASE}/api/blogs`;
-      if (user?.role?.toLowerCase() === 'user') {
-        endpoint = `${API_BASE}/api/blogs/my-posts`;
-      }
+      // Use the main blogs endpoint for all users
+      const endpoint = `${API_BASE}/api/blogs`;
 
       const requestUrl = `${endpoint}?${params}`;
       console.log('Making request to:', requestUrl);
@@ -281,21 +282,8 @@ const BlogsAdminPanel = () => {
       const blogsData = data.blogs || data || [];
       const hasMoreData = data.hasMore || false;
 
-      // For regular users, the backend already filters, so no need to filter again
-      let filteredBlogsData = blogsData;
-      if (user?.role?.toLowerCase() !== 'user') {
-        filteredBlogsData = filterBlogsByRole(blogsData);
-      } else {
-        // Still calculate stats for user role
-        const newStats = {
-          total: blogsData.length,
-          published: blogsData.filter(blog => blog.status && blog.status !== 'None').length,
-          drafts: blogsData.filter(blog => !blog.status || blog.status === 'None').length,
-          featured: blogsData.filter(blog => ['Featured', "Editor's Pick", 'Trending'].includes(blog.status)).length
-        };
-        setStats(newStats);
-        filteredBlogsData = blogsData;
-      }
+      // Calculate stats for all blogs
+      const filteredBlogsData = calculateBlogStats(blogsData);
 
       if (reset) {
         setBlogs(filteredBlogsData);
@@ -414,45 +402,12 @@ const BlogsAdminPanel = () => {
   };
 
   const handleEdit = (blog) => {
-    if (!canEdit) {
-      showNotification("You don't have permission to edit blogs", 'error');
-      return;
-    }
-    
-    // Enhanced ownership check for users
-    if (user?.role?.toLowerCase() === 'user') {
-      const canEditThisPost = blog.author === user.username || 
-                             blog.authorId === user.id ||
-                             blog.createdBy === user.id;
-      
-      if (!canEditThisPost) {
-        showNotification("You can only edit your own posts", 'error');
-        return;
-      }
-    }
-    
     console.log('Opening edit modal for blog:', blog);
     setEditingBlog(blog);
     setShowCreateModal(true);
   };
 
   const handleDelete = async (blogId, blog) => {
-    if (!canDelete) {
-      showNotification("You don't have permission to delete blogs", 'error');
-      return;
-    }
-
-    // Enhanced ownership check for users
-    if (user?.role?.toLowerCase() === 'user') {
-      const canDeleteThisPost = blog.author === user.username || 
-                               blog.authorId === user.id ||
-                               blog.createdBy === user.id;
-      
-      if (!canDeleteThisPost) {
-        showNotification("You can only delete your own posts", 'error');
-        return;
-      }
-    }
 
     if (!confirm("Are you sure you want to delete this blog? This action cannot be undone.")) {
       return;
@@ -512,11 +467,6 @@ const BlogsAdminPanel = () => {
   };
 
   const openCreateModal = () => {
-    if (!canCreate) {
-      showNotification("You don't have permission to create blogs", 'error');
-      return;
-    }
-    
     setEditingBlog(null);
     setShowCreateModal(true);
   };

@@ -3,9 +3,82 @@
 // API Configuration
 const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5002';
 
+// Helper: robust public endpoint detection (exact paths only)
+const isPublicEndpoint = (fullUrl, method = 'GET') => {
+  try {
+    const urlObj = new URL(fullUrl);
+    const pathname = urlObj.pathname;
+    const m = (method || 'GET').toUpperCase();
+
+    // Public health checks
+    if (pathname === '/api/ping' || pathname === '/api/blogs/ping') return true;
+
+    // Auth flows that must work without a token
+    if (pathname === '/api/auth/login' && m === 'POST') return true;
+
+    // Optional: allow open registration only if intended to be public
+    if (pathname === '/api/auth/register' && m === 'POST') return true;
+
+    // Everything else is protected (e.g., /api/auth/users/*, /api/auth/validate-token)
+    return false;
+  } catch {
+    return false; // assume protected on parse failure
+  }
+};
+
+// Small utility to stringify safely for logs
+const safeString = (v) => {
+  try { return String(v); } catch { return '[unprintable]'; }
+};
+
+// Determine if response has a JSON payload
+const isJsonResponse = (response) => {
+  const ct = response.headers.get('content-type') || '';
+  return ct.includes('application/json');
+};
+
+// Determine if response likely has no body (204 or Content-Length: 0)
+const hasNoBody = (response) => {
+  if (response.status === 204) return true;
+  const cl = response.headers.get('content-length');
+  if (cl && cl.trim() === '0') return true;
+  // Many servers omit content-length; use status+content-type as primary signals
+  return false;
+};
+
+// Parse JSON safely; return null if no body/JSON
+const parseJsonSafe = async (response) => {
+  try {
+    if (hasNoBody(response)) return null; // 204 No Content
+    if (!isJsonResponse(response)) return null; // not JSON
+    // Do not clone if body consumed; call json() once
+    return await response.json();
+  } catch {
+    return null;
+  }
+};
+
+// Ensure the response is JSON; allow 204/empty responses
+const ensureJsonResponse = async (response) => {
+  const ct = response.headers.get('content-type') || '';
+  if (response.status === 204 || hasNoBody(response)) {
+    return response; // acceptable: no content by definition
+  }
+  if (!ct.includes('application/json')) {
+    const body = await response.text();
+    throw new Error(
+      `Expected JSON response, got ${ct || 'unknown content-type'} (status ${response.status}). Body: ${body.slice(0, 200)}${body.length > 200 ? '...' : ''}`
+    );
+  }
+  return response;
+};
+
 // Enhanced fetch with authentication that integrates with AuthContext
 const fetchWithAuth = async (url, options = {}) => {
-  // Check if localStorage is available (for SSR/SSG safety)
+  if (!url || typeof url !== 'string') {
+    throw new Error('fetchWithAuth: endpoint URL must be a non-empty string');
+  }
+
   const token = typeof localStorage !== "undefined" 
     ? localStorage.getItem("adminToken") 
     : null;
@@ -13,23 +86,18 @@ const fetchWithAuth = async (url, options = {}) => {
   // Build full URL if relative path provided
   const fullUrl = url.startsWith('http') ? url : `${API_BASE_URL}${url}`;
 
-  // ✅ Enhanced endpoint detection
-  const isAuthEndpoint = url.includes('/auth/') || 
-                         url.includes('/ping') || 
-                         url.includes('AdminLogin') || 
-                         url.includes('/api/ping');
-  
-  if (!token && !isAuthEndpoint) {
+  // Determine if endpoint is public
+  const method = (options.method || 'GET').toUpperCase();
+  const publicEndpoint = isPublicEndpoint(fullUrl, method);
+
+  if (!token && !publicEndpoint) {
     console.warn('❌ No authentication token found for protected endpoint:', url);
-    
-    // Don't redirect if this is a server-side call or programmatic check
+
     if (options.noRedirect) {
       throw new Error("Not authenticated");
     }
-    
-    // Redirect to login for browser requests
+
     if (typeof window !== "undefined") {
-      // Store intended URL for post-login redirect
       const currentPath = window.location.pathname + window.location.search;
       if (currentPath !== '/AdminLogin') {
         sessionStorage.setItem('intendedPath', currentPath);
@@ -42,85 +110,112 @@ const fetchWithAuth = async (url, options = {}) => {
 
   // Prepare headers
   const headers = {
-    'Accept': 'application/json',
+    Accept: 'application/json',
     ...options.headers,
-    // Only add Authorization header if a token exists
-    ...(token && { Authorization: `Bearer ${token}` }),
+    ...(token && { Authorization: `Bearer ${token}` }), // Bearer for protected routes
   };
 
-  // ✅ Only add Content-Type for requests with body
-  if (options.body && !headers['Content-Type']) {
+  // Only set Content-Type for JSON bodies (not FormData/Blob)
+  const body = options.body;
+  const isFormData = typeof FormData !== 'undefined' && body instanceof FormData;
+  const isBlob = typeof Blob !== 'undefined' && body instanceof Blob;
+  if (body && !headers['Content-Type'] && !isFormData && !isBlob) {
     headers['Content-Type'] = 'application/json';
   }
 
-  // Make the request
+  // Timeout via AbortController
+  const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  const timeoutMs = options.timeoutMs ?? 30000;
+  let timeoutId = null;
+  if (controller) {
+    timeoutId = setTimeout(() => controller.abort('timeout'), timeoutMs);
+  }
+
   try {
-    console.log(`🚀 Making ${options.method || 'GET'} request to:`, fullUrl);
+    console.log(`🚀 Making ${method} request to:`, fullUrl);
     console.log('📋 Headers:', { 
       ...headers, 
       Authorization: headers.Authorization ? `Bearer ***` : 'None' 
     });
-    
+
     const response = await fetch(fullUrl, {
       ...options,
+      method,
       headers,
+      signal: controller?.signal,
+      // credentials: 'include', // not needed for Bearer; enable for cookie auth
     });
 
     console.log(`📡 Response status: ${response.status} ${response.statusText}`);
 
-    // Handle authentication errors
+    // Auth errors
     if (response.status === 401) {
       console.log('❌ Authentication failed - token expired or invalid');
       await handleAuthError('Session expired. Please login again.');
-      throw new Error("Session expired. Please login again.");
+      const msg = await response.text().catch(() => '');
+      throw new Error(msg || "Session expired. Please login again.");
     }
 
-    // Handle authorization errors  
+    // Authorization errors
     if (response.status === 403) {
       console.log('❌ Authorization failed - insufficient permissions');
-      const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.message || "Access denied. You don't have permission to perform this action.");
+      // If not JSON or empty, fall back to a generic message
+      const errJson = await parseJsonSafe(response);
+      throw new Error(errJson?.message || "Access denied. You don't have permission to perform this action.");
     }
 
-    // Handle other client errors
+    // Other client errors (better diagnostics)
     if (response.status >= 400 && response.status < 500) {
-      let errorMessage = `Request failed with status ${response.status}`;
-      
-      try {
-        const errorData = await response.json();
-        errorMessage = errorData.message || errorData.error || errorMessage;
-      } catch (jsonError) {
-        // If response is not JSON, try to get text
-        try {
-          const textData = await response.text();
-          if (textData) {
-            errorMessage = textData.length > 200 ? textData.substring(0, 200) + '...' : textData;
-          }
-        } catch (textError) {
-          console.warn('Could not parse error response');
-        }
+      let message = `Request failed with status ${response.status}`;
+      const errJson = await parseJsonSafe(response);
+      if (errJson?.message || errJson?.error) {
+        message = errJson.message || errJson.error;
+      } else {
+        const textData = await response.text().catch(() => '');
+        if (textData) message = textData.length > 400 ? textData.slice(0, 400) + '...' : textData;
       }
-      
-      throw new Error(errorMessage);
+      throw new Error(message);
     }
 
-    // Handle server errors
+    // Server errors
     if (response.status >= 500) {
-      throw new Error(`Server error (${response.status}). Please try again later.`);
+      const snippet = await response.text().catch(() => '');
+      throw new Error(`Server error (${response.status}). ${snippet?.slice(0, 200) || 'Please try again later.'}`);
     }
 
     console.log(`✅ Request successful: ${response.status}`);
     return response;
 
   } catch (error) {
-    console.error('❌ Fetch error:', error);
-    
-    // Handle network errors
-    if (error instanceof TypeError && (error.message.includes('fetch') || error.message.includes('Failed to fetch'))) {
-      throw new Error(`Cannot connect to server at ${API_BASE_URL}. Please check:\n1. Is the backend server running?\n2. Is the URL correct?\n3. Are there CORS issues?\nOriginal error: ${error.message}`);
+    if (error?.name === 'AbortError') {
+      console.error(`⏳ Request timed out after ${timeoutMs}ms:`, fullUrl);
+      throw new Error(`Request timed out after ${timeoutMs}ms while contacting ${fullUrl}`);
     }
-    
+
+    console.error('❌ Fetch error:', {
+      message: safeString(error?.message),
+      stack: safeString(error?.stack),
+      url: fullUrl
+    });
+
+    // Network/CORS failures appear as TypeError in fetch
+    if (
+      error instanceof TypeError && 
+      (String(error.message).includes('fetch') || String(error.message).includes('Failed to fetch'))
+    ) {
+      throw new Error(
+        `Cannot connect to server at ${API_BASE_URL}.\n` +
+        `Check:\n` +
+        `1) Backend is running\n` +
+        `2) URL ${fullUrl} is correct\n` +
+        `3) CORS allows origin and Authorization header\n` +
+        `Original: ${error.message}`
+      );
+    }
+
     throw error;
+  } finally {
+    if (timeoutId) clearTimeout(timeoutId);
   }
 };
 
@@ -129,7 +224,6 @@ const handleAuthError = async (message = 'Authentication failed') => {
   console.log('🧹 Clearing authentication data:', message);
   
   if (typeof localStorage !== "undefined") {
-    // Clear all authentication data
     const authKeys = [
       'adminToken',
       'adminRole', 
@@ -139,45 +233,25 @@ const handleAuthError = async (message = 'Authentication failed') => {
       'isAdminLoggedIn',
       'userData'
     ];
-    
     authKeys.forEach(key => {
       localStorage.removeItem(key);
       console.log(`🗑️ Cleared ${key}`);
     });
-    
-    // Clear session storage
     sessionStorage.removeItem('intendedPath');
   }
 
-  // Redirect to login if in browser
   if (typeof window !== "undefined") {
     console.log('🔄 Redirecting to login page...');
-    // Small delay to allow cleanup
     setTimeout(() => {
       window.location.href = "/AdminLogin";
     }, 100);
   }
 };
 
-// Ensure the response is JSON; otherwise throw a descriptive error
-const ensureJsonResponse = async (response) => {
-  const contentType = response.headers.get('content-type') || '';
-  
-  if (!contentType.includes('application/json')) {
-    const body = await response.text();
-    throw new Error(
-      `Expected JSON response, got ${contentType || 'unknown content-type'} (status ${response.status}). Body: ${body.slice(0, 200)}${body.length > 200 ? '...' : ''}`
-    );
-  }
-  
-  return response;
-};
-
 // ✅ Enhanced token validation with better error handling
 const validateToken = async (token = null) => {
   try {
     const tokenToValidate = token || (typeof localStorage !== "undefined" ? localStorage.getItem("adminToken") : null);
-    
     if (!tokenToValidate) {
       return { isValid: false, user: null, error: 'No token provided' };
     }
@@ -192,26 +266,14 @@ const validateToken = async (token = null) => {
     if (response.ok) {
       const userData = await response.json();
       console.log('✅ Token validation successful:', userData.username);
-      return { 
-        isValid: true, 
-        user: userData, 
-        error: null 
-      };
+      return { isValid: true, user: userData, error: null };
     } else {
       console.log('❌ Token validation failed:', response.status);
-      return { 
-        isValid: false, 
-        user: null, 
-        error: `Token validation failed: ${response.status}` 
-      };
+      return { isValid: false, user: null, error: `Token validation failed: ${response.status}` };
     }
   } catch (error) {
     console.error('❌ Token validation error:', error);
-    return { 
-      isValid: false, 
-      user: null, 
-      error: error.message 
-    };
+    return { isValid: false, user: null, error: error.message };
   }
 };
 
@@ -224,18 +286,17 @@ const login = async (credentials) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        Accept: 'application/json'
       },
       body: JSON.stringify(credentials)
     });
 
     if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.message || `Login failed: ${response.status}`);
+      const errorData = await parseJsonSafe(response);
+      throw new Error(errorData?.message || `Login failed: ${response.status}`);
     }
 
     const data = await response.json();
-    
     if (!data.token || !data.user) {
       throw new Error('Invalid response from server - missing token or user data');
     }
@@ -263,10 +324,8 @@ const login = async (credentials) => {
 const logout = async () => {
   try {
     const token = typeof localStorage !== "undefined" ? localStorage.getItem("adminToken") : null;
-    
     console.log('🚪 Logging out...');
     
-    // Attempt to notify backend of logout
     if (token) {
       try {
         await fetchWithAuth('/api/auth/logout', {
@@ -279,13 +338,10 @@ const logout = async () => {
       }
     }
     
-    // Always clear local data
     await handleAuthError('User logged out');
-    
     return { success: true };
   } catch (error) {
     console.error('❌ Logout error:', error);
-    // Force cleanup even if there's an error
     await handleAuthError('Logout error - clearing data');
     return { success: false, error: error.message };
   }
@@ -294,7 +350,6 @@ const logout = async () => {
 // Check if user has required role
 const hasRole = (userRole, requiredRoles) => {
   if (!userRole) return false;
-  
   const roles = Array.isArray(requiredRoles) ? requiredRoles : [requiredRoles];
   return roles.some(role => userRole.toLowerCase() === role.toLowerCase());
 };
@@ -302,7 +357,6 @@ const hasRole = (userRole, requiredRoles) => {
 // Get user data from localStorage
 const getCurrentUser = () => {
   if (typeof localStorage === "undefined") return null;
-  
   try {
     const userData = localStorage.getItem('userData');
     return userData ? JSON.parse(userData) : null;
@@ -315,13 +369,10 @@ const getCurrentUser = () => {
 // ✅ Enhanced authentication check
 const isAuthenticated = () => {
   if (typeof localStorage === "undefined") return false;
-  
   const token = localStorage.getItem('adminToken');
   const isLoggedIn = localStorage.getItem('isAdminLoggedIn') === 'true';
   const user = getCurrentUser();
-  
   const authenticated = !!(token && isLoggedIn && user && user.isActive !== false);
-  
   console.log('🔐 Authentication check:', {
     hasToken: !!token,
     isLoggedIn,
@@ -329,7 +380,6 @@ const isAuthenticated = () => {
     userActive: user?.isActive,
     result: authenticated
   });
-  
   return authenticated;
 };
 
@@ -337,54 +387,36 @@ const isAuthenticated = () => {
 const testConnection = async () => {
   try {
     console.log('🏥 Testing backend connectivity...');
-    
-    // Test both ping endpoints
     const endpoints = ['/api/ping', '/api/blogs/ping'];
-    
     for (const endpoint of endpoints) {
       try {
         const response = await fetch(`${API_BASE_URL}${endpoint}`, {
           method: 'GET',
-          headers: {
-            'Content-Type': 'application/json'
-          }
+          headers: { 'Content-Type': 'application/json' }
         });
-        
         if (response.ok) {
-          const data = await response.json();
+          const data = await parseJsonSafe(response);
           console.log(`✅ ${endpoint} responded successfully`);
-          return { 
-            connected: true, 
-            message: data.message || 'Connected',
-            status: response.status,
-            endpoint
-          };
+          return { connected: true, message: data?.message || 'Connected', status: response.status, endpoint };
         }
       } catch (error) {
         console.log(`❌ ${endpoint} failed:`, error.message);
       }
     }
-    
-    return { 
-      connected: false, 
-      message: 'All ping endpoints failed',
-      status: null 
-    };
-    
+    return { connected: false, message: 'All ping endpoints failed', status: null };
   } catch (error) {
     console.error('❌ Connection test failed:', error);
-    return { 
-      connected: false, 
-      message: `Connection failed: ${error.message}`,
-      status: null 
-    };
+    return { connected: false, message: `Connection failed: ${error.message}`, status: null };
   }
 };
 
-// Helper to make authenticated API calls with automatic JSON parsing
+// Helper to make authenticated API calls with automatic JSON parsing (204-safe)
 const apiCall = async (endpoint, options = {}) => {
   const response = await fetchWithAuth(endpoint, options);
-  await ensureJsonResponse(response);
+  // Allow 204/empty responses without throwing
+  if (response.status === 204 || hasNoBody(response)) return null;
+  // If not JSON, try to parse safely or return null
+  if (!isJsonResponse(response)) return null;
   return response.json();
 };
 
@@ -433,17 +465,19 @@ const apiUpload = async (endpoint, formData, options = {}) => {
   });
   
   if (!response.ok) {
-    const errorData = await response.json().catch(() => ({}));
-    throw new Error(errorData.message || `Upload failed: ${response.status}`);
+    const errorData = await parseJsonSafe(response);
+    throw new Error(errorData?.message || `Upload failed: ${response.status}`);
   }
   
-  return response.json();
+  // Accept JSON or 204
+  const data = await parseJsonSafe(response);
+  return data ?? {};
 };
 
 // Export all utilities
 export {
   fetchWithAuth,
-  ensureJsonResponse,
+  ensureJsonResponse, // kept for compatibility; now 204-tolerant
   validateToken,
   login,
   logout,

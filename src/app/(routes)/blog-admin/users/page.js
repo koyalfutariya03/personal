@@ -23,6 +23,16 @@ const UserManagement = () => {
     role: 'user'
   });
 
+  // NEW: Edit modal state (additive)
+  const [showEdit, setShowEdit] = useState(false);
+  const [editUser, setEditUser] = useState({
+    id: '',
+    username: '',
+    role: 'user',
+    password: '',
+    confirmPassword: '',
+  });
+
   // Permission checks
   const canCreateUsers = useBlogPermission('users:create');
   const canDeleteUsers = useBlogPermission('users:delete');
@@ -227,6 +237,95 @@ const UserManagement = () => {
     }
   };
 
+  // ========== NEW: Edit helpers (additive, does not remove existing code) ==========
+
+  const openEdit = (u) => {
+    setEditUser({
+      id: u._id || u.id,
+      username: u.username || '',
+      role: u.role || 'user',
+      password: '',
+      confirmPassword: '',
+    });
+    setShowEdit(true);
+  };
+
+  const handleEditChange = (e) => {
+    const { name, value } = e.target;
+    setEditUser(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleUpdateUser = async (e) => {
+    e.preventDefault();
+    if (!canEditUsers) {
+      toast.error('You do not have permission to edit users', { autoClose: 3000 });
+      return;
+    }
+    setActionLoading(true);
+    try {
+      const payload = {
+        username: editUser.username?.trim() || undefined,
+        role: editUser.role || undefined
+      };
+      const res = await fetchWithAuth(`/api/auth/users/${editUser.id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.message || `HTTP ${res.status}: Failed to update user`);
+      }
+      const data = await res.json();
+      toast.success(data.message || 'User updated successfully', { autoClose: 3000 });
+      setShowEdit(false);
+      await fetchUsers();
+      // router.refresh(); // optional if server-rendered data elsewhere depends on this
+    } catch (err) {
+      toast.error(err.message || 'Failed to update user', { autoClose: 5000 });
+    } finally {
+      setActionLoading(false);
+    }
+  };
+
+  const handleUpdatePassword = async (e) => {
+    e.preventDefault();
+    if (!canEditUsers) {
+      toast.error('You do not have permission to edit users', { autoClose: 3000 });
+      return;
+    }
+    if (editUser.password !== editUser.confirmPassword) {
+      toast.error('Passwords do not match', { autoClose: 3000 });
+      return;
+    }
+    if (!editUser.password || editUser.password.length < 6) {
+      toast.error('Password must be at least 6 characters', { autoClose: 3000 });
+      return;
+    }
+    setActionLoading(true);
+    try {
+      const res = await fetchWithAuth(`/api/auth/users/${editUser.id}/password`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: editUser.password })
+      });
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.message || `HTTP ${res.status}: Failed to update password`);
+      }
+      const data = await res.json();
+      toast.success(data.message || 'Password updated successfully', { autoClose: 3000 });
+      setEditUser(prev => ({ ...prev, password: '', confirmPassword: '' }));
+      await fetchUsers();
+    } catch (err) {
+      toast.error(err.message || 'Failed to update password', { autoClose: 5000 });
+    } finally {
+      setActionLoading(false);
+    }
+  };
+
+  // ================================================================================
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -409,6 +508,129 @@ const UserManagement = () => {
         </div>
       )}
 
+      {/* ✅ NEW: Edit User Modal (additive) */}
+      {showEdit && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg p-4 sm:p-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-lg sm:text-xl font-semibold">Edit User</h2>
+              <button
+                onClick={() => setShowEdit(false)}
+                disabled={actionLoading}
+                className="text-gray-500 hover:text-gray-700 disabled:cursor-not-allowed text-xl"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Identity & role */}
+            <form onSubmit={handleUpdateUser} className="space-y-4">
+              <div>
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="edit-username">
+                  Username
+                </label>
+                <input
+                  type="text"
+                  id="edit-username"
+                  name="username"
+                  value={editUser.username}
+                  onChange={handleEditChange}
+                  disabled={actionLoading}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 text-sm sm:text-base"
+                  minLength={3}
+                  maxLength={30}
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="edit-role">
+                  Role
+                </label>
+                <select
+                  id="edit-role"
+                  name="role"
+                  value={editUser.role}
+                  onChange={handleEditChange}
+                  disabled={actionLoading}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 text-sm sm:text-base"
+                >
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                  {user?.role?.toLowerCase() === 'superadmin' && (
+                    <option value="superadmin">SuperAdmin</option>
+                  )}
+                </select>
+              </div>
+              <div className="flex flex-col sm:flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setShowEdit(false)}
+                  disabled={actionLoading}
+                  className="w-full sm:w-auto px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50 text-sm sm:text-base"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={actionLoading}
+                  className="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 flex items-center justify-center text-sm sm:text-base"
+                >
+                  {actionLoading ? <FaSpinner className="animate-spin mr-2" /> : null}
+                  Save Changes
+                </button>
+              </div>
+            </form>
+
+            {/* Password change */}
+            <div className="mt-6 border-t pt-4">
+              <h3 className="text-sm font-semibold mb-2">Change Password</h3>
+              <form onSubmit={handleUpdatePassword} className="space-y-3">
+                <div>
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="edit-password">
+                    New Password
+                  </label>
+                  <input
+                    type="password"
+                    id="edit-password"
+                    name="password"
+                    value={editUser.password}
+                    onChange={handleEditChange}
+                    disabled={actionLoading}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 text-sm sm:text-base"
+                    minLength={6}
+                    placeholder="Minimum 6 characters"
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="edit-confirm-password">
+                    Confirm Password
+                  </label>
+                  <input
+                    type="password"
+                    id="edit-confirm-password"
+                    name="confirmPassword"
+                    value={editUser.confirmPassword}
+                    onChange={handleEditChange}
+                    disabled={actionLoading}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 text-sm sm:text-base"
+                    minLength={6}
+                  />
+                </div>
+                <div className="flex justify-end">
+                  <button
+                    type="submit"
+                    disabled={actionLoading}
+                    className="w-full sm:w-auto px-4 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 flex items-center justify-center text-sm sm:text-base"
+                  >
+                    {actionLoading ? <FaSpinner className="animate-spin mr-2" /> : null}
+                    Update Password
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* ✅ Responsive Users List */}
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <div className="p-3 sm:p-4 border-b border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
@@ -518,8 +740,12 @@ const UserManagement = () => {
                           {canEditUsers && (
                             <button
                               className="text-blue-600 hover:text-blue-900 disabled:text-gray-400"
-                              title="Edit user (Coming soon)"
-                              disabled
+                              title="Edit user"
+                              onClick={() => openEdit(userItem)}
+                              disabled={
+                                actionLoading ||
+                                (userItem.role === 'superadmin' && user?.role?.toLowerCase() !== 'superadmin')
+                              }
                             >
                               <FaEdit />
                             </button>
@@ -591,8 +817,12 @@ const UserManagement = () => {
                       {canEditUsers && (
                         <button
                           className="text-blue-600 hover:text-blue-900 disabled:text-gray-400 p-1"
-                          title="Edit user (Coming soon)"
-                          disabled
+                          title="Edit user"
+                          onClick={() => openEdit(userItem)}
+                          disabled={
+                            actionLoading ||
+                            (userItem.role === 'superadmin' && user?.role?.toLowerCase() !== 'superadmin')
+                          }
                         >
                           <FaEdit />
                         </button>

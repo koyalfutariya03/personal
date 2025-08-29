@@ -61,13 +61,44 @@ const ProtectedPage = ({
         setValidationError(null);
         setHasAccess(false);
 
-        // Wait for AuthContext to finish loading
-        if (loading) return;
+        // Check for token in localStorage as fallback
+        const token = localStorage.getItem('blogToken') || localStorage.getItem('adminToken');
+        
+        // If no token and not authenticated, redirect to login
+        if (!token && !isAuthenticated()) {
+          console.log('ProtectedPage: No token found, redirecting to login');
+          router.push(`/AdminLogin?redirect=${encodeURIComponent(window.location.pathname)}`);
+          return;
+        }
 
-        // Check if user is authenticated
-        if (!isAuthenticated() || !user) {
-          console.log('ProtectedPage: User not authenticated');
-          setValidationError('You must be logged in to access this page.');
+        // If we have a token but AuthContext isn't initialized yet, try to validate it
+        if (token && (!user || !isAuthenticated())) {
+          try {
+            const response = await fetch(`${API_BASE_URL}/api/auth/validate-token`, {
+              headers: { 'Authorization': `Bearer ${token}` }
+            });
+            
+            if (!response.ok) throw new Error('Invalid token');
+            
+            const userData = await response.json();
+            // Trigger login in AuthContext
+            if (window.loginFromProtectedPage) {
+              window.loginFromProtectedPage(userData);
+            }
+            // Wait for next render to let AuthContext update
+            return;
+          } catch (error) {
+            console.error('Token validation failed:', error);
+            localStorage.removeItem('blogToken');
+            localStorage.removeItem('adminToken');
+            router.push(`/AdminLogin?redirect=${encodeURIComponent(window.location.pathname)}`);
+            return;
+          }
+        }
+
+        // At this point, we should have a valid user from AuthContext
+        if (!user) {
+          setValidationError('Failed to load user information. Please try again.');
           return;
         }
 

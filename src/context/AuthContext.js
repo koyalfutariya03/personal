@@ -68,6 +68,7 @@ export const AuthProvider = ({ children }) => {
   }, [API_BASE_URL]);
 
   const clearAuthData = () => {
+    // Clear all auth-related items
     localStorage.removeItem('adminToken');
     localStorage.removeItem('adminRole');
     localStorage.removeItem('adminUsername');
@@ -75,6 +76,13 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('adminId');
     localStorage.removeItem('userData');
     localStorage.removeItem('isAdminLoggedIn');
+    localStorage.removeItem('user');
+    
+    // Clear blog-specific items
+    localStorage.removeItem('blogToken');
+    localStorage.removeItem('blogRole');
+    localStorage.removeItem('blogUser');
+    
     setUser(null);
   };
 
@@ -86,11 +94,12 @@ export const AuthProvider = ({ children }) => {
     
     // Store all user data with normalized role
     const userInfo = {
-      id: userData.id,
+      id: userData.id || userData._id,
+      _id: userData._id || userData.id,
       username: userData.username,
-      email: userData.email,
+      email: userData.email || '',
       role: normalizedRole,  // Ensure role is always lowercase
-      isActive: userData.isActive,
+      isActive: userData.isActive !== false, // Default to true if not specified
       lastLogin: userData.lastLogin || new Date().toISOString()
     };
 
@@ -98,19 +107,24 @@ export const AuthProvider = ({ children }) => {
     
     // Update state
     setUser(userInfo);
-
-    // Store all necessary data in localStorage with consistent naming
-    localStorage.setItem('adminToken', userData.token || '');
+    
+    // Store in localStorage for persistence
+    localStorage.setItem('user', JSON.stringify(userInfo));
+    localStorage.setItem('adminToken', userData.token);
     localStorage.setItem('adminRole', normalizedRole);
     localStorage.setItem('adminUsername', userInfo.username);
-    localStorage.setItem('adminEmail', userInfo.email || '');
+    localStorage.setItem('adminEmail', userInfo.email);
     localStorage.setItem('adminId', userInfo.id);
-    localStorage.setItem('userData', JSON.stringify(userInfo));
     localStorage.setItem('isAdminLoggedIn', 'true');
     
-    console.log('AuthContext: Login successful, localStorage updated');
+    // Also store in blog namespace for blog routes
+    if (userData.source === 'blog' || !userData.source) {
+      localStorage.setItem('blogToken', userData.token);
+      localStorage.setItem('blogRole', normalizedRole);
+      localStorage.setItem('blogUser', JSON.stringify(userInfo));
+    }
     
-    console.log('User logged in successfully:', userInfo);
+    return userInfo;
   };
 
   const logout = async () => {
@@ -153,6 +167,17 @@ export const AuthProvider = ({ children }) => {
     }
     return false;
   };
+
+  useEffect(() => {
+    window.loginFromProtectedPage = (userData) => {
+      const userInfo = login(userData);
+      return userInfo;
+    };
+    
+    return () => {
+      delete window.loginFromProtectedPage;
+    };
+  }, [login]);
 
   const value = {
     user,
